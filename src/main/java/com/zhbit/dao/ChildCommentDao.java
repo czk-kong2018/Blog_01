@@ -13,7 +13,7 @@ public interface ChildCommentDao {
      * 根据文章id,查询所有子评论
      */
     @Select("select child_comment_id,article_id,create_time,content,response_user,author_name," +
-            "comment_id from child_comment where comment_id=#{article_id}")
+            "comment_id from child_comment where article_id=#{article_id}")
     List<ChildComment> getChildCommentByArticleId(@Param("article_id") int article_id);
 
     /**

@@ -76,10 +76,25 @@ public class CommonServiceImpl implements CommonService {
         int from=(current_page-1)*OnePageCount;
         int count=OnePageCount;
         List<FatherCommentFront> fatherCommentFronts = CommentDao.getCommentByPage(article_id, from, count);
+        int fatherCount=CommentDao.getFatherCommentCount(article_id);  //根据文章id查询父评论总数
+
+        //查出文章下所有子评论 再分别插到父评论里 不用做太多次数据库查询
+        List<ChildComment> child = childCommentDao.getChildCommentByArticleId(article_id);
+        List<ChildComment> tmp=new ArrayList<ChildComment>();
         for (FatherCommentFront f:fatherCommentFronts) {
-            f.setCommentCount(articleDao.getCommentCount(f.getArticle_id()));//设置评论总数 根据Articledao
-            f.setFatherCount(CommentDao.getFatherCommentCount(article_id));  //设置父评论数
+            //设置子评论
+            for (ChildComment c:child) {
+                if(c.getComment_id()==f.getComment_id()){
+                    tmp.add(c);
+                }
+            }
+            f.setChildList(tmp);
+            f.setCommentCount(articleDao.getCommentCount(f.getArticle_id()));//设置评论总数 根据Articledao  懒得改了 其实可查子评论总数再加父评论总数就行- - 写都写好了
+            f.setFatherCount(fatherCount);  //设置父评论数
             f.setChildList(childCommentDao.getChildCommentByCommentId(f.getComment_id()));//设置父评论下所有子评论
+
+            tmp.clear();//清空tmp
+
         }
 
         return fatherCommentFronts;
