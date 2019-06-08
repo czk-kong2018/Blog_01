@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhbit.dao.ArticleDao">
+
+
+    <select id="getALLArticleByUserName" resultMap="ArticleList">
+  SELECT c.*,GROUP_CONCAT(f.tag_name SEPARATOR ',') as tag_name from
+ (SELECT a.*,b.head_portrait FROM `article` as a ,user_message as b where a.own_id=b.user_id and user_name=#{user_name} ) as c
+  LEFT JOIN
+ (SELECT d.*,article_id from tag as d ,article_tag as e WHERE d.tag_id=e.tag_id ) as f on f.article_id=c.article_id GROUP BY article_id;
+
+    </select>
+
+    <resultMap id="ArticleList" type="com.zhbit.dto.UserArticle">
+        <id column="article_id" property="article_id"></id>
+        <result property="head_portrait" column="head_portrait"></result>
+        <result property="tag_name" column="tag_name"></result>
+        <association property="article" javaType="com.zhbit.entity.Article">
+
+            <result property="title" column="title"></result>
+            <result property="article_profile" column="article_profile"></result>
+            <result property="url" column="url"></result>
+            <result property="click_like" column="click_like"></result>
+            <result property="click_unlike" column="click_unlike"></result>
+            <result property="watch" column="watch"></result>
+            <result property="create_time" column="create_time"></result>
+            <result property="own_id" column="own_id"></result>
+        </association>
+    </resultMap>
+
+
+
+    <select id="getArticleToPage" resultMap="ArticleToPage">
+
+
+  SELECT c.*,GROUP_CONCAT(f.tag_name SEPARATOR ',') as tag_name,
+	(SELECT count(*) FROM `article` as a ,user_message as b where a.own_id=b.user_id and user_name=#{user_name} ) as articleCount
+	from
+ (SELECT a.*,b.head_portrait,user_name FROM `article` as a ,user_message as b where a.own_id=b.user_id and user_name=#{user_name}  ) as c
+  LEFT JOIN
+ (SELECT d.*,article_id from tag as d ,article_tag as e WHERE d.tag_id=e.tag_id ) as f on
+ f.article_id=c.article_id GROUP BY article_id  DESC LIMIT #{from},#{count}
+
+
+
+
+
+    </select>
+
+
+
+    <resultMap id="ArticleToPage" type="com.zhbit.dto.ArticleToPage">
+        <id column="article_id" property="article_id"></id>
+        <result column="articleCount" property="articleCount"></result>
+        <association javaType="com.zhbit.dto.UserArticle" property="userArticles">
+        <result column="article_id" property="article_id"></result>
+        <result property="head_portrait" column="head_portrait"></result>
+        <result property="tag_name" column="tag_name"></result>
+        <association property="article" javaType="com.zhbit.entity.Article">
+            <result property="article_id" column="article_id"></result>
+            <result property="title" column="title"></result>
+            <result property="article_profile" column="article_profile"></result>
+            <result property="url" column="url"></result>
+            <result property="click_like" column="click_like"></result>
+            <result property="click_unlike" column="click_unlike"></result>
+            <result property="watch" column="watch"></result>
+            <result property="create_time" column="create_time"></result>
+            <result property="own_id" column="own_id"></result>
+            <result property="user_name" column="user_name"></result>
+        </association>
+        </association>
+
+
+
+    </resultMap>
+</mapper>
