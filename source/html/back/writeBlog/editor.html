@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>editor</title>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/editor.md-master/css/editormd.min.css" />
+		<link rel="stylesheet" href="/css/jquery-labelauty.css">
+		<style type="text/css">
+			ul { list-style-type: none; margin-bottom: 0;}
+			li { display: inline-block; margin: 10px 0 0;}
+		</style>
+		<script src="/js/jquery-3.4.0.js"></script>
+		<script src="/js/jquery-labelauty.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/editor.md-master/editormd.min.js"></script>
+		<script>
+			$(function() {
+				md_edit = editormd("editor_md", {
+            		placeholder : "editormd",
+            		width : "95%",
+            		height : 600,
+            		syncScrolling : "single",
+            		emoji : true,
+            		path : "editor.md-master/lib/",
+            		saveHTMLToTextarea : true,
+            		tocm : true, // Using [TOCM]
+            		tex : true, // 开启科学公式TeX语言支持，默认关闭
+            		flowChart : true, // 开启流程图支持，默认关闭
+            		/* 上传图片配置 */
+            		imageUpload : true,
+            		imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
+            		imageUploadURL : "/ArticleManager/uploadImg"
+				});
+				
+				$("#publish").click(function(){
+					var header=$("#article_header").val();
+					var main=md_edit.getMarkdown();
+					$.ajax({
+						async:false,
+						type:"post",
+						url:"/ArticleManager/publish",
+						dataType:"json",
+					//	contentType:"application/json",
+						data:{
+							"header":header,
+							"main":main
+						},
+						success:function(data){
+							alert("success");
+						},
+						error:function(data){
+							alert("error");
+						}
+					});
+				});
+				var edit=true;
+				if(edit){
+					var fileId=0;
+					$.ajax({
+						async:false,
+						type:"post",
+						url:"/ArticleManager/editArticle",
+						dataType:"json",
+						data:{
+							"fid":fileId
+						},
+						success:function(data){
+							$("#article_header").val(data.header);
+							window.setTimeout(function() {
+								md_edit.setMarkdown(data.main);
+							}, 500);
+						},
+						error:function(data){
+							alert("error");
+						}
+					});
+				}
+				
+				$(".tag").labelauty();
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div class="container-full panel panel-default">
+			<div class="row panel-heading">
+				<div class="col-md-9 col-md-offset-1">
+					<input type="text" id="article_header" class="form-control" value="" placeholder="请输入文章标题" />
+				</div>
+				<div class="col-md-2">
+					<button id="publish" type="button" class="btn btn-default">发表文章</button>
+				</div>
+			</div>
+			<div class="row panel-body">
+				<div id="editor_md"></div>
+			</div>
+			<div class="row panel-footer">
+				<ul class="dowebok">
+					<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag1"></li>
+					<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag2"></li>
+					<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag3"></li>
+					<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag4"></li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

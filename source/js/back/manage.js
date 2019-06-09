@@ -1,0 +1,207 @@
+$(function() {
+	var obj = $('#content');
+	// 基本信息
+	$('#basic-info').click(function() {
+		obj.html("");
+		var content = '<div class="row">\n' +
+			'<div class="contain">\n' +
+			'<div class="col-sm-2 ">\n' +
+			'<div align="center" class="user-img">\n' +
+			'<div style="border: 5px solid lightblue;width: 150px;height:150px;border-radius: 50%;">\n' +
+			'<img src="http://localhost:8081/source/image/meixi.jpg" alt="选择并上传头像" id="avatar_img" 　 style="width: 140px;height: 140px;left:0;top: 0;border-radius: 50%;" />\n' +
+			'<input type="file" id="avatar_file" name="avatar_file" accept="image/jpg,image/png,image/gif" style="width: 100%;height:100%;opacity: 0;position:absolute;;left:0;top: 0;" />\n' +
+			'</div>\n' +
+			'</div>\n' +
+			'\n' +
+			'<div align="center">\n' +
+			'<button onclick="text()" class="btn btn-default">修改头像</button>\n' +
+			'</div>\n' +
+			'</div>\n' +
+			'</div>\n' +
+			'<div class="col-sm-5 ">\n' +
+			'<div class="content">\n' +
+			'<form role="form">\n' +
+			'<div class="form-group">\n' +
+			'<label for="exampleInputName">昵称:</label><input type="text" class="form-control" id="exampleInputName" width="20%"\n' +
+			'height="auto" value="梅西" />\n' +
+			'</div>\n' +
+			'<div class="form-group">\n' +
+			'\n' +
+			'</div>\n' +
+			'<div class="form-group">\n' +
+			'<label for="exampleInputName">简介:</label> <textarea class="form-control" rows="4"></textarea>\n' +
+			'</div>\n' +
+			'<div class="form-group" style="float:right;">\n' +
+			'<button type="submit" class="btn btn-default">保存设置</button>\n' +
+			'</div>\n' +
+			'</form>\n' +
+			'</div>\n' +
+			'</div>\n' +
+			'</div>'
+		obj.append(content);
+	});
+
+	// 修改用户头像
+	$('#user-img').click(function() {
+		$("#avatar_file").click();
+	})
+	// 头像预览
+	$("#avatar_file").change(function() {
+		// 获取上传文件对象
+		var file = $(this)[0].files[0];
+		// 读取文件URL
+		var reader = new FileReader();
+		reader.readAsDataURL(file);
+		// 阅读文件完成后触发的事件
+		reader.onload = function() {
+			// 读取的URL结果：this.result
+			$("#avatar_img").attr("src", this.result);
+		}
+	});
+
+	//账号安全
+	$('#account-secure').click(function(){
+		obj.html("");
+		var content='<input type="text" />';
+		obj.append(content);
+	})
+	// 文章管理
+	$('#original-article').click(function() {
+		obj.html("");
+		var content = '<table class="table table-hover table-striped">\n' +
+			'<thead>\n' +
+			'<tr>\n' +
+			'<th>标题</th>\n' +
+			'<th>发布时间</th>\n' +
+			'<th>评论功能</th>\n'+
+			'<th>点击量</th>\n' +
+			'<th>点赞数</th>\n' +
+			'<th>操作</th>\n' +
+			'</thead>\n' +
+			'<tbody>\n' +
+			'<tr class="">\n' +
+			'<td>《最短路径算法》</td>\n' +
+			'<td>2018-9-07</td>\n' +
+			'<td>\n' +
+			'<div class="ckbx-style-8 ckbx-medium">\n' +
+			'<input type="checkbox" id="ckbx-size-2" value="" checked="" name="ckbx-square-1">\n' +
+			'<label for="ckbx-size-2"></label>\n' +
+			'</div>\n' +
+			'</td>\n' +
+			'<td>5</td>\n' +
+			'<td>5</td>\n' +
+			'<td>\n' +
+			'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>查看</a></div>\n' +
+			'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-trash" aria-hidden="true"></i>删除</a></div>\n' +
+			'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>修改</a></div>\n' +
+			'</td>\n' +
+			'</tr>\n' +
+			'</tbody>\n' +
+			'</table>'
+		obj.append(content);
+	});
+	
+	//系统通知
+	$("#system-notify").click(function(){
+		obj.html("");
+		var content = '<table class="table table-hover table-striped">\n' +
+			'<tr>\n' +
+			'<th>来源</th>\n' +
+			'<th>链接</th>\n' +
+			'<th>内容</th>\n' +
+			'<th>日期</th>\n' +
+			'<th>操作</th>\n' +
+			'</tr>\n' +
+			'<tr>\n' +
+			'<td><a href="#">root</a></td>\n' +
+			'<td>\n' +
+			'<a href="#">java线程池</a>'+
+			'</td>\n' +
+			'<td>\n' +
+			'该文章被举报，经核实举报通过'+
+			'</td>\n' +
+			'<td>2019-02-11</td>\n' +
+			'<td><a href="#"><i class="fa fa-fw fa fa-trash"></i>删除</a></td>\n' +
+			'</tr>\n' +
+			'</table>'
+		obj.append(content);
+	})
+
+	//文章推送
+	$("#article-push").click(function(){
+		obj.html("");
+		var content = '<table class="table table-hover table-striped">\n' +
+			'<tr>\n' +
+			'<th>来源</th>\n' +
+			'<th>链接</th>\n' +
+			'<th>内容</th>\n' +
+			'<th>日期</th>\n' +
+			'<th>操作</th>\n' +
+			'</tr>\n' +
+			'<tr>\n' +
+			'<td><a href="#">阿扎尔</a></td>\n' +
+			'<td>\n' +
+			'<a href="#">java线程池</a>'+
+			'</td>\n' +
+			'<td>\n' +
+			'发布了新文章'+
+			'</td>\n' +
+			'<td>2019-02-11</td>\n' +
+			'<td><a href="#"><i class="fa fa-fw fa fa-trash"></i>删除</a></td>\n' +
+			'</tr>\n' +
+			'</table>'
+		obj.append(content);
+	})
+	
+	//评论通知
+	$("#comment-notify").click(function(){
+		obj.html("");
+		var content = '<table class="table table-hover table-striped">\n' +
+			'<tr>\n' +
+			'<th>来源</th>\n' +
+			'<th>链接</th>\n' +
+			'<th>内容</th>\n' +
+			'<th>日期</th>\n' +
+			'<th>操作</th>\n' +
+			'</tr>\n' +
+			'<tr>\n' +
+			'<td><a href="#">梅西</a></td>\n' +
+			'<td>\n' +
+			'<a href="#">java线程池</a>'+
+			'</td>\n' +
+			'<td>\n' +
+			'感谢博主分享'+
+			'</td>\n' +
+			'<td>2019-02-11</td>\n' +
+			'<td><a href="#"><i class="fa fa-fw fa fa-trash"></i>删除</a></td>\n' +
+			'</tr>\n' +
+			'</table>'
+		obj.append(content);
+	})
+	
+	//我的关注
+	$('#my-focus').click(function() {
+		obj.html("");
+		var content = '<table class="table table-hover table-striped">\n' +
+			'<tr>\n' +
+			'<th>名称</th>\n' +
+			'<th>文章推送</th>\n' +
+			'<th>最近更新</th>\n' +
+			'<th>操作</th>\n' +
+			'</tr>\n' +
+			'<tr>\n' +
+			'<td><a href="#">阿扎尔</a></td>\n' +
+			'<td>\n' +
+			'<div class="ckbx-style-8 ckbx-medium">\n' +
+			'<input type="checkbox" id="ckbx-size-2" value="" checked="" name="ckbx-square-1">\n' +
+			'<label for="ckbx-size-2"></label>\n' +
+			'</div>\n' +
+			'</td>\n' +
+			'<td>2019-02-11</td>\n' +
+			'<td><a href="#"><i class="fa fa-fw fa fa-minus"></i>取消关注</a></td>\n' +
+			'</tr>\n' +
+			'</table>'
+		obj.append(content);
+	})
+
+})
