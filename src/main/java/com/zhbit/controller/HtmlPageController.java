@@ -8,20 +8,25 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-@CrossOrigin(origins="*")
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
 
 /**
  * 返回各种前后台界面
  */
-
+@Controller
+@CrossOrigin(origins="*")
 public class HtmlPageController {
 
     @Autowired
     private UserMessageService userMessageService;
 
     /**
-     * 发挥用户主界面
+     * 返回用户主界面
      * @param user_name
      * @return
      */
@@ -36,22 +41,26 @@ public class HtmlPageController {
      * @return
      */
     @RequestMapping("/back/Manager")
-    public String getBackManger(){
+    public String getBackManger(HttpServletRequest request, HttpSession httpSession) {
         return "back/manage";
     }
+        /**
+         * 返回注册界面
+         */
+        @RequestMapping("/front/Register")
+        public String getRegister () {
+            return "front/register";
+        }
+        /**
+         * 返回编写博客界面, js太乱暂时不用
+         */
+        @RequestMapping("/back/Editor")
+        public String getWriteBlog () {
+            return "back/writeBlog/editor";
+        }
 
-    /**
-     * 返回注册界面
-     */
-    @RequestMapping("/front/Register")
-    public String getRegister(){
-        return "front/register";
+        @RequestMapping("/page/error")
+        public String returnError(){
+            return "front/404";
+        }
     }
-    /**
-     * 返回编写博客界面, js太乱暂时不用
-     */
-    @RequestMapping("/back/Editor")
-    public String getWriteBlog(){
-        return "back/writeBlog/editor";
-    }
-}

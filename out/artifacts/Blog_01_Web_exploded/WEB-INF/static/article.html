@@ -1,0 +1,622 @@
+<html lang="zh-CN" class=" ">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OneBlog简介 | OneBlog开源博客</title>
+    <meta name="author" content="张亚东(yadong.zhang0415#gmail.com)">
+    <meta name="keywords" content="OneBlog,开源博客,OneBlog开源博客">
+    <meta name="description" content="OneBlog是一款简洁美观、自适应的Java博客系统。使用springboot开发，前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。"
+        id="meta_description">
+    <link rel="canonical" href="http://dblog-web.zhyd.me/article/1">
+    <link href="http://dblog-web.zhyd.me/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery-confirm/3.3.2/jquery-confirm.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+    <link href="http://dblog-web.zhyd.me/css/zhyd.core.css" rel="stylesheet" type="text/css">
+    <link href="http://dblog-web.zhyd.me/css/zhyd.comment.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+    <script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=432243"></script>
+    <style type="text/css">
+        .fancybox-margin {
+            margin-right: 7px;
+        }
+    </style>
+    <link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style1_24.css">
+
+
+
+</head>
+
+<body>
+
+    <nav id="topmenu" class="navbar navbar-default navbar-fixed-top" style="opacity: 0;">
+        <div class="menu-box">
+            <div class="pull-left">
+                <ul class="list-unstyled list-inline">
+                    <li><span id="currentTime">2019年04月24日 12时59分28秒 星期三</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="menu-topmenu-container pull-right">
+                <ul class="list-unstyled list-inline pull-left">
+                    <li><a href="http://dblog-web.zhyd.me/about" class="menu_a" title="" data-toggle="tooltip"
+                            data-placement="bottom" data-original-title="关于博客"><i class="fa fa-info fa-fw"></i>关于</a></li>
+                    <li><a href="http://dblog-web.zhyd.me/links" class="menu_a" title="" data-toggle="tooltip"
+                            data-placement="bottom" data-original-title="友情链接"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav id="mainmenu" class="navbar navbar-default navbar-fixed-top transparent" role="navigation" style="top: 0px; z-index: 1000;">
+        <div class="menu-box">
+            <div class="navbar-header">
+                <span class="pull-right nav-search toggle-search" data-toggle="modal" data-target=".nav-search-box"><i
+                        class="fa fa-search"></i></span>
+                <a type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="navbar-brand logo" href="#"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="pull-left site-desc">
+                    <h1 class="auto-shake"><a href="http://dblog-web.zhyd.me" data-original-title="OneBlog是一款简洁美观、自适应的Java博客系统"
+                            data-toggle="tooltip" data-placement="bottom">OneBlog开源博客</a></h1>
+                    <p class="site-description">OneBlog是一款简洁美观、自适应的Java博客系统</p>
+                </div>
+                <ul class="nav navbar-nav ">
+                    <li>
+                        <a href="/" class="menu_a"><i class="fa fa-home"></i>首页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menu_a" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-css3"></i>前端技术 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/type/4" title="点击查看《1》的文章">1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/type/2" class="menu_a"><i class="fa fa-coffee"></i>后端技术</a></li>
+                    <li><a href="/type/3" class="menu_a"><i class="fa fa-folder-open-o"></i>其他文章</a></li>
+                    <li><a href="/guestbook" class="menu_a"><i class="fa fa-comments-o"></i>留言板</a></li>
+                    <li><span class="pull-right nav-search main-search" data-toggle="modal" data-target=".nav-search-box"><i
+                                class="fa fa-search"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </nav> <img src="http://dblog-web.zhyd.me/img/default_article_cover.jpg" onerror="this.src='http://dblog-web.zhyd.me/img/default_article_cover.jpg'"
+        style="display: none;" id="cover-img">
+    <div class="container custome-container">
+        <nav class="breadcrumb">
+            <a class="crumbs" title="" href="http://dblog-web.zhyd.me" data-toggle="tooltip" data-placement="bottom"
+                data-original-title="返回首页"><i class="fa fa-home"></i>首页</a>
+            <i class="fa fa-angle-right"></i>
+            <a href="http://dblog-web.zhyd.me/type/3" title="" data-toggle="tooltip" data-placement="bottom"
+                data-original-title="点击查看该分类文章">其他文章</a>
+            <i class="fa fa-angle-right"></i>正文
+        </nav>
+        <div class="row article-body">
+            <div class="col-sm-8 blog-main">
+                <div class="blog-body overflow-initial fade-in">
+                    <div class="article-flag">
+                        <span class="article-blockquote article-blockquote-green"></span>
+                        <span class="article-original article-original-green">
+                            <a href="http://dblog-web.zhyd.me/article/1">原创</a>
+                        </span>
+                        <div class="blog-info-meta pull-right">
+                            <ul class="list-unstyled list-inline">
+                                <li><i class="fa fa-clock-o fa-fw"></i>2019-04-24</li>
+                                <li><i class="fa fa-eye fa-fw"></i><a class="pointer" data-original-title="315人浏览了该文章"
+                                        data-toggle="tooltip" data-placement="bottom">浏览 (<num>315</num>)</a></li>
+                                <li><a href="#comment-box" data-original-title="1人评论了该文章" data-toggle="tooltip"
+                                        data-placement="bottom"><i class="fa fa-comments-o fa-fw"></i>评论 (1)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="blog-info overflow-initial">
+                        <h1 class="blog-info-title">
+                            <strong>OneBlog简介</strong>
+                        </h1>
+                        <div class="blog-info-body markdown-body editor-preview-active-side">
+                           
+
+                        </div>
+                        <div class="separateline"><span>正文到此结束</span></div>
+                        <div id="social" style="margin-bottom: 45px;">
+                            <div class="social-main">
+                                <span class="like">
+                                    <a href="javascript:;" data-id="1" title="点赞"><i class="fa fa-thumbs-up"></i>赞 <i
+                                            class="count"> 1</i> </a>
+                                </span>
+                                <div class="shang-p">
+                                    <div class="shang-empty"><span></span></div>
+                                    <span class="shang-s"><a onclick="PaymentUtils.show();" style="cursor:pointer">赏</a>
+                                    </span>
+                                </div>
+                                <div class="share-sd">
+                                    <span class="share-s"><a href="javascript:void(0)" id="share-s" title="分享"><i class="fa fa-share-alt"></i>分享</a></span>
+                                    <div id="share" style="display: none">
+                                        <ul class="bdsharebuttonbox bdshare-button-style1-24" data-bd-bind="1556081950229">
+                                            <li><a title="分享到人人网" class="fa fa-renren" data-cmd="renren" onclick="return false;"
+                                                    href="#"></a></li>
+                                            <li><a title="分享到腾讯微博" class="fa fa-pinterest-square" data-cmd="tqq"
+                                                    onclick="return false;" href="#"></a></li>
+                                            <li><a title="分享到QQ空间" class="fa fa-qq" data-cmd="qzone" onclick="return false;"
+                                                    href="#"></a></li>
+                                            <li><a title="分享到新浪微博" class="fa fa-weibo" data-cmd="tsina" onclick="return false;"
+                                                    href="#"></a></li>
+                                            <li><a title="分享到微信" class="fa fa-weixin" data-cmd="weixin" onclick="return false;"
+                                                    href="#"></a></li>
+                                            <li><a title="更多" class="bds_more fa fa-plus-square" data-cmd="more"
+                                                    onclick="return false;" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="article-footer overflow-initial">所属分类：<a href="http://dblog-web.zhyd.me/type/3"
+                                data-original-title="点击查看其他文章分类的文章" data-toggle="tooltip" data-placement="bottom">其他文章</a></div>
+                    </div>
+                </div>
+                <div class="blog-body article-tag">
+                    <div class="cat">
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>本文标签：</strong>
+                                <a href="http://dblog-web.zhyd.me/tag/5" class="c-label" data-original-title="其他"
+                                    data-toggle="tooltip" data-placement="bottom" target="_blank">其他</a>
+                            </li>
+                            <li>
+                                <strong>版权声明：</strong>
+                                本站原创文章，于2019年04月24日由<a href="http://dblog-web.zhyd.me" target="_blank"
+                                    data-original-title="OneBlog开源博客" data-toggle="tooltip" data-placement="bottom"><strong>张亚东</strong></a>发布，转载请注明出处
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db&amp;utm_source=wylo59db"
+                        target="_blank" rel="external nofollow">
+                        <img src="http://dblog-web.zhyd.me/img/ad/aliyun_sale1000-60.png" alt="阿里云首购8折" class="img-responsive"
+                            style="width: 100%;">
+                    </a>
+                </div>
+
+                <div class="blog-body clear overflow-initial expansion">
+                    <div id="" data-id="120">
+                        <div class="commentList">
+                            <h4 class="bottom-line"><i class="fa fa-comments-o fa-fw icon"></i><strong><em>14</em> 条评论</strong></h4>
+                            <ul class="comment" id='setComm'>
+
+                                
+                                <li>
+                                    <div class="list-comment-empty-w fade-in">
+                                        <div class="empty-prompt-w"><span class="prompt-null-w">还没有评论，快来抢沙发吧！</span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sendCommentToOwn"><i class="fa fa-commenting-o fa-fw icon"></i><strong>@博主</strong>                                                              
+                            <form method=""> <textarea name="comment-area" id="comment-data" style="width:100%;" rows=5 placeholder="说点什么吧,最多200字左右哦^_^"></textarea>
+                            <button class="btn-success" >提交评论</button></form></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 blog-sidebar">
+                <div class="sidebar-module">
+                    <h5 class="custom-title"><i class="fa fa-hand-peace-o fa-fw icon"></i><strong>说给你听</strong><small></small></h5>
+                    <div class="div-quote">
+                        <i class="fa fa-quote-left fa-fw"></i>
+                        <p id="hitokoto" style="margin-left: 15px;">七岁断指，断了他的善，死前断臂，断了他的恶。</p>
+                    </div>
+                </div>
+                <div class="sidebar-module article-module fixed" style="display: block; width: 25.2%; top: 85px;">
+                    <h5 class="custom-title"><i class="fa fa-book fa-fw icon"></i><strong>本文目录</strong><i class="fa fa-close pull-right close-article-menu pointer"></i><small></small></h5>
+                    <div id="article-menu" style="display: block;">
+                        <ul class="list-unstyled">
+                            <li style="padding-left:10px;" class=""><a href="#menu_0" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 写在前面的话</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_1" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 开发环境</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_2" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 模块划分</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_3" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 技术栈</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_4" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 使用方法</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_5" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 更新日志</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_6" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 图片预览</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_7" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 生命不息，折腾不止！ 更多信息，请关注：</a></li>
+                            <li style="padding-left:20px;" class=""><a href="#menu_8" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 有任何问题可以</a></li>
+                            <li style="padding-left:20px;" class="active"><a href="#menu_9" style="display:inline-block;"><i
+                                        class="fa fa-caret-right"></i> 开源协议</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-module">
+                    <h5 class="custom-title"><i class="fa fa-tags fa-fw icon"></i><strong>标签云</strong><small></small></h5>
+                    <a style="font-size: 14.45px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/2" title=""
+                        data-toggle="tooltip" data-placement="bottom" data-original-title="Java">
+                        Java
+                    </a>
+                    <a style="font-size: 10.2px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/3" title=""
+                        data-toggle="tooltip" data-placement="bottom" data-original-title="Spring">
+                        Spring
+                    </a>
+                    <a style="font-size: 10.94px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/4" title=""
+                        data-toggle="tooltip" data-placement="bottom" data-original-title="Spring Boot">
+                        Spring Boot
+                    </a>
+                    <a style="font-size: 14.58px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/5" title=""
+                        data-toggle="tooltip" data-placement="bottom" data-original-title="其他">
+                        其他
+                    </a>
+                </div>
+                
+                <div class="sidebar-module">
+                    <ul class="nav nav-tabs sidebar-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab"
+                                data-toggle="tab"><i class="fa fa-list"></i>近期文章</a></li>
+                        <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i
+                                    class="fa fa-thumbs-o-up"></i>站长推荐</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i
+                                    class="fa fa-hand-peace-o"></i>随机文章</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="profile">
+                            <ol class="list-unstyled">
+                                <li>
+                                    <a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"
+                                        data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">
+                                        <i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"
+                                        data-placement="bottom" data-original-title="OneBlog简介">
+                                        <i class="fa fa-book fa-fw"></i> OneBlog简介
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="home">
+                            <ol class="list-unstyled">
+                                <li class="empty-list">
+                                    <i class="fa fa-bookmark-o fa-fw"></i> 暂无相关文章
+                                </li>
+                            </ol>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <ol class="list-unstyled">
+                                <li>
+                                    <a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"
+                                        data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">
+                                        <i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"
+                                        data-placement="bottom" data-original-title="OneBlog简介">
+                                        <i class="fa fa-book fa-fw"></i> OneBlog简介
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="sidebar-module">
+                    <h5 class="custom-title"><i class="fa fa-info fa-fw icon"></i><strong>网站信息</strong><small></small></h5>
+                    <ul class="ul-default site-info">
+                        <li> <i class="fa fa-file fa-fw"></i> 文章总数：2 篇</li>
+                        <li> <i class="fa fa-tags fa-fw"></i> 标签总数：5 个</li>
+                        <li> <i class="fa fa-folder-open fa-fw"></i> 分类总数：4 个</li>
+                        <li> <i class="fa fa-comments fa-fw"></i> 留言数量：0 条</li>
+                        <li> <i class="fa fa-users fa-fw"></i> 在线人数：<span class="online">6</span>人</li>
+                        <li> <i class="fa fa-calendar fa-fw"></i> 运行天数：478天</li>
+                        <li> <i class="fa fa-pencil-square fa-fw"></i> 最后更新：2019年04月24日00点</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade nav-search-box" tabindex="-1" role="dialog" aria-labelledby="navSearchModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 5px 15px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px;"><span
+                            aria-hidden="true">×</span></button>
+                    <h4><i class="fa fa-search"></i> 搜索文章</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/" method="post" class="form-horizontal searchForm" id="searchForm">
+                        <input type="hidden" name="pageNumber" value="1">
+                        <div class="input-group bottom-line">
+                            <input type="text" class="form-control br-none" name="keywords" value="" required="required"
+                                placeholder="输入搜索内容">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default br-none nav-search-btn pointer" type="submit"><i class="fa fa-search"></i>
+                                    搜索</button>
+                            </span>
+                        </div>
+                        <div class="clear"></div>
+                        <ul class="list-unstyled list-inline search-hot">
+                            <li><strong style="position: relative;top: 2px;color: #999999;">热门搜索：</strong></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-default">Java</span></a></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-primary">Springboot</span></a></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-success">Linux</span></a></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-info">Maven</span></a></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-warning">Bootstrap</span></a></li>
+                            <li><a class="pointer" rel="external nofollow"><span class="label label-danger">阿里云</span></a></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--评论弹框-->
+    <div class="modal fade bs-example-modal-sm" id="comment-detail-modal" tabindex="-1" role="dialog" aria-labelledby="comment-detail-modal-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="comment-detail-modal-label">评论信息框</h4>
+                    <small><i class="fa fa-lightbulb-o fa-fw"></i>可以通过QQ号实时获取昵称和头像</small>
+                </div>
+                <div class="modal-body">
+                    <form id="detail-form" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit"
+                            style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="avatar">
+                        <div class="form-group input-logo">
+                            <input type="text" class="form-control" name="qq" placeholder="选填" value="">
+                            <img class="pull-left hide" alt="">
+                            <span class="fa fa-qq pull-left" aria-hidden="true">QQ</span>
+                        </div>
+                        <div class="form-group input-logo has-feedback">
+                            <input type="text" class="form-control" name="nickname" placeholder="必填" value="匿名"
+                                data-bv-field="nickname"><i class="form-control-feedback" data-bv-icon-for="nickname"
+                                style="display: none; top: 0px;"></i>
+                            <span class="fa fa-user pull-left" aria-hidden="true">昵称</span>
+                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="nickname"
+                                data-bv-result="NOT_VALIDATED" style="display: none;">昵称必填</small></div>
+                        <div class="form-group input-logo has-feedback">
+                            <input type="text" class="form-control" name="email" placeholder="选填" data-bv-field="email"><i
+                                class="form-control-feedback" data-bv-icon-for="email" style="display: none; top: 0px;"></i>
+                            <span class="fa fa-envelope pull-left" aria-hidden="true">邮箱</span>
+                            <small class="help-block" data-bv-validator="emailAddress" data-bv-for="email"
+                                data-bv-result="NOT_VALIDATED" style="display: none;">邮箱地址不正确</small></div>
+                        <div class="form-group input-logo has-feedback">
+                            <input type="text" class="form-control" name="url" placeholder="选填" data-bv-field="url"><i
+                                class="form-control-feedback" data-bv-icon-for="url" style="display: none; top: 0px;"></i>
+                            <span class="fa fa-globe pull-left" aria-hidden="true">网址</span>
+                            <small class="help-block" data-bv-validator="uri" data-bv-for="url" data-bv-result="NOT_VALIDATED"
+                                style="display: none;">URL地址不正确</small></div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default btn-sm" id="detail-form-btn"><i class="fa fa-smile-o"></i>提交评论</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="reward" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">山无棱江水为竭，冬雷震震夏雨雪，才敢请君舍</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="rewardType" align="center">
+                        <ul class="list-unstyle list-inline">
+                            <li style="margin-right: 20px;">
+                                <input type="radio" name="type" id="alipay" onclick="PaymentUtils.change(0)" data-index="0"
+                                    checked="checked"><span style="margin-left: 5px;">支付宝</span>
+                            </li>
+                            <li style="margin-right: 20px;">
+                                <input type="radio" name="type" id="wechat" onclick="PaymentUtils.change(1)" data-index="1"><span
+                                    style="margin-left: 5px;">微信</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="qrcode-container" align="center" style="margin-top: 10px;"></div>
+                    <div style="width: 100%;color: #a3a3a3;font-size: 16px;font-family: 'Microsoft YaHei';text-align: center;">
+                        转账时请备注“<strong>博客赞助</strong>”
+                    </div>
+                </div>
+            </div>
+            <small class="font-bold"></small>
+        </div>
+        <small class="font-bold"> </small>
+    </div>
+    <div id="loading">
+        <div class="filter"></div>
+        <div class="loader">
+            <div class="loading-1"></div>
+            <div class="loading-2">Loading...</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12 col-md-12 col-lg-12">
+                    <p>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li>其他连接：</li>
+                        <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=9f986e9b33b1de953e1ef9a96cdeec990affd0ac7855e00ff103514de2027b60"
+                                target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+                                data-original-title="加入我的QQ交流群：190886500"><i class="fa fa-qq"></i>QQ交流群</a></li>
+                        <li><a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db"
+                                target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+                                data-original-title="史上最全的阿里云优惠券"><i class="fa fa-fire fa-fw"></i>阿里云券</a></li>
+                        <li><a href="https://mi.aliyun.com/shop/19462" target="_blank" title="" data-toggle="tooltip"
+                                data-placement="bottom" rel="external nofollow" data-original-title="闲置域名出售"><i class="fa fa-globe fa-fw fa-spin"></i>域名出售</a></li>
+                        <li><a href="http://dblog-web.zhyd.me/sitemap.html" target="_blank" title="" data-toggle="tooltip"
+                                data-placement="bottom" data-original-title="网站地图"><i class="fa fa-map-o fa-fw"></i>网站地图</a></li>
+                        <li><a href="http://dblog-web.zhyd.me/recommended" title="" data-toggle="tooltip"
+                                data-placement="bottom" data-original-title="站长推荐"><i class="fa fa-thumbs-o-up fa-fw"></i>站长推荐</a></li>
+                        <li><a href="http://dblog-web.zhyd.me/updateLog" title="" data-toggle="tooltip" data-placement="bottom"
+                                data-original-title="更新记录"><i class="fa fa-file-o fa-fw"></i>更新记录</a></li>
+                        <li><a href="http://dblog-web.zhyd.me/archives" title="" data-toggle="tooltip" data-placement="bottom"
+                                data-original-title="归档目录"><i class="fa fa-folder-o fa-fw"></i>归档目录</a></li>
+                        <li><a href="http://dblog-web.zhyd.me/disclaimer" title="" data-toggle="tooltip" data-placement="bottom"
+                                data-original-title="免责声明"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
+                    </ul>
+                    <p></p>
+                    <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db"
+                            target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+                            data-original-title="阿里云-为了无法计算的价值">阿里云</a> &amp; <a href="https://portal.qiniu.com/signup?code=3l8yx2v0f21ci"
+                            target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+                            data-original-title="七牛云-国内领先的企业级云服务商">七牛云</a> · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"
+                            target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+                            data-original-title="查看备案信息">鲁ICP备17054970号-1</a></p>
+                    <p>Copyright © 2019 zhyd.me All Rights Reserved | Powered by <a href="https://gitee.com/yadong.zhang/DBlog"
+                            title="" data-toggle="tooltip" data-placement="right" target="_blank" data-original-title="OneBlog是一款简洁美观、自适应的Java博客系统...">OneBlog</a>
+                    </p>
+                </div>
+                <div class="col col-md-4"></div>
+            </div>
+        </div>
+    </footer>
+    <a class="to-top" title="" data-toggle="tooltip" data-placement="bottom" style="position: fixed; right: 25px; bottom: 50px; cursor: pointer;"
+        data-original-title="点击返回顶部"></a>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/js-xss/0.3.3/xss.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/mustache.js/2.3.0/mustache.min.js"></script>
+   
+
+   
+   <script>
+       var ifClose=[true,true,true];
+       function CommSet(){
+           data={
+                'userName':'梅老板',
+               'comment':'我是梅西,我现在慌得一笔',
+               'createTime':'2019-4-32 8:00',
+                'response':'azhaer',
+                'respUrl':'www.zhbit.com',
+                'userImag':'meixi.jpg',
+                'userUrl':'www.baidu.com' 
+           }
+           var  write=document.getElementById('setComm');
+
+           var tmp0=
+           '<li> <div class="comment-body fade-in" id="comment-572">'
+           +'<div class="cheader">'+
+           '<div class="user-img"><img class="userImage" src="'+data.userImag+'"onerror="this.src="https://static.zhyd.me/static/img/user.png"></div>'                             
+            +'<div class="user-info">'+
+            '<div class="nickname"> <a target="_blank" href="'+data.userUrl+'"rel="external nofollow"><strong>'+data.userName+'</strong></a>'                               
+            +' <i class="icons os-win1" title="Windows 7"></i> <i class="icons browser-chrome title="Chrome 63.0.3239.132"></i></div>'
+            +' <div class="timer"> <i class="fa fa-clock-o fa-fw"></i>'+data.createTime+'</div> </div></div>'
+            +'<div class="content"> <div>'
+            +'<p><a href="'+data.respUrl+'" class="comment-quote">'+'@'+data.response+'</a>'+data.comment+'</p> </div></div>'                         
+            +'<div class="sign"> <a href="javascript:void(0);" class="comment-up" onclick="$.comment.praise(572, this)"><i class="fa fa-thumbs-o-up"></i>赞(<span class="count">0</span>)<i'
+            +'class="sepa"></i></a> <a href="javascript:void(0);" class="comment-down" onclick="$.comment.step(572, this)"><i class="fa fa-thumbs-o-down"></i>踩(<span'
+            +'class="count">0</span>)<i class="sepa"></i></a> <a href="javascript:void(0);" class="comment-reply" onclick="controComm(0)"><i class="fa fa-reply"></i>回复</a>'
+            +' <div class="sendComment" style="display:none"><i class="fa fa-commenting-o fa-fw icon"></i><strong>@'+data.userName+'</strong>'                                                              
+            +'<form method=""> <textarea name="comment-area" id="comment-data" style="width:100%;" rows=5 placeholder="说点什么吧,最多200字左右哦^_^"></textarea>'
+            +'<button class="btn-success" >提交评论</button></form></div>'                                
+             +'        </div> </div> </li>'
+             var tmp1=
+           '<li> <div class="comment-body fade-in" id="comment-572">'
+           +'<div class="cheader">'+
+           '<div class="user-img"><img class="userImage" src="'+data.userImag+'"onerror="this.src="https://static.zhyd.me/static/img/user.png"></div>'                             
+            +'<div class="user-info">'+
+            '<div class="nickname"> <a target="_blank" href="'+data.userUrl+'"rel="external nofollow"><strong>'+data.userName+'</strong></a>'                               
+            +' <i class="icons os-win1" title="Windows 7"></i> <i class="icons browser-chrome title="Chrome 63.0.3239.132"></i></div>'
+            +' <div class="timer"> <i class="fa fa-clock-o fa-fw"></i>'+data.createTime+'</div> </div></div>'
+            +'<div class="content"> <div>'
+            +'<p><a href="'+data.respUrl+'" class="comment-quote">'+'@'+data.response+'</a>'+data.comment+'</p> </div></div>'                         
+            +'<div class="sign"> <a href="javascript:void(0);" class="comment-up" onclick="$.comment.praise(572, this)"><i class="fa fa-thumbs-o-up"></i>赞(<span class="count">0</span>)<i'
+            +'class="sepa"></i></a> <a href="javascript:void(0);" class="comment-down" onclick="$.comment.step(572, this)"><i class="fa fa-thumbs-o-down"></i>踩(<span'
+            +'class="count">0</span>)<i class="sepa"></i></a> <a href="javascript:void(0);" class="comment-reply" onclick="controComm(1)"><i class="fa fa-reply"></i>回复</a>'
+            +' <div class="sendComment" style="display:none"><i class="fa fa-commenting-o fa-fw icon"></i><strong>@'+data.userName+'</strong>'                                                              
+            +'<form method=""> <textarea name="comment-area" id="comment-data" style="width:100%;" rows=5 placeholder="说点什么吧,最多200字左右哦^_^"></textarea>'
+            +'<button class="btn-success" >提交评论</button></form></div>'                                
+             +'        </div> </div> </li>'
+           write.innerHTML=tmp0+tmp1;
+           
+       }
+       CommSet();
+       
+       function controComm(i){
+           var x =document.getElementsByClassName('sendComment');
+           if(ifClose[i]){
+            x[i].style.display="";
+            ifClose[i]=!ifClose[i];
+           }else{
+            x[i].style.display="none";
+            ifClose[i]=!ifClose[i];
+           }
+       }
+
+
+        function createComm(tid){
+        var  comment='<div class="sendComment">'+' <i class="fa fa-commenting-o fa-fw icon"></i><strong>评论</strong>'
+                +'<form method="">'+' <textarea name="comment-area" id="comment-data" style="width:100%;" rows=5 placeholder="说点什么吧,最多200字左右哦^_^"></textarea>'
+                +'<button class="btn-success" >提交评论</button>'+'</form></div>';
+       var area= document.getElementById('com-click'+tid);
+       area.innerHTML=comment;
+       console.log(123);
+    }
+   </script>
+   
+   <script type="text/javascript">
+        var appConfig = {
+            siteName: 'OneBlog开源博客',
+            wwwPath: 'http://dblog-web.zhyd.me',
+            cmsPath: 'http://dblog-admin.zhyd.me',
+            staticPath: 'http://dblog-web.zhyd.me',
+            fileStoragePath: 'http://dblog-file.zhyd.me/',
+            wxPraiseCode: '',
+            zfbPraiseCode: '',
+            anonymous: '1',
+            editorPlaceholder: '说点什么吧',
+            editorAlert: '讲文明、要和谐'
+        };
+    </script>
+   
+    <script type="text/javascript" src="http://dblog-web.zhyd.me/js/zhyd.core.js"></script>
+    <script type="text/javascript" src="http://dblog-web.zhyd.me/js/zhyd.comment.js"></script>
+    <script type="text/javascript" src="http://dblog-web.zhyd.me/js/zhyd.js"></script>
+    <script type="text/javascript">
+        /*
+            百度分享
+            建议改成自己的百度分享js，否则你是没法查看分享的统计结果的。
+         */
+        var bdText = $("#meta_description").attr("content") + " - by zhyd.me";
+        // 如果文章没有封面图，则取默认的图片
+        var coverImg = $("#cover-img").attr("src") || "http://dblog-web.zhyd.me/img/default_article_cover.jpg";
+        window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": bdText, "bdMini": "2", "bdMiniList": ["mshare", "qzone", "tsina", "bdysc", "weixin", "renren", "tqq", "kaixin001", "tqf", "tieba", "douban", "bdhome", "sqq", "youdao", "sdo", "qingbiji", "mail", "isohu", "ty", "fbook", "twi", "linkedin", "h163", "evernotecn", "copy", "print"], "bdPic": coverImg, "bdStyle": "1", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <script src="https://v1.hitokoto.cn/?encode=js&amp;c=d&amp;select=%23hitokoto" defer=""></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script>
+
+
+
+</body>
+
+</html>

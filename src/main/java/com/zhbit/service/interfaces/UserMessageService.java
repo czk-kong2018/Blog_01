@@ -8,4 +8,6 @@ public interface UserMessageService {
     int getUserId(String user_name);
 
     UserMessage getUserMessageByUserName(String user_name);
+
+    UserMessage getUserMessageByUserId(int user_id);
 }

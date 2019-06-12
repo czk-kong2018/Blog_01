@@ -21,4 +21,9 @@ public class UserMessageServiceImpl  implements UserMessageService {
         UserMessage userMessageByUserName = userMessageDao.getUserMessageByUserName(user_name);
         return userMessageByUserName;
     }
+
+    public UserMessage getUserMessageByUserId(int user_id) {
+        UserMessage userMessageByUserId = userMessageDao.getUserMessageByUserId(user_id);
+        return userMessageByUserId;
+    }
 }

@@ -4,14 +4,18 @@ package com.zhbit.controller;
 import com.zhbit.dto.CommentList;
 import com.zhbit.dto.FatherCommentFront;
 import com.zhbit.entity.ChildComment;
+import com.zhbit.enums.CurrencyEnum;
 import com.zhbit.service.interfaces.CommonService;
 import com.zhbit.service.interfaces.UserMessageService;
+import com.zhbit.util.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 @Controller
 
@@ -42,21 +46,19 @@ public class CommentController {
 
 
     @RequestMapping(value = "/commitFather",method = RequestMethod.POST)
-    @ResponseBody
-    public void commitComment(@RequestBody FatherCommentFront commitComm){
+    public void commitComment(@RequestBody FatherCommentFront commitComm, HttpServletResponse response) throws IOException {
         System.out.println(commitComm);
         int res = commonService.commitCommentAndCreateNotify(commitComm);
-
+        JsonUtils.CreateJsonAndSend(response,CurrencyEnum.COMMITSUCCESS.toMap());//提交成功
     }
 
 
 
     @RequestMapping(value = "/commitChild",method = RequestMethod.POST)
-    @ResponseBody
-    public void commitComment(@RequestBody ChildComment childComment){
+    public void commitComment(@RequestBody ChildComment childComment,HttpServletResponse response) throws IOException {
         System.out.println(childComment);
         int res = commonService.commitCommentAndCreateNotifyChild(childComment);
-
+        JsonUtils.CreateJsonAndSend(response,CurrencyEnum.COMMITSUCCESS.toMap());  //提交成功
     }
 
     /**
