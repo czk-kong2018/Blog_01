@@ -1,129 +1,165 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-		<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css" rel="stylesheet">
-		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
-		<title>blog系统-注册</title>
-		<style>
-			.form-group{
-				margin-top: 30px;
-				margin-bottom: 30px;
-			}
-		</style>
-		<!-- 表单验证 -->
-		<script>
-			$(function() {
-				$("#form-test").bootstrapValidator({
-					// 参数设置
-					live: 'enabled', //验证时机，enabled是内容有变化就验证（默认），disabled和submitted是提交再验证
-					excluded: [':disabled', ':hidden', ':not(:visible)'], //排除无需验证的控件，比如被禁用的或者被隐藏的
-					submitButtons: '#btn-submit', //指定提交按钮，如果验证失败则变成disabled
-					message: '通用的验证失败消息', //好像从来没出现过
-					feedbackIcons: { //根据验证结果显示的各种图标
-						valid: 'glyphicon glyphicon-ok',
-						invalid: 'glyphicon glyphicon-remove',
-						validating: 'glyphicon glyphicon-refresh'
-					},
-					// 验证区域
-					fields: {
-						// 用户名对应的name属性
-						email:{
-							validators:{
-								notEmpty:{
-									message:"邮箱不能为空"
-								},
-								emailAddress:{
-									message:"邮箱格式错误"
-								}
-							}
-						},
-						password: {
-							validators: {
-								notEmpty: {
-									message: "密码不能为空"
-								},
-								stringLength: {
-									min: 6,
-									max: 20,
-									message: "输入6-20位的密码"
-								},
-							}
-						},
-						rePassword:{
-							validators:{
-								notEmpty:{
-									message:"密码不能为空"
-								},
-								identical:{//判断与指定控件的输入是否相等
-									field:"password",
-									message:"两次输入的密码不一致"
-								}
-							}
-						}
-					}
-				})
-				
-				$("#send-validation").click(function(){
-					$(this).attr("disabled",true);
-					var code=$("#send-validation");
-					var time=10;
-					time--;
-					var set=setInterval(function(){
-						if(time!=0){
-							code.val("("+time+")秒后可重新获取");
-							time--;
-						}else{
-							code.attr("disabled",false).val("重新获取验证码");
-							clearInterval(set);
-						}
-					},1000);
-				});
-			})
-		</script>
-	</head>
-	<body>
 
-		<div class="container">
-			<div class="row" style="margin-top: 100px;">
-				<div class="col-sm-5 col-sm-offset-3">
-					<h3 align="center">Blog账号注册</h3>
-					<form method="POST" action="register" id="form-test">
-						<div class="form-group">
-							<label for="exampleInputEmail1">邮箱</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" name="email"/>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">密码(6-15个字符)</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">确认密码(6-15个字符)</label>
-							<input type="password" class="form-control" id="exampleInputPassword2" name="rePassword"/>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">验证码</label>
-							<div class="input-group bottom-line">
-								<input type="text" class="form-control br-none" id="validation" />
-								<span class="input-group-btn">
-									<input type="button" class="btn btn-success" id="btn-send" value="获取验证码" />
-								</span>
-							</div>
-						</div>
-						<!-- br-none nav-search-btn pointer -->
-						<div class="form-group">
-							<div class="text-center">
-								<input id="btn-submit" class="btn btn-success" style="width:120px" type="submit" value="注册" />
-							</div>
-						</div>
-					</form>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css" rel="stylesheet">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
+	<title>blog系统-注册</title>
+	<style>
+		.form-group{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	</style>
+	<!-- 表单验证 -->
+	<script>
+        $(function () {
+            $("#form-test").bootstrapValidator({
+                // 参数设置
+                live: 'enabled', //验证时机，enabled是内容有变化就验证（默认），disabled和submitted是提交再验证
+                excluded: [':disabled', ':hidden', ':not(:visible)'], //排除无需验证的控件，比如被禁用的或者被隐藏的
+                submitButtons: '#btn-send', //指定提交按钮，如果验证失败则变成disabled
+                message: '通用的验证失败消息', //好像从来没出现过
+                feedbackIcons: { //根据验证结果显示的各种图标
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                // 验证区域
+                fields: {
+                    // 用户名对应的name属性
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: "邮箱不能为空"
+                            },
+                            emailAddress: {
+                                message: "邮箱格式错误"
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 20,
+                                message: "输入6-20位的密码"
+                            },
+                        }
+                    },
+                    rePassword: {
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            identical: {//判断与指定控件的输入是否相等
+                                field: "password",
+                                message: "两次输入的密码不一致"
+                            }
+                        }
+                    }
+                }
+            })
+
+            $("#btn-send").click(function () {
+                $(this).attr("disabled", true);
+                var code = $("#btn-send");
+                var time = 60;
+                time--;
+                var set = setInterval(function () {
+                    if (time != 0) {
+                        code.val("(" + time + ")秒后可重新发送");
+                        time--;
+                    } else {
+                        code.attr("disabled", false).val("重新发送邮件");
+                        clearInterval(set);
+                    }
+                }, 1000);
+                var email = $("#exampleInputEmail1")[0].value;
+                var pwd = $("#exampleInputPassword1")[0].value;
+                var repwd = $("#exampleInputPassword2")[0].value;
+                if (email != null && pwd != null && repwd != null && pwd == repwd) {
+                    var registerData = {
+                        "pwd": pwd,
+                        "email": email,
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: "http://localhost:8080/register/getUser",
+                        data: JSON.stringify(registerData),
+                        dataType: "text",
+                        async: false,
+                        contentType: "application/json;character:utf-8",
+                        success: function (res) {
+                            if(res=="false"){
+                                alert("该邮箱已注册");
+                                console.log("123");
+                            }
+                        },
+                        errot:function(e){
+                            alert("服务器异常");
+                            console.log("123");
+                        }
+                    });
+                }
+                else if(pwd!=repwd){
+                    alert("两次密码不一致");
+				}
+            });
+        })
+	</script>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-sm-5 col-sm-offset-3">
+			<h3 align="center">Blog账号注册</h3>
+			<form method="POST" action="register" id="form-test">
+				<div class="form-group">
+					<label for="exampleInputEmail1">邮箱</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" name="email" />
 				</div>
-			</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">密码(6-15个字符)</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" name="password" />
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">确认密码(6-15个字符)</label>
+					<input type="password" class="form-control" id="exampleInputPassword2" name="rePassword" />
+				</div>
+				<!--<div class="form-group">-->
+				<!--<label for="exampleInputPassword1">邮箱验证</label>-->
+				<!--<div class="input-group bottom-line">-->
+				<!--&lt;!&ndash;<input type="text" class="form-control br-none" id="validation" />&ndash;&gt;-->
+				<!--<span class="input-group-btn">-->
+				<!--<input type="button" class="btn btn-success" id="btn-send" value="发送邮件" />-->
+				<!--</span>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!-- br-none nav-search-btn pointer -->
+				<div class="form-group">
+					<div class="text-center">
+						<input id="btn-send" class="btn btn-success" style="width:120px" value="邮箱验证" />
+					</div>
+				</div>
+				<div class="explain">
+					<p>邮件验证将会发送一封邮件到您的邮箱中,您只需点击邮箱链接即可完成注册</p>
+				</div>
+			</form>
 		</div>
-	</body>
+	</div>
+</div>
+</body>
+
 </html>

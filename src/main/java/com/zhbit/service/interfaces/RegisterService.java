@@ -4,7 +4,7 @@ import com.zhbit.entity.Login;
 
 public interface RegisterService {
 
-    Login Register(String loginName, String pwd, String email, String code);
+    Login Register( String pwd, String email, String code);
 
     int insertUser(Login login);
 

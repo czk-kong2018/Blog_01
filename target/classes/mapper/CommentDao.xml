@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhbit.dao.CommentDao">
+
+
+    <select id="getComments" resultType="com.zhbit.dto.FatherCommentFront">
+      select a.article_id,b.user_name,b.head_portrait,a.create_time,a.response_user,a.click_like,a.click_unlike,a.content
+      from comment_on as a,user_message as b where a.author_id=b.user_id and a.article_id=#{article_id} order by a.comment_id;
+    </select>
+
+
+    <insert id="commitComment">
+        insert  into comment_on values(NULL,#{comment.article_id},#{comment.create_time},#{comment.content},'0','0',#{comment.response_user}
+        ,#{user_id});
+    </insert>
+
+
+    <select id="getCommentByPage" resultType="com.zhbit.dto.FatherCommentFront">
+     select a.comment_id,a.article_id,b.user_name,b.head_portrait,a.create_time,a.response_user,a.click_like,a.click_unlike,a.content
+     ,(SELECT count(*) from comment_on where article_id=#{article_id})as CommentCount
+      from comment_on as a,user_message as b
+      where a.author_id=b.user_id and a.article_id=#{article_id} order by a.comment_id desc LIMIT #{from},#{count}
+    </select>
+
+</mapper>
