@@ -9,9 +9,9 @@ import java.util.Map;
  * 通用的枚举
  */
 public enum  CurrencyEnum {
-    JSONISNULL("4","json不能为空或者空串"),
-    COMMITSUCCESS("5","提交成功"),
-    COOKIDEFALSIFY("6","伪造cookie");
+    JSONISNULL("40","提交数据不符要求"),
+    COMMITSUCCESS("41","提交成功"),
+    COOKIDEFALSIFY("42","cookie无效");
     private String errorCode;
     private String message;
 

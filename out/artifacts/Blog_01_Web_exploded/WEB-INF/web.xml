@@ -21,6 +21,8 @@
         <url-pattern>/comments/commitChild</url-pattern>
         <url-pattern>/comments/commitFather</url-pattern>
         <url-pattern>/register/getUser</url-pattern>
+        <url-pattern>/article/publish</url-pattern>
+        <!--<url-pattern>/article/uploadImg</url-pattern>-->
     </filter-mapping>
 
     <servlet-mapping>

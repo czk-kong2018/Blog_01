@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum FatherCommentEnum {
-    CONTENTLENGTH("7","内容长度超过限制"),
-    COMMENTNULL("8","文章不存在或已被删除"),
-    CONTENTNULL("9","评论内容不能为空");
+    CONTENTLENGTH("30","内容长度超过限制"),
+    COMMENTNULL("31","文章不存在或已被删除"),
+    CONTENTNULL("32","评论内容不能为空");
 
 
 

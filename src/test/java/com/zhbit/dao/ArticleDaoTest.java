@@ -2,6 +2,7 @@ package com.zhbit.dao;
 
 import com.zhbit.dto.ArticleToPage;
 import com.zhbit.dto.UserArticle;
+import com.zhbit.entity.Article;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,7 @@ public class ArticleDaoTest {
 
     @Test
     public void getALLArticleByUserName() {
-//        List<UserArticle> x = ad.getALLArticleByUserName("梅老板");
-//        for (int i = 0; i < x.size(); i++) {
-//            System.out.println(x.get(i));
-//        }
 
-        String s="java多线程";
-        System.out.println(s.hashCode());
     }
 
     @Test
@@ -36,5 +31,14 @@ public class ArticleDaoTest {
         for (int i = 0; i < articleToPage.size(); i++) {
             System.out.println(articleToPage.get(i));
         }
+    }
+    @Test
+    public void publishArticle(){
+        Article article=new Article();
+        article.setOwn_id(4);
+        article.setUrl("tmp");
+        article.setTitle("dsad");
+        article.setArticle_profile("dsadas");
+        ad.insertArticle(article);
     }
 }

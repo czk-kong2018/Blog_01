@@ -1,15 +1,22 @@
 package com.zhbit.controller;
 
 
-import com.zhbit.dto.ArticleIdAndUserName;
 import com.zhbit.dto.ArticleToPage;
+import com.zhbit.dto.PublishArticle;
 import com.zhbit.entity.Article;
+import com.zhbit.enums.ArticleEnum;
 import com.zhbit.service.interfaces.ArticleService;
+import com.zhbit.service.interfaces.UploadService;
 import com.zhbit.service.interfaces.UserMessageService;
+import com.zhbit.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -24,18 +31,20 @@ public class ArticleController {
     @Autowired
     private UserMessageService userMessageService;
 
+    @Autowired
+    UploadService up;
     /**
      *
      * 根据文章id获取文章
-     * @param articleIdAndUserName
+     * @param article_id
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/getByArticleId",method = RequestMethod.POST)
-    public Article getArticleByArticleId(@RequestBody ArticleIdAndUserName articleIdAndUserName){
-        System.out.println(articleIdAndUserName);
+    public Article getArticleByArticleId(String article_id){
+        System.out.println(article_id);
         Article article = articleService.getArticleByArticleId(
-                Integer.parseInt(articleIdAndUserName.getArticle_id()));
+                Integer.parseInt(article_id));
         return  article;
     }
 
@@ -74,10 +83,25 @@ public class ArticleController {
     /**
      * TODO  提交文章
      */
-    @RequestMapping("/postArticle")
-    public void PostArticle(){
+    @RequestMapping("/publish")
+    @ResponseBody
+    public void PostArticle(@RequestBody PublishArticle publishArticle, HttpServletResponse response) throws IOException {
+        //文章作者的id
+        up.publish(publishArticle,"/usr/source/markdown/");
+        // TODO 返回插入成功
+        JsonUtils.CreateJsonAndSend(response, ArticleEnum.SUCCESSPUBLISH.toMap());
 
     }
 
+    /**
+     * 上传文章所需的图片
+     */
+    @ResponseBody
+    @RequestMapping("/uploadImg")
+    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file, HttpSession httpSession){
+        //从session中获取用户信息
+       // UserMessage user =(UserMessage) httpSession.getAttribute("user");
 
+        return up.uploadImg("1",file,"/usr/source/image/");
+    }
 }

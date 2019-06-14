@@ -4,7 +4,15 @@ import java.util.Date;
 
 public class Article {
     private int article_id;
-
+    private String title;
+    private String article_profile;
+    private String url;
+    private int click_like;
+    private int click_unlike;
+    private int watch;
+    private Date create_time;
+    private int  own_id;
+    private String user_name; //文章拥有者的名字　根据own_id得到
     @Override
     public String toString() {
         return "Article{" +
@@ -29,7 +37,7 @@ public class Article {
         this.user_name = user_name;
     }
 
-    private String user_name; //文章拥有者的名字　根据own_id得到
+
 
     public int getArticle_id() {
         return article_id;
@@ -39,12 +47,6 @@ public class Article {
         this.article_id = article_id;
     }
 
-    private String title;
-    private String article_profile;
-    private String url;
-    private int click_like;
-    private int click_unlike;
-    private int watch;
 
     public String getTitle() {
         return title;
@@ -110,6 +112,5 @@ public class Article {
         this.own_id = own_id;
     }
 
-    private Date create_time;
-    private int  own_id;
+
 }

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum  UserEnum {
-    SESSIONTIMEOUT("23","登录失效,请重新登录");
+    SESSIONTIMEOUT("0","请重新登录");
 
 
     private String errorCode;

@@ -18,4 +18,8 @@ public  interface TagDao {
      */
     Tag[] getUserTags(@Param("user_id") int user_id);
 
+
+
+    void insertArticleTag(@Param("article_id") int article_id,@Param("tag_id") int tag_id);
+
 }
