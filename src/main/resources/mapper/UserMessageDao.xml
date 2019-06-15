@@ -9,4 +9,27 @@
       insert into user_message values(#{user_id} ,#{user_name},#{head_portrait},"")
    </insert>
 
+   <select id="getIndexBlogger" resultMap="IndexBlogger">
+      SELECT a.user_id,user_name,article_num,fans_num,head_portrait
+      FROM
+      (select COUNT(user_id) as article_num,user_name,user_id,head_portrait
+      FROM article,user_message
+      where own_id = user_id
+      GROUP BY user_id) as a,
+      (select COUNT(user_id) as fans_num,user_id
+      FROM focus,user_message
+      where author_id = user_id
+      GROUP BY user_id) as b
+      where a.user_id=b.user_id
+      ORDER BY fans_num DESC
+      LIMIT 0,9
+   </select>
+
+   <resultMap id="IndexBlogger" type="com.zhbit.dto.IndexBlogger">
+      <id column="user_id" property="userId" />
+      <result column="user_name" property="userName" />
+      <result column="article_num" property="articleNum" />
+      <result column="fans_num" property="fansNum" />
+      <result column="head_portrait" property="headPortrait" />
+   </resultMap>
 </mapper>

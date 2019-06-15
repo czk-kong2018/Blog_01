@@ -12,10 +12,4 @@
   select b.tag_id,c.tag_name from article as a,article_tag as b,tag as c
   where own_id=#{user_id} and a.article_id=b.article_id and b.tag_id=c.tag_id GROUP BY tag_id,tag_name
 </select>
-
-
-
-    <insert id="insertArticleTag">
-        insert into article_tag values (#{article_id},#{tag_id});
-    </insert>
 </mapper>

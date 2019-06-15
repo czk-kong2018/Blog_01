@@ -34,20 +34,18 @@
 
     <select id="getArticleToPage" resultMap="ArticleToPage">
 
-
   SELECT c.*,GROUP_CONCAT(f.tag_name SEPARATOR ',') as tag_name,
 	(SELECT count(*) FROM `article` as a ,user_message as b where a.own_id=b.user_id and user_name=#{user_name} ) as articleCount
 	from
  (SELECT a.*,b.head_portrait,user_name FROM `article` as a ,user_message as b where a.own_id=b.user_id and user_name=#{user_name}  ) as c
   LEFT JOIN
  (SELECT d.*,article_id from tag as d ,article_tag as e WHERE d.tag_id=e.tag_id ) as f on
- f.article_id=c.article_id GROUP BY article_id  order by article_id DESC LIMIT #{from},#{count}
-
-
-
+ f.article_id=c.article_id GROUP BY article_id order by article_id DESC LIMIT #{from},#{count}
 
 
     </select>
+
+
 
     <resultMap id="ArticleToPage" type="com.zhbit.dto.ArticleToPage">
         <id column="article_id" property="article_id"></id>
@@ -70,10 +68,70 @@
         </association>
         </association>
 
+
+
     </resultMap>
-    <!-- useGeneratedKeys="true" keyProperty将插入取得的自增主键 映射给类使用-->
-    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="article.article_id">
-        insert into article (title,article_profile,url,own_id)  values (#{article.title},#{article.article_profile},#{article.url},#{article.own_id})
-    </insert>
+
+
+    <select id="getIndexArticle" resultMap="indexArticle2">
+        select article_id,title,article_profile,user_name,head_portrait,watch,create_time,clik_like,tag_name
+        from v_article
+        <where>
+            <if test="tag!='All'">
+                and tag_name=#{tag}
+            </if>
+        </where>
+        limit #{begin},#{end}
+    </select>
+
+    <resultMap id="indexArticle" type="com.zhbit.dto.IndexArticle">
+        <id column="article_id" property="id" />
+        <association property="article" javaType="com.zhbit.entity.Article">
+            <id column="article_id" property="article_id" />
+            <result column="title" property="title" />
+            <result column="article_profile" property="article_profile" />
+            <result column="clik_like" property="click_like" />
+            <result column="watch" property="watch" />
+            <result column="create_time" property="create_time" />
+        </association>
+        <association property="userMessage" javaType="com.zhbit.entity.UserMessage">
+            <id column="user_id" property="user_id" />
+            <result column="user_name" property="user_name" />
+            <result column="head_portrait" property="head_portrait" />
+        </association>
+        <association property="tag" javaType="com.zhbit.entity.Tag">
+            <id column="tag_id" property="tag_id" />
+            <result column="tag_name" property="tag_name" />
+        </association>
+    </resultMap>
+
+    <select id="getIndexArticle2" resultMap="indexArticle2">
+        select article_id,title,article_profile,user_name,head_portrait,watch,create_time,clik_like,tag_name
+        from v_article
+        <where>
+            <if test="tag!='All'">
+                and tag_name=#{tag}
+            </if>
+        </where>
+        limit #{begin},#{end}
+    </select>
+
+    <resultMap id="indexArticle2" type="com.zhbit.dto.IndexArticle2">
+        <id column="article_id" property="article_id" />
+        <result column="title" property="title" />
+        <result column="article_profile" property="article_profile" />
+        <result column="clik_like" property="click_like" />
+        <result column="watch" property="watch" />
+        <result column="create_time" property="create_time" />
+        <association property="userMessage" javaType="com.zhbit.entity.UserMessage">
+            <id column="user_id" property="user_id" />
+            <result column="user_name" property="user_name" />
+            <result column="head_portrait" property="head_portrait" />
+        </association>
+        <collection property="tag" ofType="com.zhbit.entity.Tag">
+            <id column="tag_id" property="tag_id" />
+            <result column="tag_name" property="tag_name" />
+        </collection>
+    </resultMap>
 
 </mapper>

@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhbit.dao.RegisterDao">
 
-    <insert id="insertUser" parameterType="com.zhbit.entity.Login"  useGeneratedKeys="true" keyProperty="login.login_id">
-        insert into login values (default ,#{login.pwd},#{login.email})
+    <insert id="insertUser" parameterType="com.zhbit.entity.Login">
+        insert into login values (default ,#{login.login_name},#{login.pwd},#{login.email})
     </insert>
 
 
