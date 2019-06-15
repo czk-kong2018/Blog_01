@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://localhost:8081/source/css/jquery-labelauty.css">
+		<link rel="stylesheet" href="http://localhost:8081/source/css/index.css" />
+		<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css" rel="stylesheet">
+		<title>OneBlog-首页</title>
+	</head>
+	<body>
+
+
+		<!-- 顶部导航栏 -->
+		<nav class="navbar navbar-default" role="navigation" style="background-color: white;opacity: 0.9;">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">OneBlog</a>
+				</div>
+				<div class="pull-right">
+					<ul class="nav navbar-nav">
+						<li><a href="#"><i class="fa fa-home"></i>首页</a></li>
+						<li class="dropdrow"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-user"></i>登陆</a>
+							<!-- 	<ul class="dropdown-menu">
+                            <li><a href="../管理页面/manage.html" target="_blank">个人信息</a></li>
+                            <li><a href="../管理页面/manage.html" target="_blank">文章管理</a></li>
+                            <li><a href="../管理页面/manage.html" target="_blank">我的关注</a></li>
+                            <li><a href="#" target="_blank">退出</a></li>
+                        </ul> -->
+						</li>
+						<li><a href="#"><i class="fa fa-pencil"></i>写博客</a></li>
+						<li><a href="../管理页面/manage.html" target="_blank"><i class="fa fa-bell"></i>通知</a></li>
+						<li><a href="#"><i class="fa fa-search"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="container">
+
+			<!-- 标签+轮播+公告 -->
+			<div id="header" class="row">
+				<!-- 分类导航 -->
+				<div id="tag-nav" class="col-sm-3">
+					<ul class="list-unstyled">
+						<li class="row" style="line-height:50px;font-size:20px;text-align: center;">分类</li>
+						<li class="row">
+							<span class="col-sm-6 tag" data-name="操作系统"><i class="iconfont">&#xe63f;</i>操作系统</span>
+                            <span class="col-sm-6 tag" data-name="计算机网络"><i class="iconfont">&#xe63f;</i>计算机网络</span>
+						</li>
+						<li class="row">
+                            <span class="col-sm-6 tag" data-name="编程语言"><i class="iconfont">&#xe63f;</i>编程语言</span>
+                            <span class="col-sm-6 tag" data-name="架构"><i class="iconfont">&#xe63f;</i>架构</span>
+						</li>
+						<li class="row">
+                            <span class="col-sm-6 tag" data-name="前端"><i class="iconfont">&#xe63f;</i>前端</span>
+                            <span class="col-sm-6 tag" data-name="后端"><i class="iconfont">&#xe63f;</i>后端</span>
+						</li>
+						<li class="row">
+                            <span class="col-sm-6 tag" data-name="移动开发"><i class="iconfont">&#xe63f;</i>移动开发</span>
+                            <span class="col-sm-6 tag" data-name="游戏开发"><i class="iconfont">&#xe63f;</i>游戏开发</span>
+						</li>
+                        <li class="row">
+                            <span class="col-sm-6 tag" data-name="大数据"><i class="iconfont">&#xe63f;</i>大数据</span>
+                            <span class="col-sm-6 tag" data-name="数据库"><i class="iconfont">&#xe63f;</i>数据库</span>
+                        </li>
+						<li class="row">
+							<span class="col-sm-6 tag" data-name="其他"><i class="iconfont">&#xe63f;</i>其他</span>
+						</li>
+					</ul>
+				</div><!-- 分类导航 -->
+				<!-- 轮播图 -->
+				<div class="col-sm-6" style="background-color:#444;">
+					<div id="myCarousel" class="carousel slide">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<!-- 轮播（Carousel）项目 -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="http://localhost:8081/source/imageLocal/carousel-first.png" alt="First slide" />
+							</div>
+							<div class="item">
+								<img src="http://localhost:8081/source/imageLocal/carousel-first.png" alt="Second slide" />
+							</div>
+							<div class="item">
+								<img src="http://localhost:8081/source/imageLocal/carousel-first.png" alt="Third slide" />
+							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div><!-- 轮播图 -->
+				<!-- 网站公告 -->
+				<div id="web-notice" class="col-sm-3">
+					<ul class="list-unstyled">
+						<li class="row" style="line-height:50px;font-size:20px;text-align: center;">公告</li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+						<li><a href="#"><span>端午节快乐</span></a></li>
+					</ul>
+				</div><!-- 网站公告 -->
+			</div>
+
+			<!-- 主功能区 -->
+			<div id="main" class="row">
+				<!-- 文章展示 -->
+				<div class="col-sm-9">
+					<h4><i class="iconfont" style="color: #009a61;">&#xe62f;</i>最新发布</h4>
+					<ul id="article-list" class="list-unstyled">
+					</ul>
+					<a href="#" class="text-center" id="load-more" style="display:block;padding:5px 0;background-color:#cdd8e3;"><i
+						 class="fa fa-fw fa fa-angle-double-down"></i>加载更多</a>
+				</div><!-- 文章展示 -->
+				<!-- 主功能区右侧-博主推荐 -->
+				<div class="col-sm-3" id="blogger-recommend">
+					<h4><i class="iconfont" style="color: #009a61;">&#xe62f;</i>博主推荐</h4>
+				</div>
+			</div><!-- 主功能区 -->
+		</div>
+
+		<footer class="text-center" style="background-color: white;margin-top:30px;">
+			<div class="container">
+				<div class="row">
+					<div class="col col-xs-12 col-md-12 col-lg-12">
+						<p> </p>
+						<ul class="list-unstyled list-inline">
+							<li>其他连接：</li>
+							<li><a href="http://shang.qq.com/wpa/qunwpa?idkey=9f986e9b33b1de953e1ef9a96cdeec990affd0ac7855e00ff103514de2027b60"
+								 target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+								 data-original-title="加入我的QQ交流群：190886500"><i class="fa fa-qq"></i>QQ交流群</a></li>
+							<li><a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank"
+								 title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow" data-original-title="史上最全的阿里云优惠券"><i
+									 class="fa fa-fire fa-fw"></i>阿里云券</a></li>
+							<li><a href="https://mi.aliyun.com/shop/19462" target="_blank" title="" data-toggle="tooltip" data-placement="bottom"
+								 rel="external nofollow" data-original-title="闲置域名出售"><i class="fa fa-globe fa-fw fa-spin"></i>域名出售</a></li>
+							<li><a href="http://dblog-web.zhyd.me/sitemap.html" target="_blank" title="" data-toggle="tooltip"
+								 data-placement="bottom" data-original-title="网站地图"><i class="fa fa-map-o fa-fw"></i>网站地图</a></li>
+							<li><a href="http://dblog-web.zhyd.me/recommended" title="" data-toggle="tooltip" data-placement="bottom"
+								 data-original-title="站长推荐"><i class="fa fa-thumbs-o-up fa-fw"></i>站长推荐</a></li>
+							<li><a href="http://dblog-web.zhyd.me/updateLog" title="" data-toggle="tooltip" data-placement="bottom"
+								 data-original-title="更新记录"><i class="fa fa-file-o fa-fw"></i>更新记录</a></li>
+							<li><a href="http://dblog-web.zhyd.me/archives" title="" data-toggle="tooltip" data-placement="bottom"
+								 data-original-title="归档目录"><i class="fa fa-folder-o fa-fw"></i>归档目录</a></li>
+							<li><a href="http://dblog-web.zhyd.me/disclaimer" title="" data-toggle="tooltip" data-placement="bottom"
+								 data-original-title="免责声明"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
+						</ul>
+						<p></p>
+						<p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank"
+							 title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow" data-original-title="阿里云-为了无法计算的价值">阿里云</a>
+							&amp; <a href="https://portal.qiniu.com/signup?code=3l8yx2v0f21ci" target="_blank" title="" data-toggle="tooltip"
+							 data-placement="bottom" rel="external nofollow" data-original-title="七牛云-国内领先的企业级云服务商">七牛云</a> · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"
+							 target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
+							 data-original-title="查看备案信息">鲁ICP备17054970号-1</a></p>
+						<p>Copyright © 2019 zhyd.me All Rights Reserved | Powered by <a href="https://gitee.com/yadong.zhang/DBlog" title=""
+							 data-toggle="tooltip" data-placement="right" target="_blank" data-original-title="OneBlog是一款简洁美观、自适应的Java博客系统...">OneBlog</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- 登陆模态框 -->
+		<div class="modal" id="login-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myModalLabel">
+							登录系统
+						</h4>
+					</div>
+					<div class="modal-body" style="padding:30px 40px">
+						<form id="form-test" autocomplete="off" action="login.html" method="post">
+							<!-- 输入框必须放在“form-group”中保持才能使用验证插件 -->
+							<div class="form-group">
+								<!-- 使用“contorl-label”向右对其输入框 -->
+								<label>邮箱(已注册的邮箱)</label>
+								<div class="">
+									<!-- 使用“form-control”改变输入框样式 -->
+									<input class="form-control" type="text" name="email" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label>密码(6-20位密码)</label>
+								<div class="">
+									<input class="form-control" type="password" name="password" />
+								</div>
+							</div>
+							<div style="margin-bottom:30px;">
+								<a href="register.html" class="pull-left">没账号？去注册</a>
+								<a href="#" class="pull-right">忘记密码</a>
+								<div style="clear:both"></div>
+							</div>
+							<!-- 通过offset属性进行偏移 -->
+							<div class="text-center">
+								<input class="btn btn-success" style="width:30%" type="submit" id="btn-submit" value="登陆" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
+<script src="http://localhost:8081/source/js/index.js"></script>
+<script src="http://localhost:8081/source/js/jquery-labelauty.js"></script>
