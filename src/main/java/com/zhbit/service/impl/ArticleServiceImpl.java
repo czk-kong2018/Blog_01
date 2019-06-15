@@ -16,10 +16,14 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleDao articleDao;
 
-
+    //根据用户名获取用户所有文章 临时使用  因为有分页代替了
     public List<UserArticle> getALLArticleByUserName(String user_name) {
         List<UserArticle> list = articleDao.getALLArticleByUserName(user_name);
         return list;
+    }
+
+    public List<Article> getALLArticleByUserId(int user_id) {
+        return  articleDao.getALLArticleByUserId(user_id);
     }
 
     /**

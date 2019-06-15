@@ -28,7 +28,7 @@
     <!--3:配置html  显示ViewResolver-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
-        <property name="prefix" value="/static/html/"/>
+        <property name="prefix" value="/WEB-INF/static/html/"/>
         <property name="suffix" value=".html"/>
     </bean>
 
@@ -38,12 +38,16 @@
             <!-- 拦截登录的请求 -->
             <!--拦截后台管理页面-->
             <mvc:mapping path="/back/Manager"/>
-            <!--TODO 拦截编写博客页面-->
-            <!--<mvc:mapping path="/back/Manager"/>-->
+
+            <!--拦截编写博客页面 本来确实应该写到这 由于特殊原因分离不出js css 整个放在项目里 拦截器无法拦截页面 只能放到过滤器中 -->
+            <!--<mvc:mapping path="/static/html/back/writeBlog/editor.html"/>-->
+
             <!--拦截提交评论请求-->
             <mvc:mapping path="/comments/commitFather"/>
             <!--拦截提交子评论请求-->
             <mvc:mapping path="/comments/commitChild"/>
+            <!--拦截上传图片的请求-->
+            <mvc:mapping path="/article/uploadImg"/>
             <!-- 排除对指定路径的拦截 -->
             <!--<mvc:exclude-mapping path="/system/login.do"/>-->
             <bean class="com.zhbit.interceptors.UserInterceptor"/>
@@ -60,11 +64,12 @@
     <!--</bean>-->
 
 
-    <!-- 多部分文件上传 -->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="104857600" />
-        <property name="maxInMemorySize" value="4096" />
-        <property name="defaultEncoding" value="UTF-8"></property>
+    <!-- 定义文件上传解析器 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="2097152"></property>
+        <property name="maxInMemorySize" value="102400"></property>
+        <property name="resolveLazily" value="true" />
     </bean>
 
     <!--扫描web相关-->

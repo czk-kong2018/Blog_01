@@ -31,7 +31,7 @@ public class HtmlPageController {
      * @return
      */
     @RequestMapping("/{user_name}")
-    public String getALLArticleByUserName(@PathVariable("user_name") String user_name){
+    public String getUserBlog(@PathVariable("user_name") String user_name){
         UserMessage user = userMessageService.getUserMessageByUserName(user_name);
         return user!=null? "front/userBlog" : "front/404";
     }
@@ -56,7 +56,7 @@ public class HtmlPageController {
          */
         @RequestMapping("/back/Editor")
         public String getWriteBlog () {
-            return "back/writeBlog/editor";
+            return "writeBlog/editor";
         }
 
         @RequestMapping("/page/error")

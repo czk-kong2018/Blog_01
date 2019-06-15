@@ -6,13 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum  RegisterEnum {
-    PWDLENGTH("16","密码长度不正确"),
-    EMAILERROR("17","邮箱格式不正确"),
-    SENDSUCCESS("18","发送邮件成功"),
-    ISNULL("19","邮箱或者密码为空"),
-    EMAILEXIST("20","该邮箱已注册"),
-    URLTIMEOUT("21","连接已失效"),
-    REGISTERSUCCESS("22","注册成功");
+    PWDLENGTH("11","密码长度不正确"),
+    EMAILERROR("12","邮箱格式不正确"),
+    SENDSUCCESS("13","发送邮件成功"),
+    ISNULL("14","邮箱或者密码为空"),
+    EMAILEXIST("15","该邮箱已注册"),
+    URLTIMEOUT("16","连接已失效"),
+    REGISTERSUCCESS("17","注册成功");
     private String errorCode;
     private String message;
 

@@ -6,10 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum  ChildCommentEnum {
-        CONTENTLENGTH("0","内容长度超过限制"),
-        COMMENTNULL("1","文章不存在或已被删除"),
-        FATHERNULL("2","父评论不存在或者已被删除"),
-        CONTENTNULL("3","评论内容不能为空");
+        CONTENTLENGTH("50","内容长度超过限制"),
+        COMMENTNULL("51","文章不存在或已被删除"),
+        FATHERNULL("52","父评论不存在或者已被删除"),
+        CONTENTNULL("53","评论内容不能为空");
 
 
 

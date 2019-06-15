@@ -292,12 +292,8 @@ function page_ctrl(data_obj) {
 
 
 
-
-
-
 window.onload = function(){
 
- 
  $.ajax({
      type: "get",
      url: appConfig.BasePath+"/tags/"+appConfig.user_id+'/get',
@@ -317,8 +313,7 @@ window.onload = function(){
      }
 
      
- });
-    
+ }); 
  $('#articleCount').html(appConfig.articleCount);
  $('#tagCount').html(appConfig.tagCount);
  $('#lastUpdateTime').html(appConfig.lastUpdateTime);   

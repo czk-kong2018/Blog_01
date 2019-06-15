@@ -45,4 +45,32 @@ public class JsonUtils {
         out.flush();
     }
 
+
+    /**
+     *  文章操作所需的工具类
+     * @param success
+     * @param url
+     * @param mes
+     * @return
+     */
+
+    public static String getImgUrl(boolean success,String url,String mes){
+        int s=1;
+        String message="upload_success";
+        if(!success){
+            s=0;
+            message=mes;
+            url="";
+        }
+        String json="{\"success\": "+s+", 	\"message\": \""+message+"\", 	\"url\": \""+url+"\" }";
+        return json;
+    }
+
+    public static String getArticleMD(String header,String main){
+        JSONObject json=new JSONObject();
+        json.put("header", header);
+        json.put("main", main);
+        return json.toString();
+    }
+
 }

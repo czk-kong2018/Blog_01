@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>管理页面</title>
+		<link rel="stylesheet" href="http://localhost:8081/source/css/back/style.css">
+		<link href="http://localhost:8081/source/css/back/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://localhost:8081/source/css/back/checkboxes.min.css" />
+	</head>
+	<body>
+		<div class="col-sm-3">
+			<div id="wrapper">
+				<!-- Sidebar -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+					<ul class="nav sidebar-nav">
+						<li class="sidebar-brand" style="color: white;">
+							欢迎您，<span id="userName">梅西</span>
+						</li>
+						<li>
+							<a href="#" data-toggle="collapse" data-target="#sub-persondata"><i class="fa fa-fw fa-home"></i>个人资料<b class="caret"></b></a>
+							<ul class="collapse" id="sub-persondata" style="margin-left: 10px;">
+								<li><a href="#" id="basic-info">基本信息</a></li>
+								<li><a href="#" id="account-secure">账号安全</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" data-toggle="collapse" data-target="#sub-articleManage"><i class="fa fa-fw fa-folder"></i>文章管理<b
+								 class="caret"></b></a>
+							<ul class="collapse" id="sub-articleManage" style="margin-left: 10px;">
+								<li><a href="#" id="original-article">原创文章</a></li>
+								<li><a href="#">转载文章</a></li>
+								<li><a href="#">草稿箱</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" data-toggle="collapse" data-target="#sub-info"><i class="fa fa-fw fa fa-bell" aria-hidden="true"></i>通知管理<b
+								 class="caret"></b></a>
+							<ul class="collapse" id="sub-info" style="margin-left: 10px;">
+								<li><a href="#" id="system-notify">系统通知</a></li>
+								<li><a href="#" id="article-push">文章推送</a></li>
+								<li><a href="#" id="comment-notify">评论通知</a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="my-focus" href="#"><i class="fa fa-fw fa fa-heart" aria-hidden="true"></i>我的关注</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /#sidebar-wrapper -->
+
+				<!-- Page Content -->
+				<div id="page-content-wrapper">
+					<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+						<span class="hamb-top"></span>
+						<span class="hamb-middle"></span>
+						<span class="hamb-bottom"></span>
+					</button>
+				</div>
+				<!-- /#page-content-wrapper -->
+			</div>
+			<!-- /#wrapper -->
+		</div>
+
+
+		<!-- 主要功能区 -->
+		<div class="col-sm-8">
+			<div id="content" style="margin-top: 100px;">
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script src="http://localhost:8081/source/js/login.js"></script>
+<script src="http://localhost:8081/source/js/back/manage.js"></script>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var trigger = $('.hamburger'),
+			overlay = $('.overlay'),
+			isClosed = false;
+
+		trigger.click(function() {
+			hamburger_cross();
+		});
+
+		function hamburger_cross() {
+
+			if (isClosed == true) {
+				overlay.hide();
+				trigger.removeClass('is-open');
+				trigger.addClass('is-closed');
+				isClosed = false;
+			} else {
+				overlay.show();
+				trigger.removeClass('is-closed');
+				trigger.addClass('is-open');
+				isClosed = true;
+			}
+		}
+
+		$('[data-toggle="offcanvas"]').click(function() {
+			$('#wrapper').toggleClass('toggled');
+		});
+	});
+</script>

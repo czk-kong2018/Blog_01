@@ -49,8 +49,6 @@
 
     </select>
 
-
-
     <resultMap id="ArticleToPage" type="com.zhbit.dto.ArticleToPage">
         <id column="article_id" property="article_id"></id>
         <result column="articleCount" property="articleCount"></result>
@@ -72,7 +70,10 @@
         </association>
         </association>
 
-
-
     </resultMap>
+    <!-- useGeneratedKeys="true" keyProperty将插入取得的自增主键 映射给类使用-->
+    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="article.article_id">
+        insert into article (title,article_profile,url,own_id)  values (#{article.title},#{article.article_profile},#{article.url},#{article.own_id})
+    </insert>
+
 </mapper>
