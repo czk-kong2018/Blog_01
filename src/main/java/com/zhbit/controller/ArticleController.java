@@ -94,14 +94,25 @@ public class ArticleController {
     }
 
     /**
-     * 上传文章所需的图片
+     * 上传文章所需的图片,需要先将用户id传过来
      */
     @ResponseBody
     @RequestMapping("/uploadImg")
-    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file, HttpSession httpSession){
+    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file, String user_id){
         //从session中获取用户信息
        // UserMessage user =(UserMessage) httpSession.getAttribute("user");
 
-        return up.uploadImg("1",file,"/usr/source/image/");
+        return up.uploadImg(user_id,file,"/usr/source/image/");
     }
+    /**
+     * 根据用户名获取用户所有文章  临时使用在后台管理文章处  未分页
+     */
+    @ResponseBody
+    @RequestMapping("/getAllArticlesById")
+    public List<Article> getAllArticleByUserId(int user_id){
+        List<Article> list = articleService.getALLArticleByUserId(user_id);
+        return list;
+    }
+
+
 }

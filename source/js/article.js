@@ -1,34 +1,32 @@
-  var appConfig = {
-            siteName: 'OneBlog开源博客',
-            wwwPath: 'http://dblog-web.zhyd.me',
-            cmsPath: 'http://dblog-admin.zhyd.me',
-            staticPath: 'http://dblog-web.zhyd.me',
-            fileStoragePath: 'http://dblog-file.zhyd.me/',
-            wxPraiseCode: '',
-            zfbPraiseCode: '',
-            anonymous: '1',
-            editorPlaceholder: '说点什么吧',
-            editorAlert: '讲文明、要和谐',
+var appConfig = {
+    siteName: 'OneBlog开源博客',
+    wwwPath: 'http://dblog-web.zhyd.me',
+    cmsPath: 'http://dblog-admin.zhyd.me',
+    staticPath: 'http://dblog-web.zhyd.me',
+    fileStoragePath: 'http://dblog-file.zhyd.me/',
+    wxPraiseCode: '',
+    zfbPraiseCode: '',
+    anonymous: '1',
+    editorPlaceholder: '说点什么吧',
+    editorAlert: '讲文明、要和谐',
 
-            BasePath: 'http://localhost:8080',
-            staticBase:'http://localhost:8081'
+    BasePath: 'http://localhost:8080',
+    staticBase: 'http://localhost:8081'
 
-        };
+};
+
+var login_user  //登录的人
 var commentSave; //保存后台发来的评论结果
-
 var commNum = 0;      //评论的总数;
 var article_data;
-
-var loginName = $("#login_name").text();  //当前账号登录人
-
 var total_item;//数据条目总数,默认为0,组件将不加载
 var OnePageCount = 10;//每页显示条数,默认为10条
 var current_page = 1;//当前页,默认为1
 var total_page;
 
 /**
- * 显示文章细节
- */
+* 显示文章细节
+*/
 
 var url = location.href;
 //var url = appConfig.BasePath + "/article/2/梅老板";
@@ -37,21 +35,20 @@ arr = new Array();
 arr = url.split('/');
 var user_name = "";
 var article_id = arr[4];
-var tmpData = {
-    "article_id": arr[4]
-}
+
 
 
 /**
- * 获取文章
- */
+* 获取文章
+*/
 
 $.ajax({
-    type: "post",
-    data: JSON.stringify(tmpData),
+   type: "post",
+    data: {
+        "article_id":article_id
+    },
     url: appConfig.BasePath + "/article/getByArticleId",
-    contentType: 'application/json;charset=UTF-8',
-    dataType: "json",
+    
     success: function (result) {
         article_data = eval(result);
         user_name = article_data.user_name;
@@ -65,7 +62,7 @@ $.ajax({
                 $('.blog-info-title').html('<strong>' + article_data.title + '</strong>');
             },
             error: function (e) {
-                
+
             }
         });
 
@@ -74,9 +71,9 @@ $.ajax({
 
 });
 /**
- *  转化markdown文件
- *  
- */
+*  转化markdown文件
+*  
+*/
 function test() {
     document.getElementById("write").innerHTML = res;
 }
@@ -90,9 +87,9 @@ function compile(str) {
 
 
 /**
-    * 后台传来的时间转日期
-    * @param {} now 
-    */
+* 后台传来的时间转日期
+* @param {} now 
+*/
 function formatDate(now) {
     var year = now.getFullYear();
     var month = now.getMonth() + 1;
@@ -105,8 +102,8 @@ function formatDate(now) {
 
 
 /**
- * 设置评论
- */
+* 设置评论
+*/
 function CommSet(data, obj_box) {
     $("#none").remove(); //清掉那个  暂时没人评论的一段
     //清空上一次评论
@@ -176,11 +173,11 @@ function goToComment() {
     console.log('123');
 }
 /**
- * 控制评论的窗口
- * @param {*} father 第几条父评论   若是父评论  不使用子评论参数 默认为-1
- * @param {*} child  第几条子评论
- * @param {*} ifChild 是否是子评论
- */
+* 控制评论的窗口
+* @param {*} father 第几条父评论   若是父评论  不使用子评论参数 默认为-1
+* @param {*} child  第几条子评论
+* @param {*} ifChild 是否是子评论
+*/
 
 var lastBox;
 var lastFather = -1;
@@ -243,13 +240,18 @@ function getCommentBox(father, child, ifChild) {
 
 
 /**
- * 只是发送评论给博主,盖父评论楼层
- */
+* 只是发送评论给博主,盖父评论楼层
+*/
 function setSendToOwn() {
-    var userName = $("#login_name").text();
+    var userName = getCookie("user_name") ;//$("#login_user").text()
     var resp = user_name   //评论＠的人　即博主
     var create_time = new Date();
     var content = $("#commentToOwn")[0].value;
+    if(userName==null||userName==""){
+	alert("cookie失效 请重新登录");
+	 location.reload();
+	return;
+    }
     var commentData = {
         "article_id": article_id,         //文章id
         "user_name": userName,
@@ -257,7 +259,7 @@ function setSendToOwn() {
         "create_time": create_time,
         "content": content,
     }
-
+    
     $.ajax({
         type: "post",
         url: appConfig.BasePath + "/comments/commitFather",
@@ -265,8 +267,15 @@ function setSendToOwn() {
         dataType: "text",
         async: false,
         contentType: "application/json;character:utf-8",
-        success: function () {
-            alert("提交成功");
+        success: function (e) {
+            var result = JSON.parse(e);
+            for (var key in result) {
+                alert(result[key]);
+                if (key == "0") {
+		    clearCookie();
+                    location.reload();
+                } //登录失效刷新
+            }
             getComm(getObj_box); //局部刷新评论
             $("#commentToOwn")[0].value = "";//清空评论内容
             if (current_page == 1) {
@@ -281,24 +290,28 @@ function setSendToOwn() {
 }
 
 /**
- * 提交评论, 盖子评论楼层
- * Totaldata是从一开始获取评论时保留下来的data信息,保存在全局变量中方便使用,不用取标签中取
- * @param father 回复属于第几条父评论
- */
+* 提交评论, 盖子评论楼层
+* Totaldata是从一开始获取评论时保留下来的data信息,保存在全局变量中方便使用,不用取标签中取
+* @param father 回复属于第几条父评论
+*/
 function sendComm(father) {
     var comment_id = commentSave[father].comment_id;
     console.log($($(".commentContent")));
     var content = $($(".commentContent"))[0].value;
     var response_user = $($(".responsePerson")).text();
 
-    var author_name = $("#login_name").text();//发评论的人,根据上方登录后显示的用户名,获取它即可 
+    var userName = getCookie("user_name") ;//$("#login_user").text()  
     response_user = response_user.substring(1, response_user.length);   //要去先去掉头再撒上孜然   去掉@
-
+    if(userName==null||userName==""){
+	alert("请先重新登录");
+	 location.reload();
+	return;
+    }
     var commentData = {
         "article_id": article_id,
         "content": content,
         "response_user": response_user,
-        "author_name": author_name,
+        "author_name":userName,
         "comment_id": comment_id
     }
     //TODO 编写检验的代码 
@@ -308,8 +321,15 @@ function sendComm(father) {
         data: JSON.stringify(commentData),
         dataType: "text",
         contentType: "application/json;character:utf-8",
-        success: function () {
-            alert("提交成功");
+        success: function (e) {
+            var result = JSON.parse(e);
+            for (var key in result) {
+                alert(result[key]);
+                if (key == "0") {
+ 		    clearCookie();
+                    location.reload();
+                } //登录失效刷新
+            }
             getComm(getObj_box);
         },
 
@@ -323,9 +343,9 @@ function sendComm(father) {
 }
 
 /**
- * 获取评论
- * @param {*} data_obj 
- */
+* 获取评论
+* @param {*} data_obj 
+*/
 function getComm(obj_box) {
 
     var data = {
@@ -370,9 +390,9 @@ function getComm(obj_box) {
     });
 }
 /**
- * 
- * 文章展示及其评论分页模块
- */
+* 
+* 文章展示及其评论分页模块
+*/
 var getObj_box;
 function page_ctrl(data_obj) {
 
@@ -479,6 +499,8 @@ function page_ctrl(data_obj) {
         }
     });
 }
+
+
 
 
 

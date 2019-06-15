@@ -34,11 +34,9 @@ public class ArticleDaoTest {
     }
     @Test
     public void publishArticle(){
-        Article article=new Article();
-        article.setOwn_id(4);
-        article.setUrl("tmp");
-        article.setTitle("dsad");
-        article.setArticle_profile("dsadas");
-        ad.insertArticle(article);
+        List<ArticleToPage> a = ad.getArticleToPage(1, 10, "梅老板");
+        for (ArticleToPage userArticle:a) {
+            System.out.println(userArticle);
+        }
     }
 }
