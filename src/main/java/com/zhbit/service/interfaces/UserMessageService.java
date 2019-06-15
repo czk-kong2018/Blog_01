@@ -1,7 +1,10 @@
 package com.zhbit.service.interfaces;
 
+import com.zhbit.dto.IndexBlogger;
 import com.zhbit.entity.UserMessage;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMessageService {
 
@@ -9,5 +12,5 @@ public interface UserMessageService {
 
     UserMessage getUserMessageByUserName(String user_name);
 
-    UserMessage getUserMessageByUserId(int user_id);
+    List<IndexBlogger> getIndexBlogger();
 }

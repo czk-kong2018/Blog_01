@@ -30,8 +30,8 @@ public class TagController {
      */
     @ResponseBody
     @RequestMapping("/{user_id}/get")
-    public Tag[] getUserTags(@PathVariable("user_id") int user_id){
-        Tag[] userTags = tagService.getUserTags(user_id);
+    public Tag[] getUserTags(@PathVariable("user_id") String user_id){
+        Tag[] userTags = tagService.getUserTags(Integer.parseInt(user_id));
         return userTags;
     }
 

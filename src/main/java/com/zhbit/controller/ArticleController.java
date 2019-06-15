@@ -1,22 +1,17 @@
 package com.zhbit.controller;
 
 
+import com.zhbit.dto.ArticleIdAndUserName;
 import com.zhbit.dto.ArticleToPage;
-import com.zhbit.dto.PublishArticle;
+import com.zhbit.dto.IndexArticle;
+import com.zhbit.dto.IndexArticle2;
 import com.zhbit.entity.Article;
-import com.zhbit.enums.ArticleEnum;
 import com.zhbit.service.interfaces.ArticleService;
-import com.zhbit.service.interfaces.UploadService;
 import com.zhbit.service.interfaces.UserMessageService;
-import com.zhbit.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -31,20 +26,18 @@ public class ArticleController {
     @Autowired
     private UserMessageService userMessageService;
 
-    @Autowired
-    UploadService up;
     /**
      *
      * 根据文章id获取文章
-     * @param article_id
+     * @param articleIdAndUserName
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/getByArticleId",method = RequestMethod.POST)
-    public Article getArticleByArticleId(String article_id){
-        System.out.println(article_id);
+    public Article getArticleByArticleId(@RequestBody ArticleIdAndUserName articleIdAndUserName){
+        System.out.println(articleIdAndUserName);
         Article article = articleService.getArticleByArticleId(
-                Integer.parseInt(article_id));
+                Integer.parseInt(articleIdAndUserName.getArticle_id()));
         return  article;
     }
 
@@ -83,36 +76,36 @@ public class ArticleController {
     /**
      * TODO  提交文章
      */
-    @RequestMapping("/publish")
-    @ResponseBody
-    public void PostArticle(@RequestBody PublishArticle publishArticle, HttpServletResponse response) throws IOException {
-        //文章作者的id
-        up.publish(publishArticle,"/usr/source/markdown/");
-        // TODO 返回插入成功
-        JsonUtils.CreateJsonAndSend(response, ArticleEnum.SUCCESSPUBLISH.toMap());
+    @RequestMapping("/postArticle")
+    public void PostArticle(){
 
     }
 
-    /**
-     * 上传文章所需的图片,需要先将用户id传过来
-     */
+    @RequestMapping("/getIndexArticle")
     @ResponseBody
-    @RequestMapping("/uploadImg")
-    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file, String user_id){
-        //从session中获取用户信息
-       // UserMessage user =(UserMessage) httpSession.getAttribute("user");
-
-        return up.uploadImg(user_id,file,"/usr/source/image/");
-    }
-    /**
-     * 根据用户名获取用户所有文章  临时使用在后台管理文章处  未分页
-     */
-    @ResponseBody
-    @RequestMapping("/getAllArticlesById")
-    public List<Article> getAllArticleByUserId(int user_id){
-        List<Article> list = articleService.getALLArticleByUserId(user_id);
-        return list;
+    public List<IndexArticle> getIndexArticle(String tag,int num){
+        List<IndexArticle> indexArticles=articleService.getIndexArticle(tag,num);
+        System.out.println("1: "+indexArticles.size());
+        if(indexArticles!=null){
+            for(int i=0;i<indexArticles.size();i++){
+                System.out.println(indexArticles.get(i).getArticle().getTitle());
+            }
+        }
+        return indexArticles;
     }
 
+
+    @RequestMapping("/getIndexArticle2")
+    @ResponseBody
+    public List<IndexArticle2> getIndexArticle2(String tag,Integer num){
+        List<IndexArticle2> indexArticles=articleService.getIndexArticle2(tag,num);
+        System.out.println("size: "+indexArticles.size());
+        if(indexArticles!=null){
+            for(int i=0;i<indexArticles.size();i++){
+                System.out.println("name: "+indexArticles.get(i).getUserMessage().getUser_name());
+            }
+        }
+        return indexArticles;
+    }
 
 }

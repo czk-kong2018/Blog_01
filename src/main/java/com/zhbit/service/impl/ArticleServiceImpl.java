@@ -2,6 +2,8 @@ package com.zhbit.service.impl;
 
 import com.zhbit.dao.ArticleDao;
 import com.zhbit.dto.ArticleToPage;
+import com.zhbit.dto.IndexArticle;
+import com.zhbit.dto.IndexArticle2;
 import com.zhbit.dto.UserArticle;
 import com.zhbit.entity.Article;
 import com.zhbit.service.interfaces.ArticleService;
@@ -16,14 +18,10 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleDao articleDao;
 
-    //根据用户名获取用户所有文章 临时使用  因为有分页代替了
+
     public List<UserArticle> getALLArticleByUserName(String user_name) {
         List<UserArticle> list = articleDao.getALLArticleByUserName(user_name);
         return list;
-    }
-
-    public List<Article> getALLArticleByUserId(int user_id) {
-        return  articleDao.getALLArticleByUserId(user_id);
     }
 
     /**
@@ -44,5 +42,25 @@ public class ArticleServiceImpl implements ArticleService {
     public Article getArticleByArticleId(int article_id){
         Article article = articleDao.getArticleByArticleId(article_id);
         return article;
+    }
+
+    public List<IndexArticle> getIndexArticle(String tag, int num) {
+        try{
+           return articleDao.getIndexArticle(tag,num,num+9);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+
+    }
+
+    public List<IndexArticle2> getIndexArticle2(String tag, int num) {
+        try{
+            return articleDao.getIndexArticle2(tag,num,num+9);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+
     }
 }
