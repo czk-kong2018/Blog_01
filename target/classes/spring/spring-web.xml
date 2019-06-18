@@ -46,6 +46,7 @@
             <mvc:mapping path="/comments/commitFather"/>
             <!--拦截提交子评论请求-->
             <mvc:mapping path="/comments/commitChild"/>
+            <mvc:mapping path="/article/editor"/>
             <!--拦截上传图片的请求-->
             <!--<mvc:mapping path="/article/uploadImg"/>-->
             <!-- 排除对指定路径的拦截 -->

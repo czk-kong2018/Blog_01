@@ -11,7 +11,8 @@ public enum  LoginEnum {
     PWDERROR("22","密码不正确"),
     EMAILNOTEXIST("23","邮箱不存在"),
     EMAILERROR("24","邮箱格式不正确"),
-    ISNULL("25","邮箱或密码不能为空或者空串");
+    ISNULL("25","邮箱或密码不能为空或者空串"),
+    YZMERROR("26","验证码错误");
     private String errorCode;
     private String message;
 

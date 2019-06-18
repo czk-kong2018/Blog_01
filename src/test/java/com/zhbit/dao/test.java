@@ -23,12 +23,7 @@ public class test {
     @Test
     public void testAopAnnotation() {
 
-        String s="http://localhost:8081/source/markdown/41560404834482.md";
-
-        System.out.println( s.replaceAll("http://localhost:8081","usr"));
-//        log.info("test start");
-//        loggerData.perform();
-//        log.info("test  end");
+        loggerData.perform();
     }
 
 }

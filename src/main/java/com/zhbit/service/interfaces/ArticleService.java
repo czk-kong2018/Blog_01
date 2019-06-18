@@ -11,6 +11,10 @@ import java.util.List;
 
 public interface ArticleService {
 
+    String getUrlByArticleId(@Param("article_id") int article_id);
+
+    void updateTitleAndProfile(@Param("title")String title,@Param("article_profile")String article_profile,@Param("article_id")int article_id);
+
 
     /**
      * 根据文章id查询文章

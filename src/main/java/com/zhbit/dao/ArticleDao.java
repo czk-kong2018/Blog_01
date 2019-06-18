@@ -2,16 +2,14 @@ package com.zhbit.dao;
 
 import com.zhbit.dto.*;
 import com.zhbit.entity.Article;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.*;
 
 public interface ArticleDao {
 
-
+    @Select("select url from article where article_id=#{article_id}")
+    String getUrlByArticleId(@Param("article_id") int article_id);
     /**
      * 根据文章id查询文章,用户名传过来只是为了生成url
      */
@@ -77,5 +75,9 @@ public interface ArticleDao {
 
      @Delete("delete from article where article_id=#{article_id}")
     void delete(@Param("article_id") int article_id);
+
+     @Update("update article set title=#{title}, article_profile=#{article_profile} where article_id=#{article_id}")
+    void updateTitleAndProfile(@Param("title")String title,@Param("article_profile")String article_profile,@Param("article_id")int article_id);
+
 
 }

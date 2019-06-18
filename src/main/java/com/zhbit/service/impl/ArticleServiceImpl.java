@@ -33,9 +33,7 @@ public class ArticleServiceImpl implements ArticleService {
         return list;
     }
 
-    public List<Article> getALLArticleByUserId(int user_id) {
-        return  articleDao.getALLArticleByUserId(user_id);
-    }
+
 
     /**
      * 用户那显示的所有文章列表
@@ -51,6 +49,15 @@ public class ArticleServiceImpl implements ArticleService {
         return articleList;
     }
 
+
+
+    public String getUrlByArticleId(int article_id) {
+        return articleDao.getUrlByArticleId(article_id);
+    }
+
+    public void updateTitleAndProfile(String title, String article_profile, int article_id) {
+        articleDao.updateTitleAndProfile(title,article_profile,article_id);
+    }
 
     public Article getArticleByArticleId(int article_id){
         Article article = articleDao.getArticleByArticleId(article_id);
@@ -86,6 +93,10 @@ public class ArticleServiceImpl implements ArticleService {
             return null;
         }
 
+    }
+
+    public List<Article> getALLArticleByUserId(int user_id) {
+        return  articleDao.getALLArticleByUserId(user_id);
     }
 
 //后台管理部分

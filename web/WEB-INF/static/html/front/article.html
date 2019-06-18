@@ -50,7 +50,7 @@
                     </h4>
                 </div>
                 <div class="modal-body" style="padding:30px 40px">
-                    <form id="form-test" autocomplete="off" action="login.html" method="post">
+                    <form id="form-test" autocomplete="off">
                         <!-- 输入框必须放在“form-group”中保持才能使用验证插件 -->
                         <div class="form-group">
                             <!-- 使用“contorl-label”向右对其输入框 -->
@@ -64,6 +64,13 @@
                             <label>密码(6-20位密码)</label>
                             <div class="">
                                 <input class="form-control" type="password" id="password" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>验证码</label>
+                            <div class="input-group button-line">
+                                <input type="text" id="yzm_input" class="form-control br-none" />
+                                <span class="input-group-btn"><img id="yzm" title="看不清？点击换一张" src="/Login/yzm.do" onclick="this.src='/Login/yzm.do?t='+Math.random()" /></span>
                             </div>
                         </div>
                         <div style="margin-bottom:30px;">

@@ -106,15 +106,14 @@ public class ArticleController {
      * 上传文章所需的图片,需要先将用户id传过来
      */
     @ResponseBody
-    @RequestMapping("/uploadImg")
+    @RequestMapping(value = "/uploadImg",produces = "text/html;charset=utf8")
     public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file,HttpSession httpSession){
         //从session中获取用户信息
        // UserMessage user =(UserMessage) httpSession.getAttribute("user");
         UserMessage user =(UserMessage) httpSession.getAttribute("user");
         if(user==null){
-            String s="请先登录";
-            String json="{\"fail\": "+s+"}";
-            return json;
+
+            return JsonUtils.getImgUrl(false,null,"请先登录");
         }
         return up.uploadImg(String.valueOf(user.getUser_id()),file,"/usr/source/image/");
     }
@@ -164,7 +163,7 @@ public class ArticleController {
      * 后台管理所需
      * @Author 应钊
      */
-
+/*
     @ResponseBody
     @RequestMapping("/editor")
     public String editor(@RequestParam(value="articleID",required=false)Integer articleID,HttpSession session){
@@ -174,19 +173,13 @@ public class ArticleController {
         else
             session.setAttribute("edit", -1);
         return "{\"url\":\"writeBlog/editor.html\"}";
-    }
+    }*/
 
     @ResponseBody
     @RequestMapping(value = "/editArticle",produces="text/html;charset=UTF-8")
-    public String editArticle(HttpSession session){
-        Integer edit =(Integer) session.getAttribute("edit");
-        if(edit!=null) {
-            int articleID = Integer.parseInt(edit.toString());
-            System.out.println("editArticle: " + articleID);
-            session.removeAttribute("edit");
-            return up.edit(articleID);
-        }
-      return "123";  //没意义的字段
+    public String editArticle(@RequestParam("articleID")Integer articleID,HttpSession session){
+        System.out.println("editArticle: " + articleID);
+        return up.edit(articleID);
     }
 
     @ResponseBody

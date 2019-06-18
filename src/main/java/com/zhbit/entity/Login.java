@@ -4,6 +4,15 @@ public class Login {
     private int login_id;
     private String pwd;
     private String email;
+    private String yzm;
+
+    public String getYzm() {
+        return yzm;
+    }
+
+    public void setYzm(String yzm) {
+        this.yzm = yzm;
+    }
 
     @Override
     public String toString() {

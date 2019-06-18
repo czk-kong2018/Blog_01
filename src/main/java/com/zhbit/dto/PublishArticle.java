@@ -7,6 +7,15 @@ public class PublishArticle {
     private String content; //内容
     private String title; //标题
     private int  own_id; //作者id
+    private int edid; //编辑id
+
+    public int getEdid() {
+        return edid;
+    }
+
+    public void setEdid(int edid) {
+        this.edid = edid;
+    }
 
     public List<String> getTagList() {
         return tagList;

@@ -11,6 +11,8 @@
 			li { display: inline-block; margin: 10px 0 0;}
 		</style>
 		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<!--jquery 操作cookie-->
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 		<script src="js/jquery-labelauty.js"></script>
 		<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script src="editor.md-master/editormd.min.js"></script>
@@ -34,7 +36,7 @@
                     imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
                     imageUploadURL : "/article/uploadImg"
 				});
-				
+                var edid=-1;
 				$("#publish").click(function(){
                     var header=$("#article_header").val();
                     var main=md_edit.getMarkdown();
@@ -58,7 +60,8 @@
                             "title":header,
                             "content":main,
                             "tagList":tags,
-                            "own_id":own_id
+                            "own_id":own_id,
+							"edid":edid
                         }),
                         success:function(e){
                             alert(JSON.stringify(e));
@@ -69,7 +72,29 @@
                     });
 				});
 
-				$.ajax({
+				edid=$.cookie('edid');
+				if(edid!=null){
+				    $.removeCookie('edid',{path:'/'});
+                    $.ajax({
+                        async:false,
+                        type:"post",
+                        url:"/article/editArticle",
+                        data:{
+                            "articleID":edid
+						},
+						dataType:"json",
+                        success:function(data){
+                            $("#article_header").val(data.header);
+							window.setTimeout(function() {
+								md_edit.setMarkdown(data.main);
+							}, 500);
+						},
+                        error:function(data){
+                            alert("error");
+                        }
+                    });
+				}
+/*				$.ajax({
 					async:false,
 					type:"get",
 					url:"/article/editArticle",
@@ -85,7 +110,7 @@
 					error:function(data){
 						alert("error");
 					}
-				});
+				});*/
 				
 				$(".tag").labelauty();
 			});
