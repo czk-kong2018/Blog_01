@@ -1,14 +1,20 @@
 package com.zhbit.controller;
 
 
+import com.zhbit.dao.TagDao;
 import com.zhbit.dto.ArticleToPage;
+import com.zhbit.dto.IndexArticle;
+import com.zhbit.dto.IndexArticle2;
 import com.zhbit.dto.PublishArticle;
 import com.zhbit.entity.Article;
+import com.zhbit.entity.UserMessage;
 import com.zhbit.enums.ArticleEnum;
 import com.zhbit.service.interfaces.ArticleService;
+import com.zhbit.service.interfaces.TagService;
 import com.zhbit.service.interfaces.UploadService;
 import com.zhbit.service.interfaces.UserMessageService;
 import com.zhbit.util.JsonUtils;
+import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +36,9 @@ public class ArticleController {
 
     @Autowired
     private UserMessageService userMessageService;
+
+    @Autowired
+    private TagService tagService;
 
     @Autowired
     UploadService up;
@@ -98,11 +107,16 @@ public class ArticleController {
      */
     @ResponseBody
     @RequestMapping("/uploadImg")
-    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file, String user_id){
+    public String uploadImg(@RequestParam(value="editormd-image-file") MultipartFile file,HttpSession httpSession){
         //从session中获取用户信息
        // UserMessage user =(UserMessage) httpSession.getAttribute("user");
-
-        return up.uploadImg(user_id,file,"/usr/source/image/");
+        UserMessage user =(UserMessage) httpSession.getAttribute("user");
+        if(user==null){
+            String s="请先登录";
+            String json="{\"fail\": "+s+"}";
+            return json;
+        }
+        return up.uploadImg(String.valueOf(user.getUser_id()),file,"/usr/source/image/");
     }
     /**
      * 根据用户名获取用户所有文章  临时使用在后台管理文章处  未分页
@@ -113,6 +127,76 @@ public class ArticleController {
         List<Article> list = articleService.getALLArticleByUserId(user_id);
         return list;
     }
+
+    /**
+     * 首页方面的文章操作
+     * @Author 拔锋
+     */
+    @RequestMapping("/getIndexArticle")
+    @ResponseBody
+    public List<IndexArticle> getIndexArticle(String tag, int num){
+        List<IndexArticle> indexArticles=articleService.getIndexArticle(tag,num);
+        System.out.println("1: "+indexArticles.size());
+        if(indexArticles!=null){
+            for(int i=0;i<indexArticles.size();i++){
+                System.out.println(indexArticles.get(i).getArticle().getTitle());
+            }
+        }
+        return indexArticles;
+    }
+
+
+    @RequestMapping("/getIndexArticle2")
+    @ResponseBody
+    public List<IndexArticle2> getIndexArticle2(String tag, Integer num){
+        List<IndexArticle2> indexArticles=articleService.getIndexArticle2(tag,num);
+        System.out.println("size: "+indexArticles.size());
+        if(indexArticles!=null){
+            for(int i=0;i<indexArticles.size();i++){
+                System.out.println("name: "+indexArticles.get(i).getUserMessage().getUser_name());
+            }
+        }
+        return indexArticles;
+    }
+
+
+    /**
+     * 后台管理所需
+     * @Author 应钊
+     */
+
+    @ResponseBody
+    @RequestMapping("/editor")
+    public String editor(@RequestParam(value="articleID",required=false)Integer articleID,HttpSession session){
+        System.out.println("editor: "+articleID);
+        if(articleID!=null)
+            session.setAttribute("edit", articleID);
+        else
+            session.setAttribute("edit", -1);
+        return "{\"url\":\"writeBlog/editor.html\"}";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/editArticle",produces="text/html;charset=UTF-8")
+    public String editArticle(HttpSession session){
+        Integer edit =(Integer) session.getAttribute("edit");
+        if(edit!=null) {
+            int articleID = Integer.parseInt(edit.toString());
+            System.out.println("editArticle: " + articleID);
+            session.removeAttribute("edit");
+            return up.edit(articleID);
+        }
+      return "123";  //没意义的字段
+    }
+
+    @ResponseBody
+    @RequestMapping("/delete")
+    public String delete(@RequestParam("articleID")Integer articleID){
+        articleService.delete(articleID);
+        return "{}";
+    }
+
+
 
 
 }

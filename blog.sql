@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 08/06/2019 15:24:26
+ Date: 18/06/2019 15:31:21
 */
 
 SET NAMES utf8mb4;
@@ -34,18 +34,20 @@ CREATE TABLE `article`  (
   PRIMARY KEY (`article_id`) USING BTREE,
   INDEX `fk_article_own_id`(`own_id`) USING BTREE,
   CONSTRAINT `fk_article_own_id` FOREIGN KEY (`own_id`) REFERENCES `user_message` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of article
 -- ----------------------------
 INSERT INTO `article` VALUES (1, 'java反射机制', '对java反射的理解', 'http://localhost:8081/source/markdown/java_1.md', 2, 0, 0, '2019-05-15 12:59:17', 1);
-INSERT INTO `article` VALUES (2, '深入理解红黑树', '对红黑树的的记录', 'tmpNull', 0, 0, 0, '2019-05-07 17:49:50', 2);
 INSERT INTO `article` VALUES (3, 'Servlet入门二', 'Servlet入门', 'http://localhost:8081/source/markdown/Servlet入门二_3.md', 0, 0, 0, '2019-05-14 18:14:08', 1);
 INSERT INTO `article` VALUES (4, 'final用法', 'final用法', 'http://localhost:8081/source/markdown/final用法_4.md', 0, 0, 0, '2019-05-14 18:14:04', 1);
 INSERT INTO `article` VALUES (5, 'mysql存储引擎', '回顾mysql的存储引擎', 'tmpnull', 0, 0, 0, '2019-05-09 22:08:50', 2);
 INSERT INTO `article` VALUES (6, '深入理解java虚拟机', '深入理解java虚拟机', 'http://localhost:8081/source/markdown/深入理解Java虚拟机.md', 0, 0, 0, '2019-05-17 08:14:51', 2);
 INSERT INTO `article` VALUES (7, '谈谈java类加载机制', '类加载机制', 'http://localhost:8081/source/markdown/谈谈Java类加载机制.md', 0, 0, 0, '2019-05-17 08:16:42', 2);
+INSERT INTO `article` VALUES (8, '谈谈Tomcat', '# 谈谈 Tomcat 请求处理流程\n\n《谈谈 Tomcat 架构及启动过程[含部署]》已重新修订!（与本文在 GitHub 同一目录下）包括架构和 Tomcat Start 过程中的 `Mapper', 'http://localhost:8081/source/markdown/11560417592314.md', 0, 0, 0, '2019-06-16 15:25:48', 1);
+INSERT INTO `article` VALUES (9, '文件系统', '# Ext4 文件系统简要总结\n\n最近在看操作系统的文件系统这块，感觉只有理论还是不行，所以就选了一种文件系统作一下拓展。\n\n选择 Ext4 的原因是： 他是 Linux 的主流文件系统 `ext*`', 'http://localhost:8081/source/markdown/41560441355961.md', 0, 0, 0, '2019-06-16 15:25:49', 4);
+INSERT INTO `article` VALUES (10, '啊啊啊', '的撒多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达多撒奥所爱仕达', 'http://localhost:8081/source/markdown/201560741766949.md', 0, 0, 0, '2019-06-17 11:22:46', 20);
 
 -- ----------------------------
 -- Table structure for article_tag
@@ -63,10 +65,13 @@ CREATE TABLE `article_tag`  (
 -- ----------------------------
 -- Records of article_tag
 -- ----------------------------
-INSERT INTO `article_tag` VALUES (1, 1);
-INSERT INTO `article_tag` VALUES (2, 2);
-INSERT INTO `article_tag` VALUES (1, 3);
-INSERT INTO `article_tag` VALUES (3, 3);
+INSERT INTO `article_tag` VALUES (9, 1);
+INSERT INTO `article_tag` VALUES (4, 2);
+INSERT INTO `article_tag` VALUES (6, 2);
+INSERT INTO `article_tag` VALUES (7, 2);
+INSERT INTO `article_tag` VALUES (1, 8);
+INSERT INTO `article_tag` VALUES (8, 8);
+INSERT INTO `article_tag` VALUES (5, 10);
 
 -- ----------------------------
 -- Table structure for child_comment
@@ -77,7 +82,7 @@ CREATE TABLE `child_comment`  (
   `article_id` int(10) UNSIGNED NOT NULL COMMENT '做一个冗余方便查询',
   `create_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '子评论内容',
-  `response_user` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '回复的人',
+  `response_user` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '回复的人',
   `author_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '写子评论的人',
   `comment_id` int(10) UNSIGNED NOT NULL COMMENT '所属父评论id',
   PRIMARY KEY (`child_comment_id`) USING BTREE,
@@ -89,7 +94,7 @@ CREATE TABLE `child_comment`  (
   CONSTRAINT `child_comment_ibfk_2` FOREIGN KEY (`article_id`) REFERENCES `article` (`article_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `child_comment_ibfk_3` FOREIGN KEY (`comment_id`) REFERENCES `comment_on` (`comment_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `child_comment_ibfk_4` FOREIGN KEY (`response_user`) REFERENCES `user_message` (`user_name`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 79 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of child_comment
@@ -98,16 +103,12 @@ INSERT INTO `child_comment` VALUES (1, 6, '2019-06-03 22:06:42', '子评论测�
 INSERT INTO `child_comment` VALUES (2, 6, '2019-06-03 22:06:40', '子评论测试2', 'czk', '阿扎尔', 4);
 INSERT INTO `child_comment` VALUES (3, 6, '2019-06-03 22:20:10', '子评论3', '梅老板', 'czk', 4);
 INSERT INTO `child_comment` VALUES (4, 3, '2019-06-04 15:13:21', '听说你是加泰球王', '武球王', '梅老板', 62);
-INSERT INTO `child_comment` VALUES (5, 3, '2019-06-04 15:13:24', '谢谢你', NULL, 'czk', 52);
 INSERT INTO `child_comment` VALUES (21, 6, '2019-06-04 21:26:26', '我又来了', '阿扎尔', '梅老板', 4);
 INSERT INTO `child_comment` VALUES (30, 6, '2019-06-04 22:43:32', '大家好', '阿扎尔', '梅老板', 67);
-INSERT INTO `child_comment` VALUES (31, 6, '2019-06-04 22:44:29', '我真帅', NULL, '梅老板', 67);
 INSERT INTO `child_comment` VALUES (32, 6, '2019-06-04 22:45:43', '弟弟行为', 'czk', '梅老板', 4);
-INSERT INTO `child_comment` VALUES (33, 6, '2019-06-05 14:04:15', '????', NULL, '梅老板', 67);
 INSERT INTO `child_comment` VALUES (34, 6, '2019-06-05 14:04:39', '我确实牛逼', '阿扎尔', '梅老板', 48);
 INSERT INTO `child_comment` VALUES (35, 6, '2019-06-05 14:05:03', '!!!', '阿扎尔', '梅老板', 43);
 INSERT INTO `child_comment` VALUES (36, 6, '2019-06-05 14:06:43', '自己艾特自己干嘛\n', '阿扎尔', '梅老板', 13);
-INSERT INTO `child_comment` VALUES (37, 6, '2019-06-05 14:09:57', '测试+1', NULL, '阿扎尔', 70);
 INSERT INTO `child_comment` VALUES (39, 6, '2019-06-05 21:23:35', '', '阿扎尔', '阿扎尔', 44);
 INSERT INTO `child_comment` VALUES (40, 6, '2019-06-05 21:31:00', '笑什么弟弟', '阿扎尔', '武球王', 45);
 INSERT INTO `child_comment` VALUES (41, 6, '2019-06-05 21:31:22', '我更牛逼', '梅老板', '武球王', 48);
@@ -135,7 +136,17 @@ INSERT INTO `child_comment` VALUES (62, 3, '2019-06-05 22:23:22', '刚刚脑抽�
 INSERT INTO `child_comment` VALUES (63, 3, '2019-06-05 22:27:13', '怎么费事', 'czk', 'czk', 16);
 INSERT INTO `child_comment` VALUES (64, 3, '2019-06-05 22:29:06', '没bug了  ', 'czk', 'czk', 52);
 INSERT INTO `child_comment` VALUES (65, 3, '2019-06-07 14:39:39', '啊啊啊 ', '梅老板', 'czk', 62);
-INSERT INTO `child_comment` VALUES (67, 2, '2019-06-07 23:42:18', '啊打!', 'czk', 'czk', 97);
+INSERT INTO `child_comment` VALUES (68, 1, '2019-06-08 21:56:23', '不踢也得踢', '梅老板', '梅老板', 3);
+INSERT INTO `child_comment` VALUES (69, 6, '2019-06-08 21:57:12', '雅蠛蝶', 'czk', '梅老板', 48);
+INSERT INTO `child_comment` VALUES (70, 6, '2019-06-11 15:42:18', '拦截器 评论测试', '梅老板', '梅老板', 69);
+INSERT INTO `child_comment` VALUES (71, 3, '2019-06-11 23:50:22', '呀呀呀', '梅老板', '梅老板', 99);
+INSERT INTO `child_comment` VALUES (72, 4, '2019-06-12 14:19:36', '啊啊啊', '小萌', '小萌', 100);
+INSERT INTO `child_comment` VALUES (73, 5, '2019-06-12 14:31:41', '文章不存在！！', '小萌', '小萌', 101);
+INSERT INTO `child_comment` VALUES (74, 6, '2019-06-13 15:38:20', '对K', '小萌', '小萌', 103);
+INSERT INTO `child_comment` VALUES (75, 6, '2019-06-16 13:49:34', '对A', '小萌', '小萌', 103);
+INSERT INTO `child_comment` VALUES (76, 9, '2019-06-16 16:11:41', '什么！！！！', '武球王', '武球王', 105);
+INSERT INTO `child_comment` VALUES (77, 9, '2019-06-17 11:06:07', '的撒奥所多', '小萌', '小萌', 107);
+INSERT INTO `child_comment` VALUES (78, 9, '2019-06-17 11:06:30', '的撒多撒sad', '武球王', '小萌', 106);
 
 -- ----------------------------
 -- Table structure for comment_on
@@ -157,7 +168,7 @@ CREATE TABLE `comment_on`  (
   CONSTRAINT `fk_commentOn_article_id` FOREIGN KEY (`article_id`) REFERENCES `article` (`article_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_commentOn_author_id` FOREIGN KEY (`author_id`) REFERENCES `user_message` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_commentOn_response_user` FOREIGN KEY (`response_user`) REFERENCES `user_message` (`user_name`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 98 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 108 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of comment_on
@@ -225,7 +236,15 @@ INSERT INTO `comment_on` VALUES (90, 3, '2019-06-07 14:37:25', '2312123', 0, 0, 
 INSERT INTO `comment_on` VALUES (91, 3, '2019-06-07 14:37:50', 'vcxv', 0, 0, '梅老板', 6);
 INSERT INTO `comment_on` VALUES (92, 3, '2019-06-07 14:38:21', '啊啊啊啊', 0, 0, '梅老板', 6);
 INSERT INTO `comment_on` VALUES (93, 3, '2019-06-07 14:39:12', 'vcv', 0, 0, '梅老板', 6);
-INSERT INTO `comment_on` VALUES (97, 2, '2019-06-07 23:42:11', '破!', 0, 0, '阿扎尔', 6);
+INSERT INTO `comment_on` VALUES (98, 3, '2019-06-11 23:36:27', '啊啊 啊', 0, 0, '梅老板', 1);
+INSERT INTO `comment_on` VALUES (99, 3, '2019-06-11 23:39:27', '呀抱歉', 0, 0, '梅老板', 1);
+INSERT INTO `comment_on` VALUES (100, 4, '2019-06-12 14:19:31', '测试成功！', 0, 0, '梅老板', 20);
+INSERT INTO `comment_on` VALUES (101, 5, '2019-06-12 14:31:27', 'cxzcz', 0, 0, '阿扎尔', 20);
+INSERT INTO `comment_on` VALUES (102, 6, '2019-06-12 23:01:44', 'xxx', 0, 0, '阿扎尔', 20);
+INSERT INTO `comment_on` VALUES (103, 6, '2019-06-13 15:32:35', 'a a a', 0, 0, '阿扎尔', 20);
+INSERT INTO `comment_on` VALUES (105, 9, '2019-06-16 16:11:31', '我来也！', 0, 0, '武球王', 4);
+INSERT INTO `comment_on` VALUES (106, 9, '2019-06-16 16:11:50', '武球王是也！', 0, 0, '武球王', 4);
+INSERT INTO `comment_on` VALUES (107, 9, '2019-06-17 11:04:45', 'xx', 0, 0, '武球王', 20);
 
 -- ----------------------------
 -- Table structure for focus
@@ -241,26 +260,32 @@ CREATE TABLE `focus`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of focus
+-- ----------------------------
+INSERT INTO `focus` VALUES (1, 2);
+
+-- ----------------------------
 -- Table structure for login
 -- ----------------------------
 DROP TABLE IF EXISTS `login`;
 CREATE TABLE `login`  (
   `login_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `login_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `pwd` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`login_id`) USING BTREE,
-  UNIQUE INDEX `login_name_unique`(`login_name`) USING BTREE,
   UNIQUE INDEX `email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of login
 -- ----------------------------
-INSERT INTO `login` VALUES (1, 'meixi', '123', '149@qq.com');
-INSERT INTO `login` VALUES (2, 'azhaer', '123', '123@qq.com');
-INSERT INTO `login` VALUES (4, 'wulei', '123', '456@qq.com');
-INSERT INTO `login` VALUES (6, 'czk', '123', '1493773835@qq.com');
+INSERT INTO `login` VALUES (1, '123', '149@qq.com');
+INSERT INTO `login` VALUES (2, '123', '123@qq.com');
+INSERT INTO `login` VALUES (4, '123', '456@qq.com');
+INSERT INTO `login` VALUES (6, '123', '15@qq.com');
+INSERT INTO `login` VALUES (20, '123123', '1493@qq.com');
+INSERT INTO `login` VALUES (21, '123123', '925063786@qq.com');
+INSERT INTO `login` VALUES (22, '123123', '1493773835@qq.com');
 
 -- ----------------------------
 -- Table structure for notify
@@ -276,14 +301,11 @@ CREATE TABLE `notify`  (
   PRIMARY KEY (`notify_id`) USING BTREE,
   INDEX `article_id`(`article_id`) USING BTREE,
   CONSTRAINT `article_id` FOREIGN KEY (`article_id`) REFERENCES `article` (`article_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 74 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 91 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of notify
 -- ----------------------------
-INSERT INTO `notify` VALUES (2, '梅老板', '阿扎尔', '梅老板@评论了你', '0', 1);
-INSERT INTO `notify` VALUES (3, '梅老板', '阿扎尔', '阿扎尔@评论了你:测试通知消息', '0', 1);
-INSERT INTO `notify` VALUES (4, '梅老板', '阿扎尔', '阿扎尔@评论了你:继续测试一下　通知', '0', 1);
 INSERT INTO `notify` VALUES (5, '梅老板', '阿扎尔', '阿扎尔@评论了你:换一篇文章测试', '0', 4);
 INSERT INTO `notify` VALUES (6, '梅老板', '阿扎尔', '阿扎尔@评论了你:看看bug的原因\n', '0', 4);
 INSERT INTO `notify` VALUES (7, '梅老板', '阿扎尔', '阿扎尔@评论了你:测试+1', '0', 3);
@@ -311,7 +333,7 @@ INSERT INTO `notify` VALUES (28, '阿扎尔', 'czk', 'czk@评论了你:大佬们
 INSERT INTO `notify` VALUES (29, '阿扎尔', 'czk', 'czk@评论了你:天外飞仙', '0', 6);
 INSERT INTO `notify` VALUES (30, '武球王', 'czk', 'czk@评论了你:哦豁', '0', 6);
 INSERT INTO `notify` VALUES (31, '武球王', 'czk', 'czk@评论了你:你好啊', '0', 6);
-INSERT INTO `notify` VALUES (32, '梅老板', 'czk', 'czk@评论了你:梅老板真乃神人', '0', 6);
+INSERT INTO `notify` VALUES (32, '梅老板', 'czk', 'czk@评论了你:梅老板真乃神人', '1', 6);
 INSERT INTO `notify` VALUES (33, 'czk', 'czk', 'czk@评论了你:金球奖稳了', '0', 6);
 INSERT INTO `notify` VALUES (34, '阿扎尔', 'czk', 'czk@评论了你:你没有梅老板牛逼', '0', 6);
 INSERT INTO `notify` VALUES (35, '梅老板', 'czk', 'czk@评论了你:金靴已到手', '0', 6);
@@ -331,13 +353,13 @@ INSERT INTO `notify` VALUES (48, '梅老板', 'czk', 'czk@评论了你:啊哈?',
 INSERT INTO `notify` VALUES (49, '梅老板', 'czk', 'czk@评论了你:嗯哼?', '0', 3);
 INSERT INTO `notify` VALUES (50, '梅老板', 'czk', 'czk@评论了你:我擦?', '0', 3);
 INSERT INTO `notify` VALUES (51, '梅老板', 'czk', 'czk@评论了你:我??', '0', 3);
-INSERT INTO `notify` VALUES (52, '梅老板', 'czk', 'czk@评论了你:好了好了', '0', 3);
+INSERT INTO `notify` VALUES (52, '梅老板', 'czk', 'czk@评论了你:好了好了', '1', 3);
 INSERT INTO `notify` VALUES (53, 'czk', 'czk', 'czk@评论了你:怎么费事', '0', 3);
 INSERT INTO `notify` VALUES (54, '梅老板', 'czk', 'czk@评论了你:来了来了 是那个男人', '0', 3);
 INSERT INTO `notify` VALUES (55, 'czk', 'czk', 'czk@评论了你:没bug了  ', '0', 3);
 INSERT INTO `notify` VALUES (56, '梅老板', 'czk', 'czk@评论了你:梅老板牛逼', '0', 3);
 INSERT INTO `notify` VALUES (57, '梅老板', 'czk', 'czk@评论了你:very good', '0', 3);
-INSERT INTO `notify` VALUES (58, '梅老板', 'czk', 'czk@评论了你:测试滚动', '0', 3);
+INSERT INTO `notify` VALUES (58, '梅老板', 'czk', 'czk@评论了你:测试滚动', '1', 3);
 INSERT INTO `notify` VALUES (59, '梅老板', 'czk', 'czk@评论了你:继续测试滚动', '0', 3);
 INSERT INTO `notify` VALUES (60, '梅老板', 'czk', 'czk@评论了你:000000', '0', 3);
 INSERT INTO `notify` VALUES (61, '梅老板', 'czk', 'czk@评论了你:....', '0', 3);
@@ -348,11 +370,15 @@ INSERT INTO `notify` VALUES (65, '梅老板', 'czk', 'czk@评论了你:啊啊啊
 INSERT INTO `notify` VALUES (66, '梅老板', 'czk', 'czk@评论了你:vcv', '0', 3);
 INSERT INTO `notify` VALUES (67, '梅老板', 'czk', 'czk@评论了你:通天塔', '0', 3);
 INSERT INTO `notify` VALUES (68, '梅老板', 'czk', 'czk@评论了你:啊啊啊 ', '0', 3);
-INSERT INTO `notify` VALUES (69, '阿扎尔', 'czk', 'czk@评论了你:第一个评论 yes!', '0', 2);
-INSERT INTO `notify` VALUES (70, '阿扎尔', 'czk', 'czk@评论了你:我来也!', '0', 2);
-INSERT INTO `notify` VALUES (71, 'czk', 'czk', 'czk@评论了你:excuted  me!', '0', 2);
-INSERT INTO `notify` VALUES (72, '阿扎尔', 'czk', 'czk@评论了你:破!', '0', 2);
-INSERT INTO `notify` VALUES (73, 'czk', 'czk', 'czk@评论了你:啊打!', '0', 2);
+INSERT INTO `notify` VALUES (75, 'czk', '梅老板', '梅老板@评论了你:雅蠛蝶', '0', 6);
+INSERT INTO `notify` VALUES (76, '梅老板', '梅老板', '梅老板@评论了你:拦截器 评论测试', '0', 6);
+INSERT INTO `notify` VALUES (77, '梅老板', '梅老板', '梅老板@评论了你:呀呀呀', '0', 3);
+INSERT INTO `notify` VALUES (78, '梅老板', '小萌', '小萌@评论了你:测试成功！', '1', 4);
+INSERT INTO `notify` VALUES (79, '小萌', '小萌', '小萌@评论了你:啊啊啊', '0', 4);
+INSERT INTO `notify` VALUES (80, '阿扎尔', '小萌', '小萌@评论了你:cxzcz', '0', 5);
+INSERT INTO `notify` VALUES (81, '小萌', '小萌', '小萌@评论了你:文章不存在！！', '0', 5);
+INSERT INTO `notify` VALUES (84, '小萌', '小萌', '小萌@评论了你:对K', '0', 6);
+INSERT INTO `notify` VALUES (86, '小萌', '小萌', '小萌@评论了你:对A', '0', 6);
 
 -- ----------------------------
 -- Table structure for report_article
@@ -398,14 +424,23 @@ CREATE TABLE `tag`  (
   `tag_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tag_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`tag_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tag
 -- ----------------------------
-INSERT INTO `tag` VALUES (1, 'java');
-INSERT INTO `tag` VALUES (2, 'linux');
-INSERT INTO `tag` VALUES (3, '线程池');
+INSERT INTO `tag` VALUES (1, '操作系统');
+INSERT INTO `tag` VALUES (2, '编程语言');
+INSERT INTO `tag` VALUES (3, '前端');
+INSERT INTO `tag` VALUES (4, '移动开发');
+INSERT INTO `tag` VALUES (5, '大数据');
+INSERT INTO `tag` VALUES (6, '计算机网络');
+INSERT INTO `tag` VALUES (7, '架构');
+INSERT INTO `tag` VALUES (8, '后端');
+INSERT INTO `tag` VALUES (9, '游戏开发');
+INSERT INTO `tag` VALUES (10, '数据库');
+INSERT INTO `tag` VALUES (11, '其他');
+INSERT INTO `tag` VALUES (12, '算法');
 
 -- ----------------------------
 -- Table structure for user_message
@@ -428,5 +463,14 @@ INSERT INTO `user_message` VALUES (1, '梅老板', 'http://localhost:8081/source
 INSERT INTO `user_message` VALUES (2, '阿扎尔', 'http://localhost:8081/source/image/azhaer.jpg', '我是阿扎尔');
 INSERT INTO `user_message` VALUES (4, '武球王', 'http://localhost:8081/source/image/wulei.jpg', '我是武磊');
 INSERT INTO `user_message` VALUES (6, 'czk', 'http://localhost:8081/source/image/default.jpg', '');
+INSERT INTO `user_message` VALUES (20, '小萌', 'http://localhost:8081/source/image/xx.png', '');
+INSERT INTO `user_message` VALUES (21, '21', 'http://localhost:8081/source/image/default.jpg', '');
+INSERT INTO `user_message` VALUES (22, '119bb620', 'http://localhost:8081/source/image/default.jpg', '');
+
+-- ----------------------------
+-- View structure for v_article
+-- ----------------------------
+DROP VIEW IF EXISTS `v_article`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_article` AS select `article`.`article_id` AS `article_id`,`article`.`title` AS `title`,`article`.`article_profile` AS `article_profile`,`user_message`.`user_name` AS `user_name`,`user_message`.`head_portrait` AS `head_portrait`,`article`.`watch` AS `watch`,`article`.`create_time` AS `create_time`,`article`.`clik_like` AS `clik_like`,`tag`.`tag_name` AS `tag_name` from (((`article` join `article_tag`) join `tag`) join `user_message`) where ((`article`.`article_id` = `article_tag`.`article_id`) and (`tag`.`tag_id` = `article_tag`.`tag_id`) and (`article`.`own_id` = `user_message`.`user_id`)) order by `article`.`create_time` desc;
 
 SET FOREIGN_KEY_CHECKS = 1;

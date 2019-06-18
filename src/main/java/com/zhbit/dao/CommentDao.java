@@ -1,6 +1,7 @@
 package com.zhbit.dao;
 
 import com.zhbit.dto.FatherCommentFront;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -32,4 +33,11 @@ public interface CommentDao {
      */
     @Select("select count(*)  from comment_on as a where a.article_id=#{article_id}")
     int getFatherCommentCount(@Param("article_id")int article_id);
+
+    /**
+     * 删除父评论   根据文章id
+     */
+    @Delete("delete from comment_on where article_id=#{article_id}")
+    void deleteCommentByArticleId(@Param("article_id")int article_id);
+
 }

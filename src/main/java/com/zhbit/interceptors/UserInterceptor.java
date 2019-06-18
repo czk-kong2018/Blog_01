@@ -31,7 +31,6 @@ public class UserInterceptor implements HandlerInterceptor {
             return false;
         }
         //检查cookie是否和session一致  防止伪造cookie
-        if(user!=null){
             int user_id=0;
             String user_name=null;
             Cookie[] cookies = request.getCookies();
@@ -46,9 +45,8 @@ public class UserInterceptor implements HandlerInterceptor {
             if (user_id == user.getUser_id() && user_name.equals(user.getUser_name())) {
                     return true;
             }else{
-                JsonUtils.CreateJsonAndSend(response, CurrencyEnum.COOKIDEFALSIFY.toMap()); //伪造cookie
+                JsonUtils.CreateJsonAndSend(response, CurrencyEnum.COOKIDEFALSIFY.toMap()); //cookie可能伪造  无效
             }
-        }
         return false;
 
 

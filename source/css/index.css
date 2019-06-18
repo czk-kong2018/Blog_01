@@ -1,0 +1,183 @@
+/* ---------------------------------------------------------- 窗口放大到768px以上时 */
+@media (min-width: 768px) {
+	.container {
+		width: 90%;
+	}
+
+	/* ---------------------------------------------------------- 背景*/
+	body {
+		background: #f1f1f1;
+	}
+
+	/* ---------------------------------------------------------- 超链接*/
+	a {
+		color: inherit;
+	}
+
+	a:hover {
+		color: #009a61;
+		text-decoration: none;
+	}
+
+	/* ---------------------------------------------------------- 顶部导航+轮播+公告 */
+	#header {
+		margin: 20px 60px;
+	}
+
+	#header ul {
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	/*轮播*/
+	.carousel-inner>.item>img,
+	.carousel-inner>.item>a>img {
+		display: block;
+		max-width: 100%;
+		height: 360px;
+		 !important
+	}
+
+	/*标签Icon*/
+	@font-face {
+		font-family: 'iconfont';
+		/* project id 1226712 */
+		src: url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.eot');
+		src: url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.eot?#iefix') format('embedded-opentype'),
+			url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.woff2') format('woff2'),
+			url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.woff') format('woff'),
+			url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.ttf') format('truetype'),
+			url('https://at.alicdn.com/t/font_1226712_obuc4alf6x.svg#iconfont') format('svg');
+	}
+
+	.iconfont {
+		font-family: "iconfont" !important;
+		font-size: inherit;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		margin: 0 5px;
+	}
+
+	#tag-nav {
+		background-color: #444;
+		border-radius: 20px 0 0 20px;
+		background-color: #444;
+	}
+
+	#tag-nav span:hover {
+		color: #009a61;
+		cursor: pointer;
+	}
+
+	#tag-nav li {
+		height: 50px;
+	}
+
+	#tag-nav .col-sm-4 {
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: center;
+	}
+
+	/*网站公告*/
+	#header #web-notice {
+		border-radius: 0px 20px 20px 0;
+		background-color: #444;
+	}
+
+	#web-notice li {
+		height: 50px;
+	}
+
+	/* --------------------------------------------------------- 主功能区 */
+	#sub-tag-nav ul {
+		margin-bottom: 0;
+	}
+
+	#sub-tag-nav li {
+		display: inline-block;
+	}
+
+	/*文章列表*/
+	#article-list li {
+		margin: 10px 0;
+		border-radius: 10px;
+	}
+
+	article {
+		background-color: white;
+		padding: 20px 15px;
+		border-radius: 8px;
+	}
+
+	article h4 {
+		margin: 0 0;
+		font-weight: 700;
+		font-size: 20px;
+	}
+
+	article a {
+		color: black;!important
+	}
+
+	.article-content {
+		height: 60px;
+		overflow: hidden;
+		line-height: 30px;
+		margin: 15px 0;
+		color: #777;
+	}
+
+	.article-info span {
+		margin-right: 10px;
+	}
+
+	/*博主推荐*/
+	#blogger-recommend a {
+		color: #009a61;
+		 !important
+	}
+
+	#blogger-recommend img {
+		width: 60px;
+		height: 60px;
+		border-radius: 60px;
+	}
+
+	#blogger-recommend .panel {
+		margin: 0 0;
+		border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+	}
+
+	.tooltip-inner {
+		/* background-color: #428bca; */
+		background-color: #009a61;
+	}
+
+	.tooltip-arrow,
+	.tooltip-bottom {
+		/* border-bottom-color: #428bca; */
+		border-bottom-color: #009a61;
+	}
+	
+	/*-------------------------------------------------------------鼠标文字向上冒泡*/
+	.thumb-bubble {
+		font-size: 2rem;
+	}
+	
+	.effect-bubble-fly {
+		display: inline-block;
+		min-width: 150px;
+		position: absolute;
+		z-index: 9999;
+		color: #5cb85c;
+		font-size: 14px;
+		font-weight: bold;
+		transition: left 0.5s, top 2s cubic-bezier(0.170, 0.090, 0.000, 1.110), opacity 1.8s cubic-bezier(0.170, 0.090, 0.000, 1.110), -webkit-transform 0.5s linear;
+		-moz-transition: left 0.5s, top 2s cubic-bezier(0.170, 0.090, 0.000, 1.110), opacity 1.8s cubic-bezier(0.170, 0.090, 0.000, 1.110), -webkit-transform 0.5s linear;
+		/* Firefox 4 */
+		-webkit-transition: left 0.5s, top 2s cubic-bezier(0.170, 0.090, 0.000, 1.110), opacity 1.8s cubic-bezier(0.170, 0.090, 0.000, 1.110), -webkit-transform 0.5s linear;
+		/* Safari 和 Chrome */
+		-o-transition: left 0.5s, top 2s cubic-bezier(0.170, 0.090, 0.000, 1.110), opacity 1.8s cubic-bezier(0.170, 0.090, 0.000, 1.110), -webkit-transform 0.5s linear;
+		/* Opera */
+	}

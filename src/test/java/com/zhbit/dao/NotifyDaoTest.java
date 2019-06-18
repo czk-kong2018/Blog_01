@@ -15,6 +15,7 @@ public class NotifyDaoTest {
     private NotifyDao notifyDao;
     @Test
     public void createNotify() {
-        notifyDao.createNotify("梅老板","阿扎尔","梅老板@评论了你",1);
+
+        notifyDao.delete(2);
     }
 }

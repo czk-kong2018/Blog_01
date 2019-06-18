@@ -21,7 +21,11 @@ public class TagServiceImpl implements TagService {
         return userTags;
     }
 
-    public void insertTag(List<Tag> tags, int article_id) {
+    public void insertAritcleTag(int article_id,int tag_id) {
+        tagDao.insertArticleTag(article_id,tag_id);
+    }
 
+    public void deleteAllByArticleId(int article_id) {
+        tagDao.deleteAllByArticleId(article_id);
     }
 }

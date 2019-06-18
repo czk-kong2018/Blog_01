@@ -1,10 +1,7 @@
 package com.zhbit.dao;
 
 import com.zhbit.entity.ChildComment;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.*;
 public interface ChildCommentDao {
@@ -59,4 +56,11 @@ public interface ChildCommentDao {
      * @param childComment
      */
     int commitComment(@Param("childComment") ChildComment childComment);
+
+
+    /**
+     * 删除子评论   根据文章id
+     */
+    @Delete("delete from child_comment where article_id=#{article_id}")
+    void deleteChildCommentByArticleId(@Param("article_id")int article_id);
 }

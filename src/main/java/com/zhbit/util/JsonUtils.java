@@ -52,9 +52,7 @@ public class JsonUtils {
      * @param url
      * @param mes
      * @return
-     */
-
-    public static String getImgUrl(boolean success,String url,String mes){
+     */public static String getImgUrl(boolean success,String url,String mes){
         int s=1;
         String message="upload_success";
         if(!success){
@@ -66,11 +64,21 @@ public class JsonUtils {
         return json;
     }
 
-    public static String getArticleMD(String header,String main){
+    public static String remoteResponse(boolean pass){
+        if(pass)
+            return "{\"valid\":true}";
+        else
+            return "{\"valid\":false}";
+    }
+
+    public static String getArticleMD(boolean edit,String header,String main) {
         JSONObject json=new JSONObject();
+        json.put("edit", edit);
         json.put("header", header);
         json.put("main", main);
         return json.toString();
     }
+
+
 
 }

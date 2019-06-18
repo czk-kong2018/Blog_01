@@ -1,148 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>editor</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="editor.md-master/css/editormd.min.css" />
-	<link rel="stylesheet" href="css/jquery-labelauty.css">
-	<style type="text/css">
-		ul { list-style-type: none; margin-bottom: 0;}
-		li { display: inline-block; margin: 10px 0 0;}
-	</style>
-	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-	<script src="js/jquery-labelauty.js"></script>
-	<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="editor.md-master/editormd.min.js"></script>
-	<script src="http://localhost:8081/source/js/login.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title>editor</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="editor.md-master/css/editormd.min.css" />
+		<link rel="stylesheet" href="css/jquery-labelauty.css">
+		<style type="text/css">
+			ul { list-style-type: none; margin-bottom: 0;}
+			li { display: inline-block; margin: 10px 0 0;}
+		</style>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<script src="js/jquery-labelauty.js"></script>
+		<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="editor.md-master/editormd.min.js"></script>
+		<script src="http://localhost:8081/source/js/login.js"></script>
+		<script>
+
+			$(function() {
+				md_edit = editormd("editor_md", {
+                    placeholder : "editormd",
+                    width : "95%",
+                    height : 600,
+                    syncScrolling : "single",
+                    emoji : true,
+                    path : "editor.md-master/lib/",
+                    saveHTMLToTextarea : true,
+                    tocm : true, // Using [TOCM]
+                    tex : true, // 开启科学公式TeX语言支持，默认关闭
+                    flowChart : true, // 开启流程图支持，默认关闭
+                    /* 上传图片配置 */
+                    imageUpload : true,
+                    imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
+                    imageUploadURL : "/article/uploadImg"
+				});
+				
+				$("#publish").click(function(){
+                    var header=$("#article_header").val();
+                    var main=md_edit.getMarkdown();
+                    var tags=getTags();
+                    var own_id=getCookie("user_id");
+                    if(main.length<=100){
+                        alert("文章内容不得少于100字");
+                        return;
+                    }
+                    if(own_id==""||own_id==0){
+                        alert("请先登录");
+                        return;
+                    }
+                    $.ajax({
+                        async:false,
+                        type:"post",
+                        url:"/article/publish",
+                        dataType:"json",
+                        contentType:"application/json",
+                        data:JSON.stringify({
+                            "title":header,
+                            "content":main,
+                            "tagList":tags,
+                            "own_id":own_id
+                        }),
+                        success:function(e){
+                            alert(JSON.stringify(e));
+                        },
+                        error:function(e){
+                            alert("提交失败,服务器端出现异常");
+                        }
+                    });
+				});
+
+				$.ajax({
+					async:false,
+					type:"get",
+					url:"/article/editArticle",
+					dataType:"json",
+					success:function(data){
+						if(data.edit==true){
+							$("#article_header").val(data.header);
+							window.setTimeout(function() {
+								md_edit.setMarkdown(data.main);
+							}, 500);
+						}
+					},
+					error:function(data){
+						alert("error");
+					}
+				});
+				
+				$(".tag").labelauty();
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div class="container-full panel panel-default">
+			<div class="row panel-heading">
+				<div class="col-md-9 col-md-offset-1">
+					<input type="text" id="article_header" class="form-control" value="" placeholder="请输入文章标题" />
+				</div>
+				<div class="col-md-2">
+					<button id="publish" type="button" class="btn btn-default">发表文章</button>
+				</div>
+			</div>
+			<div class="row panel-body">
+				<div id="editor_md"></div>
+			</div>
+			<div class="row panel-footer">
+				<ul class="dowebok">
+					<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag1"></li>-->
+					<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag2"></li>-->
+					<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag3"></li>-->
+					<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag4"></li>-->
+				</ul>
+			</div>
+			
+		</div>
+	</body>
 	<script>
-        $(function() {
-            md_edit = editormd("editor_md", {
-                placeholder : "editormd",
-                width : "95%",
-                height : 600,
-                syncScrolling : "single",
-                emoji : true,
-                path : "editor.md-master/lib/",
-                saveHTMLToTextarea : true,
-                tocm : true, // Using [TOCM]
-                tex : true, // 开启科学公式TeX语言支持，默认关闭
-                flowChart : true, // 开启流程图支持，默认关闭
-                /* 上传图片配置 */
-                imageUpload : true,
-                imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
-                imageUploadURL : "/article/uploadImg"
-            });
-
-            $("#publish").click(function(){
-                var header=$("#article_header").val();
-                var main=md_edit.getMarkdown();
-                var tags=getTags();
-                var own_id=getCookie("user_id");
-                if(main.length<=100){
-                    alert("文章内容不得少于100字");
-                    return;
-				}
-				if(own_id==""||own_id==0){
-                    alert("请先登录");
-                    return;
-				}
-                $.ajax({
-                    async:false,
-                    type:"post",
-                    url:"/article/publish",
-                    dataType:"json",
-                    contentType:"application/json",
-                    data:JSON.stringify({
-                        "title":header,
-                        "content":main,
-                        "tagList":tags,
-                        "own_id":own_id
-                    }),
-                    success:function(e){
-                       alert(JSON.stringify(e));
-                    },
-                    error:function(e){
-                        alert("提交失败,服务器端出现异常");
-                    }
-                });
-            });
-            var edit=false;
-            if(edit){
-                var fileId=0;
-                $.ajax({
-                    async:false,
-                    type:"post",
-                    url:"",
-                    dataType:"json",
-                    data:{
-                        "fid":fileId
-                    },
-                    success:function(data){
-                        $("#article_header").val(data.header);
-                        window.setTimeout(function() {
-                            md_edit.setMarkdown(data.main);
-                        }, 500);
-                    },
-                    error:function(data){
-                        alert("error");
-                    }
-                });
+        //请求tag标签
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8080/tags/getAll",
+            async: false,
+            success: function (resp) {
+                for (var i = 0; i < resp.length; i++) {
+                    var htm = '<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="' + resp[i].tag_name + '"></li>'
+                    $($(".dowebok")).append(htm);
+                }
             }
-
-            $(".tag").labelauty();
         });
-
+        //获取选取的标签
+        function getTags(){
+            var selectTags=new Array();
+            a=$("[name=tagbox]");  //tagbox中checked属性为true表示选中
+            for (var i = 0; i < a.length; i++) {
+                if(a[i].checked){
+                    selectTags.push(a[i].labels[0].innerText);
+                }
+            }
+            return selectTags;
+        }
 	</script>
-</head>
-<body>
-<div class="container-full panel panel-default">
-	<div class="row panel-heading">
-		<div class="col-md-9 col-md-offset-1">
-			<input type="text" id="article_header" class="form-control" value="" placeholder="请输入文章标题" />
-		</div>
-		<div class="col-md-2">
-			<button id="publish" type="button" class="btn btn-default">发表文章</button>
-		</div>
-	</div>
-	<div class="row panel-body">
-		<div id="editor_md"></div>
-	</div>
-	<div class="row panel-footer">
-		<ul class="dowebok">
-			<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag1"></li>-->
-			<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag2"></li>-->
-			<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag3"></li>-->
-			<!--<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="tag4"></li>-->
-		</ul>
-	</div>
-
-</div>
-</body>
-<script>
-    //请求tag标签
-    $.ajax({
-        type: "get",
-        url: "http://localhost:8080/tags/getAll",
-        async: false,
-        success: function (resp) {
-            for (var i = 0; i < resp.length; i++) {
-                var htm = '<li><input class="tag" type="checkbox" name="tagbox" data-labelauty="' + resp[i].tag_name + '"></li>'
-                $($(".dowebok")).append(htm);
-            }
-        }
-    });
-
-    //获取选取的标签
-    function getTags(){
-        var selectTags=new Array();
-        a=$("[name=tagbox]");  //tagbox中checked属性为true表示选中
-        for (var i = 0; i < a.length; i++) {
-            if(a[i].checked){
-                selectTags.push(a[i].labels[0].innerText);
-            }
-        }
-        return selectTags;
-    }
-</script>
 </html>

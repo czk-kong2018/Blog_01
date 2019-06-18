@@ -22,7 +22,7 @@ public class ArticleDaoTest {
 
     @Test
     public void getALLArticleByUserName() {
-
+            ad.delete(2);
     }
 
     @Test

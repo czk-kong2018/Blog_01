@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>某某的个人博客</title>
+    <title>OneBlog个人首页</title>
     <meta name="author" content="">
     <meta name="keywords" content="个人博客">
     <meta name="description" content="OneBlog是一款简洁美观、自适应的Java博客系统。使用springboot开发，前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。"
@@ -31,32 +31,73 @@
 
 <body>
       <!-- 登录遮造层-->
-      <div class="modal fade" id="loginFade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            登录系统
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                            <form role="form" >
-                                    <div class="form-group">
-                                         <label for="exampleInputEmail1">email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email"/>
-                                    </div>
-                                    <div class="form-group">
-                                         <label for="exampleInputPassword1">password</label><input type="password" class="form-control" id="exampleInputPassword1" name="pwd" />
-                                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="btn-submit">sign in</button>
-                    </div>
-                </form>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+      <!--<div class="modal fade" id="loginFade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+            <!--<div class="modal-dialog">-->
+                <!--<div class="modal-content">-->
+                    <!--<div class="modal-header">-->
+                         <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                        <!--<h4 class="modal-title" id="myModalLabel">-->
+                            <!--登录系统-->
+                        <!--</h4>-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                            <!--<form role="form" >-->
+                                    <!--<div class="form-group">-->
+                                         <!--<label for="exampleInputEmail1">email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email"/>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                         <!--<label for="exampleInputPassword1">password</label><input type="password" class="form-control" id="exampleInputPassword1" name="pwd" />-->
+                                    <!--</div>-->
+                    <!--<div class="modal-footer">-->
+                        <!--<button type="button" class="btn btn-primary" id="btn-submit">sign in</button>-->
+                    <!--</div>-->
+                <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!---->
+        <!--</div>-->
+      <!-- 登陆模态框 -->
+      <div class="modal" id="login-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title" id="myModalLabel">
+                          登录系统
+                      </h4>
+                  </div>
+                  <div class="modal-body" style="padding:30px 40px">
+                      <form id="form-test" autocomplete="off">
+                          <!-- 输入框必须放在“form-group”中保持才能使用验证插件 -->
+                          <div class="form-group">
+                              <!-- 使用“contorl-label”向右对其输入框 -->
+                              <label >邮箱(已注册的邮箱)</label>
+                              <div class="">
+                                  <!-- 使用“form-control”改变输入框样式 -->
+                                  <input class="form-control" type="text" id="email" />
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>密码(6-20位密码)</label>
+                              <div class="">
+                                  <input class="form-control" type="password" id="password" />
+                              </div>
+                          </div>
+                          <div style="margin-bottom:30px;">
+                              <a href="/front/register" class="pull-left">没账号？去注册</a>
+                              <a href="#" class="pull-right">忘记密码</a>
+                              <div style="clear:both"></div>
+                          </div>
+                          <!-- 通过offset属性进行偏移 -->
+                          <div class="text-center">
+                              <input class="btn btn-success" style="width:30%" type="button" id="btn-submit" value="登陆" />
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
 
 
     <nav id="topmenu" class="navbar navbar-default navbar-fixed-top" style="opacity: 1;">
@@ -70,8 +111,9 @@
             
             <div class="menu-topmenu-container pull-right">
                 <ul class="list-unstyled list-inline pull-left">
+                    <li><a href="" id="logOut" style="display:block" class="menu_a" data-toggle="modal" data-placement="bottom"><i class="fa fa-sign-out"></i>注销</a></li>
 
-                        <li><a id="login_user" href="#loginFade" class="menu_a" data-toggle="modal"
+                        <li><a id="login_user" href="#login-modal" class="menu_a" data-toggle="modal"
                                data-placement="bottom" data-original-title="登录"><i class="fa fa-user-circle"></i>登录</a></li>
                         
                             <li><a href="http://localhost:8080/front/Register" class="menu_a" data-toggle="modal"
@@ -96,7 +138,7 @@
                 <div class="pull-left site-desc">
                     <h1 class="auto-shake"><a class="BlogTitle" href="" data-original-title="OneBlog是一款简洁美观、自适应的Java博客系统"
                             data-toggle="tooltip" data-placement="bottom"></a></h1>
-                    <p class="site-description">Blog是一款简洁美观、自适应的Java博客系统
+                    <p class="site-description">OneBlog是一款简洁美观、自适应的Java博客系统
                     </p>
                 </div>
                 <ul class="nav navbar-nav ">

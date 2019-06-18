@@ -47,7 +47,7 @@
             <!--拦截提交子评论请求-->
             <mvc:mapping path="/comments/commitChild"/>
             <!--拦截上传图片的请求-->
-            <mvc:mapping path="/article/uploadImg"/>
+            <!--<mvc:mapping path="/article/uploadImg"/>-->
             <!-- 排除对指定路径的拦截 -->
             <!--<mvc:exclude-mapping path="/system/login.do"/>-->
             <bean class="com.zhbit.interceptors.UserInterceptor"/>

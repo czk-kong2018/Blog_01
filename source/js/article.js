@@ -24,6 +24,8 @@ var OnePageCount = 10;//每页显示条数,默认为10条
 var current_page = 1;//当前页,默认为1
 var total_page;
 
+
+
 /**
 * 显示文章细节
 */
@@ -60,6 +62,7 @@ $.ajax({
                 var htm = compile(resp);
                 $('#markdown-body').html(htm);
                 $('.blog-info-title').html('<strong>' + article_data.title + '</strong>');
+		 $("#markdown-body img").addClass("img-responsive");  //使得图片适应屏幕大小
             },
             error: function (e) {
 

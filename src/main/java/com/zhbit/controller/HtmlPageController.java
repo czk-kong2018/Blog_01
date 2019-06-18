@@ -42,7 +42,7 @@ public class HtmlPageController {
      */
     @RequestMapping("/back/Manager")
     public String getBackManger(HttpServletRequest request, HttpSession httpSession) {
-        return "back/manage";
+        return "back/manage_new";
     }
         /**
          * 返回注册界面

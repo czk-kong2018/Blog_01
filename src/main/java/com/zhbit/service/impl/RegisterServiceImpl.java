@@ -32,7 +32,7 @@ public class RegisterServiceImpl implements RegisterService {
         login.setEmail(email);
         login.setPwd(pwd);
         try {
-            MailUtils.sendMail(email,content);
+            MailUtils.sendMail(email,content); //发送邮件
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("发送邮件失败");
@@ -40,13 +40,19 @@ public class RegisterServiceImpl implements RegisterService {
         return login;
     }
 
+    /**
+     * 返回插入的用户信息的 随机生成的用户名  需要使用到 用于重定向
+     * @param login
+     * @return
+     */
     @Transactional
-    public int insertUser(Login login) {
+    public String insertUser(Login login) {
         int i = registerDao.insertUser(login);
         int user_id=registerDao.getUserIdByEmail(login.getEmail());
         //默认用户名生成uuid 随机 取前8位  出现重复的概率堪比中彩票, 中了再说
-        int i1 = userMessageDao.insertUserMessage(user_id, UuidUtils.createUUid().substring(0,8), "http://localhost:8081/source/image/default.jpg");
-        return i1;
+        String user_name= UuidUtils.createUUid().substring(0,8);
+        int i1 = userMessageDao.insertUserMessage(user_id,user_name, "http://localhost:8081/source/image/default.jpg");
+        return user_name;
     }
 
     public Integer getUserIdByEmail(String email) {

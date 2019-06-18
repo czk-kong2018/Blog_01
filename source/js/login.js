@@ -1,7 +1,7 @@
 
 $("#btn-submit").click(function(){
-    var email=$("#exampleInputEmail1")[0].value;
-    var pwd=$("#exampleInputPassword1")[0].value;
+    var email=$("#email")[0].value;
+    var pwd=$("#password")[0].value;
     if(email!="".trim()&&pwd!="".trim()){
         $.ajax({
             type: "post",
@@ -19,8 +19,9 @@ $("#btn-submit").click(function(){
                if(user_id!=""&&user_name!=""){
 
                    $("#login_user").html("<i class=\"fa fa-user-circle\"></i>"+user_name);
+		   $("#logOut").attr("style","display:block");
                    $("#login_user").attr("href","http://localhost:8080/back/Manager");
-                   location.replace(location);
+                   window.location.reload();
                }
             },
             error:function(response){
@@ -31,6 +32,13 @@ $("#btn-submit").click(function(){
         alert("邮箱或密码不能为空");
     }
 });
+//注销
+$("#logOut").click(function(){
+	clearCookie();
+	alert('注销成功');
+	window.location.reload();
+});
+
 function getCookie(cname)
             {
                 var name = cname + "=";
@@ -49,9 +57,10 @@ function getCookie(cname)
             $("#login_user").html("<i class=\"fa fa-user-circle\"></i>"+user_name);
             $("#login_user").attr("href","http://localhost:8080/back/Manager");
             $("#login_user").attr("targe","new_blank");
+	    
         }else{
             $("#login_user").html("<i class=\"fa fa-user-circle\"></i>"+"登录");
-            $("#login_user").attr("href","#loginFade");
+            $("#login_user").attr("href","#login-modal");
         } 
     });
 

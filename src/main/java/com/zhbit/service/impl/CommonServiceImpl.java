@@ -101,6 +101,11 @@ public class CommonServiceImpl implements CommonService {
     }
 
 
+    public void deleteCommentByArticleId(int article_id) {
+        articleDao.delete(article_id);
+    }
+
+
     /**
      * 忽略  测试新数据结构使用的方法 未使用
      * @param article_id

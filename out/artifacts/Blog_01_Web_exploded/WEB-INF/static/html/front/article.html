@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>OneBlog简介 | OneBlog开源博客</title>
     <meta name="author" content="张亚东(yadong.zhang0415#gmail.com)">
@@ -10,7 +11,7 @@
     <meta name="description" content="OneBlog是一款简洁美观、自适应的Java博客系统。使用springboot开发，前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。"
         id="meta_description">
     <!-- <link rel="canonical" href="http://dblog-web.zhyd.me/article/1"> -->
-    <link href="http://dblog-web.zhyd.me/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--<link href="http://dblog-web.zhyd.me/img/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/jquery-confirm/3.3.2/jquery-confirm.min.css" rel="stylesheet">
@@ -35,28 +36,47 @@
 </head>
 
 <body>
-<!-- 登录遮造层-->
-<div class="modal fade" id="loginFade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">
-                    登录系统
-                </h4>
-            </div>
-            <div class="modal-body">
-                <form role="form" >
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">password</label><input type="password" class="form-control" id="exampleInputPassword1" name="pwd" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="btn-submit">sign in</button>
-                    </div>
-                </form>
+
+
+
+    <!-- 登陆模态框 -->
+    <div class="modal" id="login-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        登录系统
+                    </h4>
+                </div>
+                <div class="modal-body" style="padding:30px 40px">
+                    <form id="form-test" autocomplete="off" action="login.html" method="post">
+                        <!-- 输入框必须放在“form-group”中保持才能使用验证插件 -->
+                        <div class="form-group">
+                            <!-- 使用“contorl-label”向右对其输入框 -->
+                            <label>邮箱(已注册的邮箱)</label>
+                            <div class="">
+                                <!-- 使用“form-control”改变输入框样式 -->
+                                <input class="form-control" type="text" id="email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>密码(6-20位密码)</label>
+                            <div class="">
+                                <input class="form-control" type="password" id="password" />
+                            </div>
+                        </div>
+                        <div style="margin-bottom:30px;">
+                            <a href="register.html" class="pull-left">没账号？去注册</a>
+                            <a href="#" class="pull-right">忘记密码</a>
+                            <div style="clear:both"></div>
+                        </div>
+                        <!-- 通过offset属性进行偏移 -->
+                        <div class="text-center">
+                            <input class="btn btn-success" style="width:30%" type="button" id="btn-submit" value="登陆" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -72,15 +92,15 @@
             </div>
             <div class="menu-topmenu-container pull-right">
                 <ul class="list-unstyled list-inline pull-left">
-
-                    <li><a id="login_user" href="#loginFade" class="menu_a" data-toggle="modal" id="login_name" data-placement="bottom"
+                    <li><a id="logOut" style="display: block"><i class="fa fa-sign-out"></i>注销</a></li>
+                    <li><a id="login_user" href="#login-modal" class="menu_a" data-toggle="modal" id="login_name" data-placement="bottom"
                             data-original-title="登录"><i class="fa fa-user-circle"></i>登录</a></li>
 
                     <li><a href="http://localhost:8080/front/Register" class="menu_a" data-toggle="modal" ata-placement="bottom"
                             data-original-title="注册"><i class="fa fa-registered"></i>注册</a></li>
-                    <li><a href="http://dblog-web.zhyd.me/about" class="menu_a" title="" data-toggle="tooltip"
+                    <li><a href="" class="menu_a" title="" data-toggle="tooltip"
                             data-placement="bottom" data-original-title="关于博客"><i class="fa fa-info fa-fw"></i>关于</a></li>
-                    <li><a href="http://dblog-web.zhyd.me/links" class="menu_a" title="" data-toggle="tooltip"
+                    <li><a href="" class="menu_a" title="" data-toggle="tooltip"
                             data-placement="bottom" data-original-title="友情链接"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
                 </ul>
             </div>
@@ -102,7 +122,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="pull-left site-desc">
-                    <h1 class="auto-shake"><a href="http://dblog-web.zhyd.me" data-original-title="Blog是一款简洁美观、自适应的Java博客系统"
+                    <h1 class="auto-shake"><a href="" data-original-title="Blog是一款简洁美观、自适应的Java博客系统"
                             data-toggle="tooltip" data-placement="bottom">Blog开源博客</a></h1>
                     <p class="site-description">Blog是一款简洁美观、自适应的Java博客系统</p>
                 </div>
@@ -110,27 +130,26 @@
                     <li>
                         <a href="/" class="menu_a"><i class="fa fa-home"></i>首页</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle menu_a" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-css3"></i>前端技术 <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/type/4" title="点击查看《1》的文章">1</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/type/2" class="menu_a"><i class="fa fa-coffee"></i>后端技术</a></li>
-                    <li><a href="/type/3" class="menu_a"><i class="fa fa-folder-open-o"></i>其他文章</a></li>
-                    <li><a href="/guestbook" class="menu_a"><i class="fa fa-comments-o"></i>留言板</a></li>
+                    <li><a href="/type/3" class="menu_a"><i class="fa fa-folder-open-o"></i>博主首页</a></li>
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle menu_a" data-toggle="dropdown" aria-expanded="false">-->
+                            <!--<i class="fa fa-css3"></i>前端技术<span class="caret"></span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <li><a href="/writeBlog/editor.html" class="menu_a"><i class="fa fa-coffee"></i>编写博客</a></li>
+
+                    <!--<li><a href="/guestbook" class="menu_a"><i class="fa fa-comments-o"></i>留言板</a></li>-->
                     <li><span class="pull-right nav-search main-search" data-toggle="modal" data-target=".nav-search-box"><i
                                 class="fa fa-search"></i></span></li>
                 </ul>
             </div>
         </div>
-    </nav> <img src="http://dblog-web.zhyd.me/img/default_article_cover.jpg" onerror="this.src='http://dblog-web.zhyd.me/img/default_article_cover.jpg'"
-        style="display: none;" id="cover-img">
+    </nav>
+<!--<img src="http://dblog-web.zhyd.me/img/default_article_cover.jpg" onerror="this.src='http://dblog-web.zhyd.me/img/default_article_cover.jpg'"-->
+        <!--style="display: none;" id="cover-img">-->
     <div class="container custome-container">
         <nav class="breadcrumb">
-            <a class="crumbs" title="" href="http://dblog-web.zhyd.me" data-toggle="tooltip" data-placement="bottom"
+            <a class="crumbs" title="" href="" data-toggle="tooltip" data-placement="bottom"
                 data-original-title="返回首页"><i class="fa fa-home"></i>首页</a>
 
             <i class="fa fa-angle-right"></i>正文
@@ -198,7 +217,7 @@
                                 <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="article-footer overflow-initial">所属分类：<a href="http://dblog-web.zhyd.me/type/3"
+                        <div class="article-footer overflow-initial">所属分类：<a href=""
                                 data-original-title="点击查看其他文章分类的文章" data-toggle="tooltip" data-placement="bottom">其他文章</a></div>
                     </div>
                 </div>
@@ -207,24 +226,24 @@
                         <ul class="list-unstyled">
                             <li>
                                 <strong>本文标签：</strong>
-                                <a href="http://dblog-web.zhyd.me/tag/5" class="c-label" data-original-title="其他"
+                                <a href="" class="c-label" data-original-title="其他"
                                     data-toggle="tooltip" data-placement="bottom" target="_blank">其他</a>
                             </li>
                             <li>
                                 <strong>版权声明：</strong>
-                                本站原创文章，于2019年04月24日由<a href="http://dblog-web.zhyd.me" target="_blank"
+                                本站原创文章，于2019年04月24日由<a href="" target="_blank"
                                     data-original-title="Blog开源博客" data-toggle="tooltip" data-placement="bottom"><strong></strong></a>发布，转载请注明出处
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="blog-body">
-                    <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db&amp;utm_source=wylo59db"
-                        target="_blank" rel="external nofollow">
-                        <img src="http://dblog-web.zhyd.me/img/ad/aliyun_sale1000-60.png" alt="阿里云首购8折" class="img-responsive"
-                            style="width: 100%;">
-                    </a>
-                </div>
+                <!--<div class="blog-body">-->
+                    <!--<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db&amp;utm_source=wylo59db"-->
+                        <!--target="_blank" rel="external nofollow">-->
+                        <!--<img src="http://dblog-web.zhyd.me/img/ad/aliyun_sale1000-60.png" alt="阿里云首购8折" class="img-responsive"-->
+                            <!--style="width: 100%;">-->
+                    <!--</a>-->
+                <!--</div>-->
 
                 <div class="blog-body clear overflow-initial expansion">
                     <div id="" data-id="120">
@@ -286,25 +305,25 @@
                         </ul>
                     </div>
                 </div> -->
-                <div class="sidebar-module">
-                    <h5 class="custom-title"><i class="fa fa-tags fa-fw icon"></i><strong>标签云</strong><small></small></h5>
-                    <a style="font-size: 14.45px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/2" title=""
-                        data-toggle="tooltip" data-placement="bottom" data-original-title="Java">
-                        Java
-                    </a>
-                    <a style="font-size: 10.2px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/3" title=""
-                        data-toggle="tooltip" data-placement="bottom" data-original-title="Spring">
-                        Spring
-                    </a>
-                    <a style="font-size: 10.94px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/4" title=""
-                        data-toggle="tooltip" data-placement="bottom" data-original-title="Spring Boot">
-                        Spring Boot
-                    </a>
-                    <a style="font-size: 14.58px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/5" title=""
-                        data-toggle="tooltip" data-placement="bottom" data-original-title="其他">
-                        其他
-                    </a>
-                </div>
+                <!--<div class="sidebar-module">-->
+                    <!--<h5 class="custom-title"><i class="fa fa-tags fa-fw icon"></i><strong>标签云</strong><small></small></h5>-->
+                    <!--<a style="font-size: 14.45px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/2" title=""-->
+                        <!--data-toggle="tooltip" data-placement="bottom" data-original-title="Java">-->
+                        <!--Java-->
+                    <!--</a>-->
+                    <!--<a style="font-size: 10.2px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/3" title=""-->
+                        <!--data-toggle="tooltip" data-placement="bottom" data-original-title="Spring">-->
+                        <!--Spring-->
+                    <!--</a>-->
+                    <!--<a style="font-size: 10.94px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/4" title=""-->
+                        <!--data-toggle="tooltip" data-placement="bottom" data-original-title="Spring Boot">-->
+                        <!--Spring Boot-->
+                    <!--</a>-->
+                    <!--<a style="font-size: 14.58px;margin: 5px;" href="http://dblog-web.zhyd.me/tag/5" title=""-->
+                        <!--data-toggle="tooltip" data-placement="bottom" data-original-title="其他">-->
+                        <!--其他-->
+                    <!--</a>-->
+                <!--</div>-->
 
                 <div class="sidebar-module">
                     <ul class="nav nav-tabs sidebar-tabs" role="tablist">
@@ -318,19 +337,24 @@
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="profile">
                             <ol class="list-unstyled">
-                                <li>
-                                    <a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"
-                                        data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">
-                                        <i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"
-                                        data-placement="bottom" data-original-title="OneBlog简介">
-                                        <i class="fa fa-book fa-fw"></i> OneBlog简介
-                                    </a>
+                                <li class="empty-list">
+                                    <i class="fa fa-bookmark-o fa-fw"></i> 暂无相关文章
                                 </li>
                             </ol>
+                            <!--<ol class="list-unstyled">-->
+                                <!--<li>-->
+                                    <!--<a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"-->
+                                        <!--data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">-->
+                                        <!--<i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"-->
+                                        <!--data-placement="bottom" data-original-title="OneBlog简介">-->
+                                        <!--<i class="fa fa-book fa-fw"></i> OneBlog简介-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                            <!--</ol>-->
                         </div>
                         <div role="tabpanel" class="tab-pane" id="home">
                             <ol class="list-unstyled">
@@ -341,19 +365,24 @@
                         </div>
                         <div role="tabpanel" class="tab-pane" id="messages">
                             <ol class="list-unstyled">
-                                <li>
-                                    <a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"
-                                        data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">
-                                        <i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"
-                                        data-placement="bottom" data-original-title="OneBlog简介">
-                                        <i class="fa fa-book fa-fw"></i> OneBlog简介
-                                    </a>
+                                <li class="empty-list">
+                                    <i class="fa fa-bookmark-o fa-fw"></i> 暂无相关文章
                                 </li>
                             </ol>
+                            <!--<ol class="list-unstyled">-->
+                                <!--<li>-->
+                                    <!--<a href="http://dblog-web.zhyd.me/article/2" title="" data-toggle="tooltip"-->
+                                        <!--data-placement="bottom" data-original-title="OneBlog简介（未开启评论）">-->
+                                        <!--<i class="fa fa-book fa-fw"></i> OneBlog简介（未开启评论）-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="http://dblog-web.zhyd.me/article/1" title="" data-toggle="tooltip"-->
+                                        <!--data-placement="bottom" data-original-title="OneBlog简介">-->
+                                        <!--<i class="fa fa-book fa-fw"></i> OneBlog简介-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                            <!--</ol>-->
                         </div>
                     </div>
                 </div>
@@ -453,17 +482,17 @@
                     </p>
                     <ul class="list-unstyled list-inline">
                         <li>其他连接：</li>
-                        <li><a href="https://mi.aliyun.com/shop/19462" target="_blank" title="" data-toggle="tooltip"
+                        <li><a href="" target="_blank" title="" data-toggle="tooltip"
                                 data-placement="bottom" rel="external nofollow" data-original-title="闲置域名出售"><i class="fa fa-globe fa-fw fa-spin"></i>域名出售</a></li>
-                        <li><a href="http://dblog-web.zhyd.me/sitemap.html" target="_blank" title="" data-toggle="tooltip"
+                        <li><a href="" target="_blank" title="" data-toggle="tooltip"
                                 data-placement="bottom" data-original-title="网站地图"><i class="fa fa-map-o fa-fw"></i>网站地图</a></li>
-                        <li><a href="http://dblog-web.zhyd.me/recommended" title="" data-toggle="tooltip"
+                        <li><a href="" title="" data-toggle="tooltip"
                                 data-placement="bottom" data-original-title="站长推荐"><i class="fa fa-thumbs-o-up fa-fw"></i>站长推荐</a></li>
-                        <li><a href="http://dblog-web.zhyd.me/updateLog" title="" data-toggle="tooltip" data-placement="bottom"
+                        <li><a href="" title="" data-toggle="tooltip" data-placement="bottom"
                                 data-original-title="更新记录"><i class="fa fa-file-o fa-fw"></i>更新记录</a></li>
-                        <li><a href="http://dblog-web.zhyd.me/archives" title="" data-toggle="tooltip" data-placement="bottom"
+                        <li><a href="" title="" data-toggle="tooltip" data-placement="bottom"
                                 data-original-title="归档目录"><i class="fa fa-folder-o fa-fw"></i>归档目录</a></li>
-                        <li><a href="http://dblog-web.zhyd.me/disclaimer" title="" data-toggle="tooltip" data-placement="bottom"
+                        <li><a href="" title="" data-toggle="tooltip" data-placement="bottom"
                                 data-original-title="免责声明"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
                     </ul>
                     <p></p>
@@ -474,7 +503,7 @@
                             data-original-title="七牛云-国内领先的企业级云服务商">七牛云</a> · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"
                             target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"
                             data-original-title="查看备案信息">鲁ICP备17054970号-1</a></p>
-                    <p>Copyright © 2019 zhyd.me All Rights Reserved | Powered by <a href="https://gitee.com/yadong.zhang/DBlog"
+                    <p>Copyright © 2019 OneBlog All Rights Reserved | Powered by <a href=""
                             title="" data-toggle="tooltip" data-placement="right" target="_blank" data-original-title="OneBlog是一款简洁美观、自适应的Java博客系统...">OneBlog</a>
                     </p>
                 </div>

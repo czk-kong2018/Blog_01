@@ -51,9 +51,9 @@ public class RegisterController {
         Login login =(Login)session.getAttribute(code);
         if(login!=null) { {
                 session.removeAttribute(code);
-                registerService.insertUser(login);
-                JsonUtils.CreateJsonAndSend(response,RegisterEnum.REGISTERSUCCESS.toMap()); //注册成功
-                response.sendRedirect("http://localhost:8080/" + login.getLogin_id());
+            String user_name= registerService.insertUser(login);
+            JsonUtils.CreateJsonAndSend(response,RegisterEnum.REGISTERSUCCESS.toMap()); //注册成功
+                response.sendRedirect("http://localhost:8080/" + user_name);
             }
         }else{
             JsonUtils.CreateJsonAndSend(response,RegisterEnum.URLTIMEOUT.toMap()); //链接失效

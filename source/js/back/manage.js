@@ -1,15 +1,17 @@
 $(function () {
 		
-
+	var appConfig={
+		"basePath":"http://localhost:8080/"	
+	}
 	var cook={
 		"user_name":getCookie("user_name"),
 		"user_id":getCookie("user_id")
 	}	
 	$("#userName").html(cook.user_name);
 
+	$('#myBlog').attr("href","http://localhost:8080/"+cook.user_name)//设置我的博客地址
 
-
-	var obj = $('#content');
+	var obj = $('.main-content');
 	// 基本信息
 	$('#basic-info').click(function () {
 		var user_name = "";
@@ -82,15 +84,15 @@ $(function () {
 		obj.append(content);
 	})
 	// 文章管理
-	$('#original-article').click(function () {
+	$('#article-manage').click(function () {
 		var articles = new Array();
 		$.ajax({
-			type: "get",
-			url: "http://localhost:8080/article/getAllArticlesById",
-			data: {
-				"user_id": cook.user_id
-			},
+			type: "post",
+			url: "/article/getAllArticlesById",
 			async: false,
+			data: {
+				"user_id":cook.user_id
+			},
 			success: function (resp) {
 				articles = resp;
 			}
@@ -110,8 +112,10 @@ $(function () {
 		if (articles.length > 0) {
 			for (var i = 0; i < articles.length; i++) {
 				articles[i].create_time=formatDate(new Date(articles[i].create_time));
+				var url=appConfig.basePath+"article/"+articles[i].article_id+"/"+cook.user_name;
 				content += '<tr class="">\n' +
-					'<td>《' + articles[i].title + '》</td>\n' +
+					'<td class="hide">'+articles[i].article_id+'</td>' +
+					'<td>' + articles[i].title + '</td>\n' +
 					'<td>' + articles[i].create_time + '</td>\n' +
 					'<td>\n' +
 					'<div class="ckbx-style-8 ckbx-medium">\n' +
@@ -119,10 +123,10 @@ $(function () {
 					'<label for="ckbx-size-2"></label>\n' +
 					'</div>\n' +
 					'</td>\n' +
-					'<td>5</td>\n' +
-					'<td>5</td>\n' +
+					'<td>'+articles[i].watch+'</td>\n' +
+					'<td>'+articles[i].click_like+'</td>\n' +
 					'<td>\n' +
-					'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>查看</a></div>\n' +
+					'<div style="display: inline;padding: 5px"><a target="_blank" href="'+url+'"><i class="fa fa-eye" aria-hidden="true"></i>查看</a></div>\n' +
 					'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-trash" aria-hidden="true"></i>删除</a></div>\n' +
 					'<div style="display: inline;padding: 5px"><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>修改</a></div>\n' +
 					'</td>\n' +
@@ -132,6 +136,45 @@ $(function () {
 		content += '</tbody>\n' +
 			'</table>'
 		obj.append(content);
+		$(".fa-edit").parent().click(function(){
+			var aid=$(this).parents("tr").children().eq(0).html();
+			$.ajax({
+				async:false,
+				type:"post",
+				url:"/article/editor",
+				dataType:"json",
+				data:{
+					"articleID":aid
+				},
+				success:function(data){
+					window.location.href="http://localhost:8080/"+data.url;
+				},
+				error:function(data){
+					alert("article edit error");
+				}
+			});
+		});
+		$(".fa-trash").parent().click(function(){
+			var aid=$(this).parents("tr").children().eq(0).html();
+			var aname=$(this).parents("tr").children().eq(1).html();
+			if(!confirm("delete article: "+aname+"?"))
+				return;
+			$.ajax({
+				async:false,
+				type:"post",
+				url:"/article/delete",
+				dataType:"json",
+				data:{
+					"articleID":aid
+				},
+				success:function(data){
+					$('#article-manage').click();
+				},
+				error:function(data){
+					alert("article edit error");
+				}
+			});
+		});
 	});
 
 	//系统通知
@@ -189,28 +232,94 @@ $(function () {
 
 	//评论通知
 	$("#comment-notify").click(function () {
+		var notifys;
+		$.ajax({
+			async:false,
+			type:"post",
+			url:"/notify/manager",
+			dataType:"json",
+			data:{
+				"pageNum":1
+			},
+			success:function(data){
+				notifys=data;
+			},
+			error:function(data){
+				alert("error");
+			}
+		});
 		obj.html("");
 		var content = '<table class="table table-hover table-striped">\n' +
 			'<tr>\n' +
 			'<th>来源</th>\n' +
 			'<th>链接</th>\n' +
 			'<th>内容</th>\n' +
-			'<th>日期</th>\n' +
+			'<th>已读/未读</th>' +
 			'<th>操作</th>\n' +
-			'</tr>\n' +
+			'</tr>\n';
+		for(var i=0;i<notifys.length;i++){
+	var personUrl=appConfig.basePath+notifys[i].send_notify_person;
+	var articleUrl=appConfig.basePath+"article/"+notifys[i].article_id+"/"+notifys[i].user_name;
+			content+=
 			'<tr>\n' +
-			'<td><a href="#">梅西</a></td>\n' +
+			'<td class="hide">'+notifys[i].notify_id+'</td>\n' +
+			'<td><a target="_blank" href="'+personUrl+'">'+notifys[i].send_notify_person+'</a></td>\n' +
 			'<td>\n' +
-			'<a href="#">java线程池</a>' +
+			'<a target="_blank" href="'+articleUrl+'" class="notifyLinkURL">'+notifys[i].articleTitle+'</a>' +
 			'</td>\n' +
 			'<td>\n' +
-			'感谢博主分享' +
+			notifys[i].content +
 			'</td>\n' +
-			'<td>2019-02-11</td>\n' +
+			'<td>';
+			content+=notifys[i].isread?'已读':'未读';
+			content+='</td>'+
 			'<td><a href="#"><i class="fa fa-fw fa fa-trash"></i>删除</a></td>\n' +
-			'</tr>\n' +
-			'</table>'
-		obj.append(content);
+			'</tr>\n';
+		}
+			
+		obj.append(content+'</table>');
+		
+		$(".fa-trash").parent().click(function(){
+			var nid=$(this).parents("tr").children().eq(0).html();
+			var ncontent=$(this).parents("tr").children().eq(3).html();
+			if(!confirm("delete notify: "+ncontent+"?"))
+				return;
+			$.ajax({
+				async:false,
+				type:"post",
+				url:"/notify/delete",
+				dataType:"json",
+				data:{
+					"notifyID":nid
+				},
+				success:function(data){
+					$("#comment-notify").click();
+				},
+				error:function(data){
+					alert("notify delete error");
+				}
+			});
+		});
+		
+		$(".notifyLinkURL").click(function(){
+			var nid=$(this).parents("tr").children().eq(0).html();
+			$.ajax({
+				async:false,
+				type:"post",
+				url:"/notify/hasread",
+				dataType:"json",
+				data:{
+					"notifyID":nid
+				},
+				success:function(data){
+				//	$("#comment-notify").click();
+				},
+				error:function(data){
+					alert("notify hasread error");
+				}
+			});
+		});
+		
 	})
 
 	//我的关注

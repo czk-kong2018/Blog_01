@@ -1,9 +1,8 @@
 package com.zhbit.dao;
 
-import com.zhbit.dto.ArticleToPage;
-import com.zhbit.dto.PublishArticle;
-import com.zhbit.dto.UserArticle;
+import com.zhbit.dto.*;
 import com.zhbit.entity.Article;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -23,6 +22,7 @@ public interface ArticleDao {
      * 查询用户的所有文章  通过用户名 带标签
      */
     List<UserArticle> getALLArticleByUserName(@Param("user_name")String user_name);
+
     /**
      * 查询用户所有文章 通过id  不需要带标签 用于后台管理显示管理文章  暂用
      *
@@ -50,5 +50,32 @@ public interface ArticleDao {
      */
     int insertArticle(@Param("article") Article article);
 
+    /**
+     * 首页操作
+     * @Author   拔锋
+     * @param tag
+     * @param begin
+     * @param end
+     * @return
+     * @throws Exception
+     */
+
+    List<IndexArticle> getIndexArticle(@Param("tag") String tag, @Param("begin")int begin, @Param("end")int end)throws Exception;
+
+    List<IndexArticle2> getIndexArticle2(@Param("tag") String tag, @Param("begin")int begin, @Param("end")int end)throws Exception;
+
+    /**
+     * 后台管理所需
+     * @Author  应钊
+     */
+    @Select("select article_id,title,url,create_time from article where own_id=#{user_id} order by article_id limit #{from},#{count}")
+     List<Article> articleManage(int from,int count,String userName);
+
+
+    @Select("select a.*,b.user_name from article as a,user_message as b where article_id=#{article_id} and a.own_id=b.user_id")
+     Article getArticle(@Param("article_id") int article_id);
+
+     @Delete("delete from article where article_id=#{article_id}")
+    void delete(@Param("article_id") int article_id);
 
 }

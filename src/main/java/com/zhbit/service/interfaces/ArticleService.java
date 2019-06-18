@@ -1,6 +1,8 @@
 package com.zhbit.service.interfaces;
 
 import com.zhbit.dto.ArticleToPage;
+import com.zhbit.dto.IndexArticle;
+import com.zhbit.dto.IndexArticle2;
 import com.zhbit.dto.UserArticle;
 import com.zhbit.entity.Article;
 import org.apache.ibatis.annotations.Param;
@@ -32,6 +34,30 @@ public interface ArticleService {
      */
 
     List<ArticleToPage> getArticeByPage(int current_page, int OnePageCount, String user_name);
+
+    /**
+     * 插入文章
+     */
+    void insertArticle(Article article);
+
+
+    /**
+     * 获取首页文章
+     * @param tag
+     * @param num
+     * @Author   拔锋
+     * @return
+     */
+    List<IndexArticle> getIndexArticle(String tag, int num);
+    List<IndexArticle2> getIndexArticle2(String tag, int num);
+
+
+    /**
+     * 后台管理所需
+     * @Authro  应钊
+     */
+     List<Article> articleManage(int currentPage, int onePageCount, String userName);
+     void delete(int articleID);
 
 
 }

@@ -10,5 +10,7 @@ public interface TagService {
 
     Tag[] getUserTags(int user_id);
 
-    public void insertTag(List<Tag> tags, int article_id);
+    void insertAritcleTag(int article_id, int tag_id);
+
+    void deleteAllByArticleId(int article_id);
 }

@@ -32,6 +32,13 @@ public interface CommonService {
      */
     List<FatherCommentFront> getFatherCommentByPage(int article_id, int current_page, int OnePageCount);
 
+
+    /**
+     * 删除所有评论 包括父评论和子评论  根据文章id
+     */
+    void deleteCommentByArticleId(int article_id);
+
+
     CommentList test(int article_id, int current_page, int OnePageCount);
 
 }

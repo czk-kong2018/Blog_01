@@ -1,11 +1,12 @@
 package com.zhbit.service.impl;
 
 import com.zhbit.dao.UserMessageDao;
+import com.zhbit.dto.IndexBlogger;
 import com.zhbit.entity.UserMessage;
 import com.zhbit.service.interfaces.UserMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.*;
 @Service
 public class UserMessageServiceImpl  implements UserMessageService {
 
@@ -25,5 +26,19 @@ public class UserMessageServiceImpl  implements UserMessageService {
     public UserMessage getUserMessageByUserId(int user_id) {
         UserMessage userMessageByUserId = userMessageDao.getUserMessageByUserId(user_id);
         return userMessageByUserId;
+    }
+
+    /**
+     * @return
+     * @Author 拔锋
+     */
+    public List<IndexBlogger> getIndexBlogger() {
+        try {
+            return userMessageDao.getIndexBlogger();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+
     }
 }

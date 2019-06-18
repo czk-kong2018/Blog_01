@@ -7,32 +7,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42483ab0-9bf6-44cf-8a5a-7e7129254f75" name="Default Changelist" comment="blog.sql文件修改">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Blog_01_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Blog_01_Web_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/HtmlPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/HtmlPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/UserMessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/UserMessageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ChildCommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ChildCommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/NotifyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/NotifyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/TagDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/TagDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/UserMessageDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/UserMessageDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/interceptors/UserInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/interceptors/UserInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/TagServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UploadServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UploadServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/spring/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/TagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/UserMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/UserMessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/util/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/util/JsonUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/ArticleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/NotifyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/NotifyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/UserMessageDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/UserMessageDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/spring/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/userBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/userBlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/writeBlog/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/writeBlog/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/HtmlPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/HtmlPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ChildCommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ChildCommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/UserMessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/UserMessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/CommonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/UserMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/UserMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMessageDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMessageDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhbit/dao/NotifyDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhbit/dao/NotifyDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/HtmlPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/HtmlPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/UserMessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/UserMessageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ChildCommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ChildCommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/NotifyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/NotifyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/TagDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/TagDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/UserMessageDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/UserMessageDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/interceptors/UserInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/interceptors/UserInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/CommonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/CommonServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/TagServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UploadServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UploadServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/CommonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/CommonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/TagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/UserMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/UserMessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/util/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/util/JsonUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/NotifyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/NotifyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMessageDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMessageDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhbit/dao/ArticleDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhbit/dao/ArticleDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhbit/dao/NotifyDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhbit/dao/NotifyDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/writeBlog/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeBlog/editor.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,19 +123,33 @@
       <FILTER>cucumber.api.cli.*</FILTER>
     </SUITE>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="648442347">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="67" />
+          <entry key="project.closed" value="71" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="4" />
-          <entry key="project.open.time.16" value="13" />
-          <entry key="project.open.time.17" value="9" />
-          <entry key="project.open.time.18" value="3" />
+          <entry key="project.open.time.16" value="15" />
+          <entry key="project.open.time.17" value="12" />
+          <entry key="project.open.time.18" value="4" />
           <entry key="project.open.time.19" value="5" />
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.20" value="5" />
@@ -77,58 +166,60 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="80" />
+          <entry key="project.opened" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="159" />
-          <entry key="html" value="1726" />
-          <entry key="java" value="28072" />
+          <entry key="html" value="2288" />
+          <entry key="java" value="31435" />
           <entry key="jsp" value="45" />
           <entry key="properties" value="4" />
           <entry key="txt" value="46" />
-          <entry key="xml" value="2650" />
+          <entry key="xml" value="2811" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1726" />
-          <entry key="JAVA" value="28072" />
+          <entry key="HTML" value="2288" />
+          <entry key="JAVA" value="31435" />
           <entry key="JSP" value="45" />
           <entry key="PLAIN_TEXT" value="205" />
           <entry key="Properties" value="4" />
           <entry key="SQL" value="33" />
-          <entry key="XML" value="2617" />
+          <entry key="XML" value="2778" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="8" />
           <entry key="fxml" value="1" />
-          <entry key="html" value="97" />
+          <entry key="html" value="133" />
           <entry key="iml" value="1" />
-          <entry key="java" value="1019" />
-          <entry key="js" value="3" />
+          <entry key="java" value="1272" />
+          <entry key="js" value="4" />
           <entry key="jsp" value="7" />
+          <entry key="kt" value="1" />
           <entry key="md" value="3" />
           <entry key="properties" value="1" />
-          <entry key="sql" value="1" />
-          <entry key="xml" value="126" />
+          <entry key="sql" value="2" />
+          <entry key="xml" value="159" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="HTML" value="97" />
+          <entry key="HTML" value="133" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="1019" />
+          <entry key="JAVA" value="1272" />
           <entry key="JSP" value="7" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="4" />
+          <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="3" />
           <entry key="Properties" value="1" />
-          <entry key="SQL" value="1" />
-          <entry key="XML" value="127" />
+          <entry key="SQL" value="2" />
+          <entry key="XML" value="160" />
         </counts>
       </usages-collector>
     </session>
@@ -137,39 +228,12 @@
     <favorites_list name="Blog_01" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/LoginEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/FileUpload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+            <state relative-caret-position="212">
+              <caret line="194" selection-start-line="194" selection-end-line="194" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,61 +242,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="115" column="67" selection-start-line="115" selection-start-column="67" selection-end-line="115" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+            <state relative-caret-position="135">
+              <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="406" lean-forward="true" selection-start-line="406" selection-end-line="406" />
+            <state relative-caret-position="48">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/RegisterEnum.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.9.RELEASE/spring-aop-4.3.9.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/UserEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="125">
+              <caret line="337" selection-start-line="337" selection-end-line="337" />
             </state>
           </provider>
         </entry>
@@ -247,25 +278,19 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Kotlin File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>web</find>
-      <find>Hashcode</find>
-      <find>hash</find>
-      <find>Node</find>
-      <find>TreeNode</find>
-      <find>table</find>
       <find>addAll</find>
       <find>io</find>
       <find>commons-io</find>
       <find>upload</find>
       <find>user_name</find>
       <find>登录名</find>
-      <find>登录</find>
       <find>上传博客</find>
       <find>梅西</find>
       <find>注册</find>
@@ -275,8 +300,21 @@
       <find>#login_name</find>
       <find>#login_user</find>
       <find>login_name</find>
-      <find>login_user</find>
       <find>login</find>
+      <find>首页</find>
+      <find>bre</find>
+      <find>Blog</find>
+      <find>留言板</find>
+      <find>loginFade</find>
+      <find>login_user</find>
+      <find>modal</find>
+      <find>markdown-body</find>
+      <find>zhyd.me</find>
+      <find>没账号</find>
+      <find>注销</find>
+      <find>cookie</find>
+      <find>登录</find>
+      <find>cookie.js</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -292,57 +330,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/Filters/BodyReaderHttpServletRequestWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/ReaderUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/CreateDiffName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/RegisterDaoTest.java" />
-        <option value="$PROJECT_DIR$/web/static/html/front/register.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/CommentEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/web/static/html/front/404.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java" />
-        <option value="$PROJECT_DIR$/web/static/html/front/article.html" />
-        <option value="$PROJECT_DIR$/web/static/html/front/userBlog.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/UploadService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/entity/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/RegisterEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/LoginEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/FatherCommentEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/ChildCommentEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/TagServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/TagService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/ArticleIdAndUserName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/CurrencyEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/PublishArticle.java" />
-        <option value="$PROJECT_DIR$/web/static/html/back/writeBlog/editor.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/FilterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/FilterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/UserEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/IndexArticle2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/IndexBlogger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/UserMessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/UserMessageService.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMessageDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TagDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/ArticleEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/LoggerData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/LoggerDataImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Audience.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/HtmlPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/entity/Notify.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/LoginDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/RegisterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/web/writeBlog/editor.html" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/NotifyController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/NotifyDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/NotifyInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/TagService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/TagServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/UserArticle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/HtmlPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/back/manage_new.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/CommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/CommentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ChildCommentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/NotifyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/NotifyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java" />
       </list>
     </option>
   </component>
@@ -385,11 +423,10 @@
       <path value="$PROJECT_DIR$/web/writeBlog/editor.md-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="125" />
-    <option name="width" value="1672" />
-    <option name="height" value="853" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="666" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -399,6 +436,56 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="jsp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Blog_01" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Blog_01" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Blog_01" type="616d4139:PackageViewModuleNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -469,7 +556,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zhbit" type="462c0819:PsiDirectoryNode" />
-              <item name="Filters" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
@@ -479,7 +566,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zhbit" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptors" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhbit" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
@@ -491,6 +590,54 @@
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhbit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhbit" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,95 +645,6 @@
               <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="writeBlog" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jsp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Blog_01" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Blog_01" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Blog_01" type="616d4139:PackageViewModuleNode" />
-              <item name="com" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -599,14 +657,14 @@
     <property name="SearchEverywhereHistoryKey" value="UseArticle&#9;null&#9;null&#10;getAllA&#9;PSI&#9;JAVA://com.zhbit.service.interfaces.ArticleService#getALLArticleByUserName&#10;getALL&#9;PSI&#9;JAVA://com.zhbit.service.interfaces.ArticleService#getALLArticleByUserName&#10;getAllArticle&#9;PSI&#9;JAVA://com.zhbit.controller.HtmlPageController#getALLArticleByUserName&#10;ArticleIdA&#9;PSI&#9;JAVA://com.zhbit.dto.ArticleIdAndUserName&#10;COOKIET&#9;PSI&#9;JAVA://org.springframework.web.servlet.theme.CookieThemeResolver&#10;HttpSer&#9;FILE&#9;jar:///home/kong/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3-sources.jar!/javax/servlet/http/HttpServletRequest.java&#10;HandlerInterceptor&#9;PSI&#9;JAVA://org.springframework.web.servlet.HandlerInterceptor&#10;ArticleIdAnd&#9;PSI&#9;JAVA://com.zhbit.dao.ChildCommentDao#getChildCommentByArticleIdAndFather&#10;HashMa&#9;PSI&#9;JAVA://java.util.HashMap&#10;String&#9;PSI&#9;JAVA://java.lang.String" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560598588359" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560843035323" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/zhbit/dao" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4112676" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -616,26 +674,26 @@
       <recent name="com.zhbit.dao" />
       <recent name="com.zhbit.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/WEB-INF" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/web/static/html/front" />
-      <recent name="$PROJECT_DIR$/web/static/html/back" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zhbit.service.interfaces" />
       <recent name="com.zhbit.service" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl" />
       <recent name="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces" />
-      <recent name="$PROJECT_DIR$/web/static/html/back" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zhbit/dto" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zhbit/controller" />
+      <recent name="$PROJECT_DIR$/web" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/writeBlog" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web/static/html/front" />
-      <recent name="$PROJECT_DIR$/web/static/html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -651,6 +709,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.12">
+    <configuration name="Audience" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhbit.aop.Audience" />
+      <module name="Blog_01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhbit.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ArticleDaoTest.getALLArticleByUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Blog_01" />
       <extension name="coverage">
@@ -683,7 +754,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChildFatherCommentDaoTest.getChildCommentByArticleId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotifyDaoTest.createNotify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Blog_01" />
       <extension name="coverage">
         <pattern>
@@ -692,14 +763,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.zhbit.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.zhbit.dao.ChildFatherCommentDaoTest" />
-      <option name="METHOD_NAME" value="getChildCommentByArticleId" />
+      <option name="MAIN_CLASS_NAME" value="com.zhbit.dao.NotifyDaoTest" />
+      <option name="METHOD_NAME" value="createNotify" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterDaoTest.getUserByEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test.testAopAnnotation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Blog_01" />
       <extension name="coverage">
         <pattern>
@@ -708,24 +779,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.zhbit.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.zhbit.dao.RegisterDaoTest" />
-      <option name="METHOD_NAME" value="getUserByEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterDaoTest.insertUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Blog_01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhbit.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zhbit.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.zhbit.dao.RegisterDaoTest" />
-      <option name="METHOD_NAME" value="insertUser" />
+      <option name="MAIN_CLASS_NAME" value="com.zhbit.dao.test" />
+      <option name="METHOD_NAME" value="testAopAnnotation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -806,19 +861,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 9.0.12" />
-      <item itemvalue="JUnit.RegisterDaoTest.insertUser" />
-      <item itemvalue="JUnit.ChildFatherCommentDaoTest.getChildCommentByArticleId" />
-      <item itemvalue="JUnit.ArticleDaoTest.getALLArticleByUserName" />
-      <item itemvalue="JUnit.RegisterDaoTest.getUserByEmail" />
       <item itemvalue="JUnit.ArticleDaoTest.publishArticle" />
+      <item itemvalue="Application.Audience" />
+      <item itemvalue="JUnit.test.testAopAnnotation" />
+      <item itemvalue="JUnit.NotifyDaoTest.createNotify" />
+      <item itemvalue="JUnit.ArticleDaoTest.getALLArticleByUserName" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleDaoTest.publishArticle" />
-        <item itemvalue="JUnit.RegisterDaoTest.getUserByEmail" />
-        <item itemvalue="JUnit.RegisterDaoTest.insertUser" />
         <item itemvalue="JUnit.ArticleDaoTest.getALLArticleByUserName" />
-        <item itemvalue="JUnit.ChildFatherCommentDaoTest.getChildCommentByArticleId" />
+        <item itemvalue="JUnit.NotifyDaoTest.createNotify" />
+        <item itemvalue="JUnit.test.testAopAnnotation" />
+        <item itemvalue="Application.Audience" />
+        <item itemvalue="JUnit.ArticleDaoTest.publishArticle" />
       </list>
     </recent_temporary>
   </component>
@@ -912,43 +967,49 @@
       <workItem from="1560593355706" duration="4865000" />
       <workItem from="1560599261698" duration="324000" />
       <workItem from="1560603727097" duration="792000" />
+      <workItem from="1560740195235" duration="2531000" />
+      <workItem from="1560749183130" duration="15116000" />
+      <workItem from="1560774687238" duration="5668000" />
+      <workItem from="1560783106159" duration="4945000" />
+      <workItem from="1560823787469" duration="11445000" />
+      <workItem from="1560842205402" duration="644000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisterDaoTest_getUserByEmail - 2019.06.11 at 20h 32m 44s.xml">
-      <configuration name="RegisterDaoTest.getUserByEmail" configurationId="JUnit" />
+    <history-entry file="test_testAopAnnotation - 2019.06.17 at 14h 58m 00s.xml">
+      <configuration name="test.testAopAnnotation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterDaoTest_getUserByEmail - 2019.06.11 at 20h 35m 26s.xml">
-      <configuration name="RegisterDaoTest.getUserByEmail" configurationId="JUnit" />
+    <history-entry file="NotifyDaoTest_createNotify - 2019.06.18 at 11h 02m 27s.xml">
+      <configuration name="NotifyDaoTest.createNotify" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.12 at 22h 06m 34s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="NotifyDaoTest_createNotify - 2019.06.18 at 11h 20m 35s.xml">
+      <configuration name="NotifyDaoTest.createNotify" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.12 at 22h 07m 48s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 13h 44m 03s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.12 at 22h 08m 12s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 13h 44m 58s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.12 at 22h 09m 13s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 13h 49m 17s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.12 at 22h 51m 23s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 13h 55m 27s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.15 at 18h 32m 29s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 15h 18m 05s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.15 at 18h 33m 40s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 15h 18m 21s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleDaoTest_publishArticle - 2019.06.15 at 18h 47m 30s.xml">
-      <configuration name="ArticleDaoTest.publishArticle" configurationId="JUnit" />
+    <history-entry file="ArticleDaoTest_getALLArticleByUserName - 2019.06.18 at 15h 19m 24s.xml">
+      <configuration name="ArticleDaoTest.getALLArticleByUserName" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387013000" />
+    <option name="totallyTimeSpent" value="446510000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,21 +1021,61 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="125" width="1672" height="853" extended-state="0" />
+    <frame x="0" y="24" width="1366" height="666" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8724584" visible="true" weight="0.23894349" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8542024" visible="true" weight="0.25567323" />
+      <window_info id="Structure" order="1" sideWeight="0.2270364" side_tool="true" weight="0.18176973" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.1457976" side_tool="true" weight="0.22416812" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.202718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8570348" weight="0.37523106" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.4979568" weight="0.32744566" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4979568" weight="0.32880434" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.1429652" side_tool="true" visible="true" weight="0.4731978" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.32885087" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.39409986" weight="0.20702402" />
+      <window_info anchor="bottom" id="Spring" order="12" sideWeight="0.49970812" weight="0.32880434" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49970812" weight="0.32608697" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49970812" weight="0.32880434" />
+      <window_info active="true" anchor="bottom" id="Debug" order="15" sideWeight="0.8570348" visible="true" weight="0.4731978" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32930514" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.055975795" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.32930514" />
+      <window_info anchor="right" id="JSF" order="10" />
+      <window_info anchor="right" id="CDI" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" weight="0.32882354" />
+      <window_info anchor="right" id="ASM" order="13" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8708791" visible="true" weight="0.2055961" />
       <window_info id="Structure" order="1" sideWeight="0.25137615" side_tool="true" weight="0.19411765" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.12754159" side_tool="true" weight="0.23614958" />
+      <window_info id="Favorites" order="6" sideWeight="0.12912089" side_tool="true" weight="0.24815725" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.20436817" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5921376" visible="true" weight="0.26236263" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.45705882" weight="0.31318682" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2032967" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5921376" weight="0.12939002" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.45705882" weight="0.21626617" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49882352" weight="0.32942554" />
@@ -1001,7 +1102,7 @@
       <window_info anchor="right" id="CDI" order="11" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32882354" />
       <window_info anchor="right" id="ASM" order="13" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1037,13 +1138,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java</url>
-          <line>70</line>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java</url>
-          <line>111</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
@@ -1067,33 +1168,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java</url>
-          <line>31</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java</url>
-          <line>53</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java</url>
-          <line>49</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java</url>
@@ -1103,15 +1192,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java</url>
-          <line>41</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
-          <line>89</line>
-          <properties />
-          <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java</url>
@@ -1121,21 +1204,69 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java</url>
-          <line>78</line>
+          <line>85</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java</url>
+          <line>52</line>
           <properties />
-          <option name="timeStamp" value="125" />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
           <line>112</line>
           <properties />
-          <option name="timeStamp" value="126" />
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/NotifyController.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="159" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1145,62 +1276,218 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/FatherComment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/UserEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ChildComment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RegisterDao.xml">
+    <entry file="file://$PROJECT_DIR$/web/writeBlog/editor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="120" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="120" />
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMessageDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="374">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="884">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/LoginDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="58" column="69" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8.0_181/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="497" selection-start-line="497" selection-end-line="497" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8.0_181/src.zip!/java/lang/reflect/InvocationTargetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/TagDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/NotifyDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/NotifyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TagDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/TagService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/CurrencyEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/TagServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="529" column="88" lean-forward="true" selection-start-line="528" selection-start-column="4" selection-end-line="529" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="462" lean-forward="true" selection-start-line="462" selection-end-line="462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/back/manage_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="932">
+          <caret line="230" column="84" lean-forward="true" selection-start-line="230" selection-start-column="84" selection-end-line="230" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/UserMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/UserMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMessageDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1211,295 +1498,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.9.RELEASE/spring-aop-4.3.9.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/CommonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="337" selection-start-line="337" selection-end-line="337" />
+        <state relative-caret-position="276">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/writeBlog/editor.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+          <folding>
+            <element signature="e#3583#3584#0" expanded="true" />
+            <element signature="e#3622#3623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="85">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="40" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/ChildCommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="29" column="68" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/NotifyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/UserMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/NotifyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="238">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/UserMessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="149">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/NotifyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_181/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7293">
-          <caret line="489" column="35" selection-start-line="489" selection-start-column="35" selection-end-line="489" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/CommentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/ArticleToPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/UserArticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/ChildComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/FatherCommentFront.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.9.RELEASE/spring-webmvc-4.3.9.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerExecutionChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="43" column="79" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/HtmlPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        <state relative-caret-position="-233">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="107">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/PublishArticle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="142">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/ArticleEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/ChildCommentEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/FatherCommentEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/RegisterEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/UserEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/LoginEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/FileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="396">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+        <state relative-caret-position="212">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/interceptors/UserInterceptor.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.9.RELEASE/spring-aop-4.3.9.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="125">
+          <caret line="337" selection-start-line="337" selection-end-line="337" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="115" column="67" selection-start-line="115" selection-start-column="67" selection-end-line="115" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/back/manage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="406" lean-forward="true" selection-start-line="406" selection-end-line="406" />
+        <state relative-caret-position="48">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1562,7 +1728,6 @@
             <option name="proportions">
               <list>
                 <option value="0.4112676" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>管理页面</title>
+		<link href="http://localhost:8081/source/css/back/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://localhost:8081/source/css/back/checkboxes.min.css" />
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<style>
+		#menu{
+			height:753px;
+			background-color: #2A3F54;
+			color: rgb(255,255,255,0.8);
+		}
+		#menu a{
+			color:#E7E7E7;
+		}
+		.menu-head{
+			height: 5%;
+		}
+		.menu-content{
+			height: 75%;
+		}
+		.menu-content li{
+			font-size: 17px;
+			margin: 25px;
+		}
+		.menu-footer li{
+			font-size: 15px;
+			margin: 10px;
+		}
+		.icon-font{
+			font-size: 40px;
+		}
+		.col-sm-1{
+			width:5%;!important
+		} 
+	</style>
+	<body>
+		<!-- 菜单 -->
+		<div class="col-sm-2 collapse in" id="menu" style="">
+
+			<div class="menu-content">
+				<ul class="list-unstyled">
+					<li>
+						<a href="#" data-toggle="collapse" data-target="#sub-persondata"><i class="fa fa-fw fa-home"></i>个人资料<b class="caret"></b></a>
+						<ul class="collapse" id="sub-persondata">
+							<li><a href="#" id="basic-info">基本信息</a></li>
+							<li><a href="#" id="account-secure">账号安全</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" id="article-manage"><i class="fa fa-fw fa-folder"></i>文章管理</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="collapse" data-target="#sub-info"><i class="fa fa-fw fa-bell" aria-hidden="true"></i>通知管理<b class="caret"></b></a>
+						<ul class="collapse" id="sub-info" style="margin-left: 5px;">
+							<li><a href="#" id="system-notify">系统通知</a></li>
+							<li><a href="#" id="article-push">文章推送</a></li>
+							<li><a href="#" id="comment-notify">评论通知</a></li>
+						</ul>
+					</li>
+					<li>
+						<a id="my-focus" href="#"><i class="fa fa-fw fa-heart" aria-hidden="true"></i>我的关注</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-footer">
+				<ul class="list-unstyled">
+					<li><a href="/"><i class="fa fa-fw fa-home"></i>回到首页</a></li>
+					<li><a href="#"  id="myBlog"><i class="fa fa-fw fa-pencil"></i>我的博客</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-1 text-center" id="switch" style="padding-top: 10px;">
+			<i class="fa fa-fw fa-bars icon-font" data-toggle="collapse" data-target="#menu"></i>
+		</div>
+		<div class="col-sm-8" id="main" >
+			<div style="height: 700px;border: 1px solid #333;border-radius:20px;margin: 20px 10px;">
+				<div class="main-header">
+					<h3 style="border-bottom: 1px solid #333;padding-bottom:10px;" align="center">信息管理</h3>
+				</div>
+				<div class="main-content" style="padding:10px 0;">
+					<h3>什么都没有，去左侧菜单瞧瞧</h3>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://localhost:8081/source/js/back/manage.js"></script>
+<script src="http://localhost:8081/source/js/login.js"></script>
+<script>
+	$(function(){
+		var flag=0;
+		$('#switch').click(function(){
+			if(flag==0){
+				setTimeout(function(){
+					$('#main').attr("class","col-sm-11");
+				},500)
+				flag=1;
+			}else{
+				$('#main').attr("class","col-sm-9");
+				flag=0;
+			}
+		})
+	})
+</script>

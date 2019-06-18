@@ -9,4 +9,22 @@
     </insert>
 
 
+
+    <select id="notifyInfo" parameterType="string" resultType="com.zhbit.dto.NotifyInfo">
+		select c.user_name,n.article_id,notify_id,send_notify_person,url as articleURL,title as articleTitle,content,isread
+		from notify n,article a,user_message as c
+		where n.article_id=a.article_id and a.own_id=c.user_id and notify_person=#{value}
+    </select>
+
+    <delete id="delete" parameterType="int">
+        delete  from notify
+		where notify_id=#{id}
+    </delete>
+
+    <update id="hasread" parameterType="int">
+		update notify
+		set isread=1
+		where notify_id=#{id}
+    </update>
+
 </mapper>

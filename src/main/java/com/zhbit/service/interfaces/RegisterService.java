@@ -6,7 +6,7 @@ public interface RegisterService {
 
     Login Register( String pwd, String email, String code);
 
-    int insertUser(Login login);
+    String insertUser(Login login);
 
     Integer getUserIdByEmail(String email);
 }
