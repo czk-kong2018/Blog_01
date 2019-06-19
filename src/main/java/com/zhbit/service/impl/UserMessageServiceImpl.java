@@ -30,13 +30,12 @@ public class UserMessageServiceImpl  implements UserMessageService {
 
     /**
      * @return
-     * @Author 拔锋
+     * @Author
      */
     public List<IndexBlogger> getIndexBlogger() {
         try {
             return userMessageDao.getIndexBlogger();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return null;
         }
 

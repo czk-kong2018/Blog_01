@@ -65,6 +65,7 @@
                         }),
                         success:function(e){
                             alert(JSON.stringify(e));
+                            window.location.reload();
                         },
                         error:function(e){
                             alert("提交失败,服务器端出现异常");

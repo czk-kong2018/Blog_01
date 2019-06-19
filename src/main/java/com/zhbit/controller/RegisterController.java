@@ -37,11 +37,12 @@ public class RegisterController {
                 httpSession.setAttribute(code, register);
 
                 //设置三分钟失效
-                httpSession.setMaxInactiveInterval(3 * 60);
+                httpSession.setMaxInactiveInterval(5 * 60);
 
                 JsonUtils.CreateJsonAndSend(response, RegisterEnum.SENDSUCCESS.toMap()); //邮箱发送成功
+            }else {
+                JsonUtils.CreateJsonAndSend(response, RegisterEnum.EMAILEXIST.toMap()); //邮箱已存在
             }
-        JsonUtils.CreateJsonAndSend(response, RegisterEnum.EMAILEXIST.toMap()); //邮箱已存在
     }
 
 
@@ -53,7 +54,7 @@ public class RegisterController {
                 session.removeAttribute(code);
             String user_name= registerService.insertUser(login);
             JsonUtils.CreateJsonAndSend(response,RegisterEnum.REGISTERSUCCESS.toMap()); //注册成功
-                response.sendRedirect("http://localhost:8080/" + user_name);
+
             }
         }else{
             JsonUtils.CreateJsonAndSend(response,RegisterEnum.URLTIMEOUT.toMap()); //链接失效

@@ -50,7 +50,7 @@ public interface ArticleDao {
 
     /**
      * 首页操作
-     * @Author   拔锋
+     * @Author
      * @param tag
      * @param begin
      * @param end
@@ -64,7 +64,7 @@ public interface ArticleDao {
 
     /**
      * 后台管理所需
-     * @Author  应钊
+     * @Author
      */
     @Select("select article_id,title,url,create_time from article where own_id=#{user_id} order by article_id limit #{from},#{count}")
      List<Article> articleManage(int from,int count,String userName);

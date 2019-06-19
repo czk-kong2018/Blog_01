@@ -39,6 +39,7 @@ public class CommentController {
     @ResponseBody
     public List<FatherCommentFront> getCommentByPage(@PathVariable("article_id")int article_id
     , String current_page, String OnePageCount){
+        System.out.println("commentTest");
         List<FatherCommentFront> fatherCommentByPage = commonService.getFatherCommentByPage(article_id, Integer.parseInt(current_page), Integer.parseInt(OnePageCount));
         return  fatherCommentByPage;
     }

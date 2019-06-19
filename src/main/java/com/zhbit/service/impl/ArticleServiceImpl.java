@@ -69,7 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     /**
-     * @Author  拔锋
+     * @Author
      * @param tag
      * @param num
      * @return
@@ -79,7 +79,6 @@ public class ArticleServiceImpl implements ArticleService {
         try{
             return articleDao.getIndexArticle(tag,num,num+9);
         }catch (Exception e){
-            System.out.println(e.getMessage());
             return null;
         }
 
@@ -89,7 +88,6 @@ public class ArticleServiceImpl implements ArticleService {
         try{
             return articleDao.getIndexArticle2(tag,num,num+9);
         }catch (Exception e){
-            System.out.println(e.getMessage());
             return null;
         }
 
@@ -101,7 +99,7 @@ public class ArticleServiceImpl implements ArticleService {
 
 //后台管理部分
     /**
-     * @Author  应招
+     * @Author
      */
     public List<Article> articleManage(int currentPage, int onePageCount, String userName) {
         return articleDao.articleManage((currentPage-1)*onePageCount, onePageCount, userName);

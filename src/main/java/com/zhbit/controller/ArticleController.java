@@ -67,7 +67,7 @@ public class ArticleController {
     @ResponseBody
     @RequestMapping(value = "/{user_name}/getArticleToPage",method = RequestMethod.POST)
     public List<ArticleToPage> getArticleToPage(@PathVariable("user_name") String user_name, String current_page, String OnePageCount){
-
+        System.out.println("articlePage");
         List<ArticleToPage> articleList = articleService.getArticeByPage(Integer.parseInt(current_page), Integer.parseInt(OnePageCount), user_name);
         return articleList;
 
@@ -135,12 +135,12 @@ public class ArticleController {
     @ResponseBody
     public List<IndexArticle> getIndexArticle(String tag, int num){
         List<IndexArticle> indexArticles=articleService.getIndexArticle(tag,num);
-        System.out.println("1: "+indexArticles.size());
-        if(indexArticles!=null){
-            for(int i=0;i<indexArticles.size();i++){
-                System.out.println(indexArticles.get(i).getArticle().getTitle());
-            }
-        }
+//        System.out.println("1: "+indexArticles.size());
+//        if(indexArticles!=null){
+//            for(int i=0;i<indexArticles.size();i++){
+//                System.out.println(indexArticles.get(i).getArticle().getTitle());
+//            }
+//        }
         return indexArticles;
     }
 
@@ -149,19 +149,19 @@ public class ArticleController {
     @ResponseBody
     public List<IndexArticle2> getIndexArticle2(String tag, Integer num){
         List<IndexArticle2> indexArticles=articleService.getIndexArticle2(tag,num);
-        System.out.println("size: "+indexArticles.size());
-        if(indexArticles!=null){
-            for(int i=0;i<indexArticles.size();i++){
-                System.out.println("name: "+indexArticles.get(i).getUserMessage().getUser_name());
-            }
-        }
+//        System.out.println("size: "+indexArticles.size());
+//        if(indexArticles!=null){
+//            for(int i=0;i<indexArticles.size();i++){
+//                System.out.println("name: "+indexArticles.get(i).getUserMessage().getUser_name());
+//            }
+//        }
         return indexArticles;
     }
 
 
     /**
      * 后台管理所需
-     * @Author 应钊
+     * @Author
      */
 /*
     @ResponseBody

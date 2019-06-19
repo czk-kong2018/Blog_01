@@ -100,14 +100,10 @@
                         async: false,
                         contentType: "application/json;character:utf-8",
                         success: function (res) {
-                            if(res=="false"){
-                                alert("该邮箱已注册");
-                                console.log("123");
-                            }
+                                alert(res);
                         },
                         errot:function(e){
                             alert("服务器异常");
-                            console.log("123");
                         }
                     });
                 }

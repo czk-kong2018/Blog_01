@@ -79,7 +79,20 @@ public class LoginController {
 
     }
 
-    //yzm
+    /**
+     * 注销
+
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/logOut",produces = "text/html;charset=utf8")
+    public String logOut(HttpSession session ){
+        session.removeAttribute("user");
+        return "注销成功";
+    }
+
+
+    //验证码模块
     @RequestMapping("/yzmcheck.do")    //response bootstrapValidator "remote"
     @ResponseBody
     public String yzmcheck(@RequestParam(value = "yzm", required = false) String yzm, HttpSession session) {
