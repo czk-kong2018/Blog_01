@@ -17,7 +17,7 @@ public interface NotifyDao {
 
     /**
      * 后台通知管理
-     * Author  应钊
+     * Author
      * @param userName
      * @return
      */

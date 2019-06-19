@@ -8,34 +8,28 @@
   <component name="ChangeListManager">
     <list default="true" id="42483ab0-9bf6-44cf-8a5a-7e7129254f75" name="Default Changelist" comment="blog.sql文件修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/aop/Audience.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/aop/Audience.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UploadServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UploadServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/com/zhbit/service/interfaces/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/classes/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/writeBlog/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/writeBlog/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/userBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Blog_01_Web_exploded/WEB-INF/static/html/front/userBlog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/impl/UserMessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhbit/service/interfaces/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/writeBlog/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeBlog/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,14 +63,14 @@
     <session id="648442347">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="78" />
+          <entry key="project.closed" value="79" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="6" />
-          <entry key="project.open.time.16" value="17" />
-          <entry key="project.open.time.17" value="13" />
+          <entry key="project.open.time.16" value="18" />
+          <entry key="project.open.time.17" value="15" />
           <entry key="project.open.time.18" value="6" />
           <entry key="project.open.time.19" value="6" />
           <entry key="project.open.time.2" value="6" />
@@ -94,14 +88,14 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="97" />
+          <entry key="project.opened" value="100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="159" />
-          <entry key="html" value="2580" />
-          <entry key="java" value="33113" />
+          <entry key="html" value="2612" />
+          <entry key="java" value="33127" />
           <entry key="jsp" value="45" />
           <entry key="properties" value="4" />
           <entry key="txt" value="46" />
@@ -110,8 +104,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2580" />
-          <entry key="JAVA" value="33113" />
+          <entry key="HTML" value="2612" />
+          <entry key="JAVA" value="33127" />
           <entry key="JSP" value="45" />
           <entry key="PLAIN_TEXT" value="205" />
           <entry key="Properties" value="4" />
@@ -123,31 +117,31 @@
         <counts>
           <entry key="class" value="8" />
           <entry key="fxml" value="1" />
-          <entry key="html" value="154" />
+          <entry key="html" value="160" />
           <entry key="iml" value="1" />
-          <entry key="java" value="1385" />
+          <entry key="java" value="1397" />
           <entry key="js" value="4" />
           <entry key="jsp" value="7" />
           <entry key="kt" value="1" />
           <entry key="md" value="3" />
           <entry key="properties" value="1" />
           <entry key="sql" value="2" />
-          <entry key="xml" value="168" />
+          <entry key="xml" value="170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="HTML" value="154" />
+          <entry key="HTML" value="160" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="1385" />
+          <entry key="JAVA" value="1397" />
           <entry key="JSP" value="7" />
           <entry key="JavaScript" value="4" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="3" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="2" />
-          <entry key="XML" value="169" />
+          <entry key="XML" value="171" />
         </counts>
       </usages-collector>
     </session>
@@ -157,101 +151,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/local/jdk1.8.0_181/src.zip!/java/lang/reflect/Method.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7429">
-              <caret line="497" selection-start-line="497" selection-end-line="497" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="48" column="78" lean-forward="true" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/writeBlog/editor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="141" selection-start-line="141" selection-end-line="141" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/util/YZMUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="107" column="87" lean-forward="true" selection-start-line="107" selection-start-column="87" selection-end-line="107" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3094">
-              <caret line="213" selection-start-line="213" selection-end-line="213" />
+            <state relative-caret-position="-94">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -273,8 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn-submit</find>
-      <find>#login_name</find>
       <find>#login_user</find>
       <find>login_name</find>
       <find>login</find>
@@ -303,6 +205,8 @@
       <find>edid</find>
       <find>articleid</find>
       <find>首页</find>
+      <find>加载</find>
+      <find>email</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -318,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/LoggerDataImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java" />
@@ -339,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/ArticleDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ChildCommentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/NotifyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/NotifyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/YZMService.java" />
@@ -347,28 +249,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/enums/LoginEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/entity/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/util/YZMUtil.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/static/html/back/manage_new.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dto/PublishArticle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/TagDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/zhbit/dao/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/aop/Audience.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UserMessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/web/writeBlog/editor.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java" />
       </list>
     </option>
   </component>
@@ -411,11 +315,10 @@
       <path value="$PROJECT_DIR$/web/writeBlog/editor.md-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
-    <option name="y" value="137" />
-    <option name="width" value="1787" />
-    <option name="height" value="795" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="24" />
+    <option name="width" value="1364" />
+    <option name="height" value="660" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -436,6 +339,40 @@
               <item name="Blog_01" type="58d84e3e:PackageViewProjectNode" />
               <item name="Blog_01" type="616d4139:PackageViewModuleNode" />
               <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="jsp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -491,7 +428,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zhbit" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhbit" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
@@ -522,8 +469,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zhbit" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
@@ -531,6 +477,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog_01" type="b2602c69:ProjectViewProjectNode" />
@@ -568,40 +522,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jsp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Blog_01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Blog_01" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,7 +529,7 @@
     <property name="SearchEverywhereHistoryKey" value="UseArticle&#9;null&#9;null&#10;getAllA&#9;PSI&#9;JAVA://com.zhbit.service.interfaces.ArticleService#getALLArticleByUserName&#10;getALL&#9;PSI&#9;JAVA://com.zhbit.service.interfaces.ArticleService#getALLArticleByUserName&#10;getAllArticle&#9;PSI&#9;JAVA://com.zhbit.controller.HtmlPageController#getALLArticleByUserName&#10;ArticleIdA&#9;PSI&#9;JAVA://com.zhbit.dto.ArticleIdAndUserName&#10;COOKIET&#9;PSI&#9;JAVA://org.springframework.web.servlet.theme.CookieThemeResolver&#10;HttpSer&#9;FILE&#9;jar:///home/kong/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3-sources.jar!/javax/servlet/http/HttpServletRequest.java&#10;HandlerInterceptor&#9;PSI&#9;JAVA://org.springframework.web.servlet.HandlerInterceptor&#10;ArticleIdAnd&#9;PSI&#9;JAVA://com.zhbit.dao.ChildCommentDao#getChildCommentByArticleIdAndFather&#10;HashMa&#9;PSI&#9;JAVA://java.util.HashMap&#10;String&#9;PSI&#9;JAVA://java.lang.String" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560905980850" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560919119503" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/zhbit/dao" />
@@ -936,6 +856,9 @@
       <workItem from="1560902851099" duration="1378000" />
       <workItem from="1560904484482" duration="1421000" />
       <workItem from="1560906064740" duration="2630000" />
+      <workItem from="1560909655709" duration="525000" />
+      <workItem from="1560913134326" duration="4777000" />
+      <workItem from="1560918249637" duration="1285000" />
     </task>
     <servers />
   </component>
@@ -972,7 +895,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="483600000" />
+    <option name="totallyTimeSpent" value="490187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -984,9 +907,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="137" width="1787" height="795" extended-state="0" />
+    <frame x="0" y="-6" width="1366" height="696" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8542024" visible="true" weight="0.2765347" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8542024" visible="true" weight="0.2118003" />
       <window_info id="Structure" order="1" sideWeight="0.2270364" side_tool="true" weight="0.18176973" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -996,16 +919,16 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.202718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83419394" weight="1.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83055973" weight="0.15411559" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49741825" weight="0.32686567" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4962708" weight="0.32686567" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.16580608" side_tool="true" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.16944024" side_tool="true" visible="true" weight="0.18914185" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.32885087" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.3471027" weight="0.33432835" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.3441755" weight="0.33099824" />
       <window_info anchor="bottom" id="Spring" order="12" sideWeight="0.49970812" weight="0.32880434" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49970812" weight="0.32608697" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49970812" weight="0.32880434" />
@@ -1018,7 +941,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.042455535" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.04236006" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.32930514" />
       <window_info anchor="right" id="JSF" order="10" />
       <window_info anchor="right" id="CDI" order="11" />
@@ -1132,7 +1055,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
-          <line>169</line>
+          <line>157</line>
           <properties />
           <option name="timeStamp" value="140" />
         </line-breakpoint>
@@ -1162,13 +1085,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java</url>
-          <line>187</line>
+          <line>175</line>
           <properties />
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java</url>
-          <line>109</line>
+          <line>101</line>
           <properties />
           <option name="timeStamp" value="159" />
         </line-breakpoint>
@@ -1208,6 +1131,12 @@
           <properties />
           <option name="timeStamp" value="175" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1216,65 +1145,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/YZMService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhbit/dao/NotifyDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/util/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/enums/LoginEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/FileUpload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1286,13 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/util/YZMUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1331,13 +1194,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -1380,34 +1236,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/NotifyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/NotifyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1422,13 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1477,20 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="158" column="92" selection-start-line="158" selection-start-column="92" selection-end-line="158" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/RegisterServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -1505,10 +1316,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        <state relative-caret-position="493">
+          <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="107" column="87" selection-start-line="107" selection-start-column="87" selection-end-line="107" selection-end-column="87" />
         </state>
       </provider>
     </entry>
@@ -1519,61 +1357,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/writeBlog/editor.html">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        <state relative-caret-position="43">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/interfaces/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="48" column="78" lean-forward="true" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="73">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/UploadServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/CommonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/Filters/MyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="107" column="87" lean-forward="true" selection-start-line="107" selection-start-column="87" selection-end-line="107" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="442">
           <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="213" column="169" lean-forward="true" selection-start-line="213" selection-start-column="169" selection-end-line="213" selection-end-column="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/userBlog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="90" column="192" selection-start-line="90" selection-start-column="192" selection-end-line="90" selection-end-column="192" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/html/front/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="69" column="46" lean-forward="true" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/writeBlog/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1207">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/IndexArticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/IndexArticle2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="146" column="5" selection-start-line="137" selection-start-column="72" selection-end-line="146" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/NotifyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/NotifyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NotifyDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/entity/Notify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="52" selection-start-line="96" selection-start-column="52" selection-end-line="96" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dao/ArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/dto/NotifyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/controller/NotifyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhbit/util/YZMUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
         </state>
       </provider>
     </entry>

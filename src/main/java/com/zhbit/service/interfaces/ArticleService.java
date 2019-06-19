@@ -52,7 +52,6 @@ public interface ArticleService {
      * @Author   拔锋
      * @return
      */
-    List<IndexArticle> getIndexArticle(String tag, int num);
     List<IndexArticle2> getIndexArticle2(String tag, int num);
 
 

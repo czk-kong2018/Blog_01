@@ -58,7 +58,7 @@ public interface ArticleDao {
      * @throws Exception
      */
 
-    List<IndexArticle> getIndexArticle(@Param("tag") String tag, @Param("begin")int begin, @Param("end")int end)throws Exception;
+
 
     List<IndexArticle2> getIndexArticle2(@Param("tag") String tag, @Param("begin")int begin, @Param("end")int end)throws Exception;
 

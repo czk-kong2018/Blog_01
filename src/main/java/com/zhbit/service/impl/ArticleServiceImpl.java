@@ -75,18 +75,10 @@ public class ArticleServiceImpl implements ArticleService {
      * @return
      */
 
-    public List<IndexArticle> getIndexArticle(String tag, int num) {
-        try{
-            return articleDao.getIndexArticle(tag,num,num+9);
-        }catch (Exception e){
-            return null;
-        }
-
-    }
 
     public List<IndexArticle2> getIndexArticle2(String tag, int num) {
         try{
-            return articleDao.getIndexArticle2(tag,num,num+9);
+            return articleDao.getIndexArticle2(tag,num,num+10);
         }catch (Exception e){
             return null;
         }

@@ -80,37 +80,7 @@
 
 
 
-    <select id="getIndexArticle" resultMap="indexArticle">
-        select article_id,title,article_profile,user_name,head_portrait,watch,create_time,clik_like,tag_name
-        from v_article
-        <where>
-            <if test="tag!='All'">
-                and tag_name=#{tag}
-            </if>
-        </where>
-        limit #{begin},#{end}
-    </select>
 
-    <resultMap id="indexArticle" type="com.zhbit.dto.IndexArticle">
-        <id column="article_id" property="id" />
-        <association property="article" javaType="com.zhbit.entity.Article">
-            <id column="article_id" property="article_id" />
-            <result column="title" property="title" />
-            <result column="article_profile" property="article_profile" />
-            <result column="clik_like" property="click_like" />
-            <result column="watch" property="watch" />
-            <result column="create_time" property="create_time" />
-        </association>
-        <association property="userMessage" javaType="com.zhbit.entity.UserMessage">
-            <id column="user_id" property="user_id" />
-            <result column="user_name" property="user_name" />
-            <result column="head_portrait" property="head_portrait" />
-        </association>
-        <association property="tag" javaType="com.zhbit.entity.Tag">
-            <id column="tag_id" property="tag_id" />
-            <result column="tag_name" property="tag_name" />
-        </association>
-    </resultMap>
 
     <select id="getIndexArticle2" resultMap="indexArticle2">
         select article_id,title,article_profile,user_name,head_portrait,watch,create_time,clik_like,tag_name

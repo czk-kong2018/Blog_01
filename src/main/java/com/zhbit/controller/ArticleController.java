@@ -130,19 +130,7 @@ public class ArticleController {
     /**
      * 首页方面的文章操作
      * @Author 拔锋
-     */
-    @RequestMapping("/getIndexArticle")
-    @ResponseBody
-    public List<IndexArticle> getIndexArticle(String tag, int num){
-        List<IndexArticle> indexArticles=articleService.getIndexArticle(tag,num);
-//        System.out.println("1: "+indexArticles.size());
-//        if(indexArticles!=null){
-//            for(int i=0;i<indexArticles.size();i++){
-//                System.out.println(indexArticles.get(i).getArticle().getTitle());
-//            }
-//        }
-        return indexArticles;
-    }
+    */
 
 
     @RequestMapping("/getIndexArticle2")
